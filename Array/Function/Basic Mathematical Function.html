@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mathematical Functions in JavaScript</title>
+</head>
+
+<body>
+    <h2>JavaScript Mathematical Functions </h2>
+    <script>
+        // BASIC CONSTANTS  
+        document.write("<h3>Math Constants</h3>");
+        document.write("E =:> " + Math.E + "<br>");
+        document.write("PI =:> " + Math.PI + "<br>");
+        document.write("SQRT2 =:> " + Math.SQRT2 + "<br>");
+        document.write("LN10 =:> " + Math.LN10 + "<br><hr>");
+
+        // BASIC ARITHMETIC 
+        document.write("<h3>Basic Arithmetic Functions</h3>");
+        document.write("abs(-7) =:> " + Math.abs(-7) + "<br>");
+        document.write("round(4.6) =:> " + Math.round(4.6) + "<br>");
+        document.write("ceil(4.2) =:> " + Math.ceil(4.2) + "<br>");
+        document.write("floor(4.8) =:> " + Math.floor(4.8) + "<br>");
+        document.write("trunc(7.9) =:> " + Math.trunc(7.9) + "<br>");
+        document.write("sign(-25) =:> " + Math.sign(-25) + "<br><hr>");
+
+        // EXPONENTS & ROOTS   
+        document.write("<h3>Exponents and Roots</h3>");
+        document.write("pow(2, 5) =:> " + Math.pow(2, 5) + "<br>");
+        document.write("sqrt(49) =:> " + Math.sqrt(49) + "<br>");
+        document.write("cbrt(27) =:> " + Math.cbrt(27) + "<br>");
+
+        // LOGARITHMIC FUNCTIONS   
+        document.write("<h3>Logarithmic Functions</h3>");
+        document.write("log(10) =:> " + Math.log(10) + "<br>");
+        document.write("log10(100) =:> " + Math.log10(100) + "<br>");
+        document.write("log2(8) =:> " + Math.log2(8) + "<br>");
+
+        // TRIGONOMETRIC FUNCTIONS  
+        document.write("<h3>Trigonometric Functions</h3>");
+        document.write("sin(PI/2) =:> " + Math.sin(Math.PI / 2) + "<br>");
+        document.write("cos(PI) =:> " + Math.cos(Math.PI) + "<br>");
+        document.write("tan(PI/4) =:> " + Math.tan(Math.PI / 4) + "<br>");
+        document.write("asin(1) =:> " + Math.asin(1) + "<br>");
+        document.write("acos(0) =:> " + Math.acos(0) + "<br>");
+        document.write("atan(1) =:> " + Math.atan(1) + "<br>");
+        // RANDOM AND UTILITY FUNCTIONS   
+        document.write("<h3>Random and Utility Functions</h3>");
+        document.write("Random (0–1) =:> " + Math.random() + "<br>");
+        document.write("min(3, 1, 7, 5) =:> " + Math.min(3, 1, 7, 5) + "<br>");
+        document.write("max(3, 1, 7, 5) =:> " + Math.max(3, 1, 7, 5) + "<br>");
+
+        // RANDOM INTEGER FUNCTION (EXTRA)   
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        document.write("<h3>Random Integer Example</h3>");
+        document.write("Random number between 1 and 10 =:> " + getRandomInt(1, 10) + "<br>");
+           </script>
+</body>
+
+</html>

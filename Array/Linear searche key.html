@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linears Search_key</title>
+</head>
+
+<body>
+    <h1>Linears Search_key Element</h1>
+    <script>
+        var a = [];
+        var n, search_key, element;
+        a = new Array();
+            n = parseInt(prompt("Enter the Linears Search_key array limit:"));
+        search_key = parseInt(prompt("Enter the Linears Search_key array limit:"));
+        for (i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Enter array element " + (i + 1) + ":"));
+        }
+
+        document.write("<br>Enter Array Elements are:<br>");
+        for (i = 0; i < n; i++) {
+            document.write(a[i] + ", ");
+            if (a[i] == search_key) {
+                element++;
+            }
+        }
+
+         
+        if(fc>0){
+            document.write("<br><br>Element " + search_key + " found " + element + " times in the array.<br>");
+        } else {
+            document.write("<br><br>Element " + search_key + " not found in the array.<br>");
+        }
+       
+        
+    </script>
+</body>
+
+</html>

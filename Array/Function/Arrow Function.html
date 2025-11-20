@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<style>
+    h3{
+        color:blue;
+    }
+</style>
+<body> 
+    
+    <h1>Find the Arrow Function </h1>
+    <script>
+        // document.write("<hr><h3>Arrow Function </h3><hr>");
+        document.write(" <hr><h3>Arrow Function</h3><hr>");
+        const num=(a,b) => a + b;
+        document.write(num(5,10)); // Output: 15
+        // Arrow Function to calculate the sum of numbers in an array
+        // let a.map =>
+        document.write("<hr><h3>Arrow Function  Elements</h3> <hr>");
+        
+        const a=[1,2,3,4,5,6,7,8,9,12];
+        document.write("Array Elements:[  " + a);
+        document.write("] <br><br>");
+        const square= a.map(n => n*n); 
+        // document.write(" ]");
+
+        //sum of array elements using arrow function
+        document.write(" <hr><h3>sum of array elements using Arrow Function </h3><hr>");
+        const sum = a.reduce((acc, n) => acc + n, 0);
+        document.write("<br>Sum of Array Elements: [ " + sum);
+        document.write(" ]");
+        document.write(" <br><br>");
+        
+        // Arrow Function to calculate the square of each number in an array
+        document.write(" <hr><h3>Arrow Functto calculate the square of each number in an arrayion </h3><hr>");
+        document.write("<br>Square of Array Elements:[  " + square); 
+        document.write(" ]");
+        
+        // Arrow Function to filter even numbers from an array
+        document.write(" <hr><h3>Arrow Function to filter even numbers from an array</h3><hr>");
+        const evenNum = a.filter(n => n % 2 === 0);
+        document.write("<br>Even Numbers from Array:[  " + evenNum); 
+        document.write(" ]");
+        document.write(" <br><br>");
+        
+        // Arrow Function to filter odd numbers from an array
+        document.write(" <hr><h3>Arrow Function to filter odd numbers from an array</h3><hr>");
+        const oddNum = a.filter(n => n % 2 !== 0);
+        document.write("<br>Odd Numbers from Array:[  " + oddNum);
+        document.write(" ]");
+        document.write(" <br><br>");
+        
+        // Arrow Function to find the maximum number in an array
+
+        document.write(" <hr><h3>Arrow Function to find the  Maximum in an array </h3><hr>");
+        const maxNum = a.reduce((max, n) => (n > max ? n : max), a[0]);
+        document.write("<br>Maximum Number in Array:[  " + maxNum);    
+        document.write(" ]");
+        document.write(" <br><br>");
+        
+        // Arrow Function to find the minimum number in an array
+        document.write(" <hr><h3>Arrow Function to find the Minimum number in an array </h3><hr>");
+        const minNum = a.reduce((min, n) => (n < min ? n : min), a[0]);
+        document.write("<br>Minimum Number in Array:[  " + minNum);
+        document.write(" ]");
+        document.write(" <br><br>");
+    </script>
+    
+</body>
+</html>

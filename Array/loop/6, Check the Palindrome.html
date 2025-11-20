@@ -1,0 +1,26 @@
+<html>
+<body>
+     <h1>Check if the given number is a palindrome</h1>
+    <script>
+        let no = prompt("Enter a number:");
+        let originalNo = no;
+        let temp = 0;
+        let rev = 0;
+        
+        // Loop to reverse the number
+        do {
+            temp = no % 10;
+            rev = rev * 10 + temp;
+            no = Math.floor(no / 10);
+        } while (no > 0);
+
+        // Check if the number is a palindrome
+        if (rev == originalNo) {
+            document.write("<br>The number is a palindrome.");
+        } else {
+            document.write("<br>The number is not a palindrome.");
+        }
+    </script>
+</body>
+
+</html>

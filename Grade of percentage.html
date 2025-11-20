@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    
+        /* container: box; 
+    height: 100ox;
+    width: 50p;
+        border-radius:4px solid green; */
+    
+.msg{
+    background-color: rgb(105, 109, 108);
+    font-family:Algerian;
+    font-size: 20px;
+    text-align: center;
+    color: red;
+}
+.mrt{background-color: rgb(141, 206, 216);
+    font-family:Algerian;
+    font-size: 20px;
+    text-align: center;
+    color: rgb(254, 4, 92);
+
+}
+</style>
+<head>
+</head>
+
+<body bgcolor="lightgreen">
+    <div class="msg">
+    <hr size="10" color=""> <h1> Grade Calculation<br> and <br>
+        Using Percentage</h1>
+    <hr backgraund color="" size="10">
+    <hr></div>
+        <div class="mrt">
+    <h2>
+        <br>:- (>90 )= A;<br>:-(>80)= B;<br>:-(>70)= C;<br>:-(>60) = D;<BR>:-(>=50) = E;<BR>:- (>50) = F;
+    </h2>
+</div>
+    <p id="calculate"></p>
+    <script>
+        let grade;
+        let per = prompt("Enter percentages");
+        if (per <= 100 & per > 90) {
+            grade = "A";
+            alert("Grade=" + grade + "and percentages=" + per);
+        }
+        else if (per <= 90 && per > 80) {
+            grade = "B";
+            alert("Grade=" + grade + " and percentaes=" + per);
+        }
+        else if (per <= 80 && per > 70) {
+            grade = "C";
+            alert("Grade=" + grade + "and percentages=" + per);
+        }
+        else if (per <= 70 && per > 60){
+            grade = "D";
+        alert("Grade=" + grade + "and percentages=" + per);
+        }
+            else if(per <= 60 && per > 50){
+                grade = "E";
+            alert("Grade=" + grade + "and percentages=" + per);
+        }
+        else if(per <= 50 && per > 40);{
+            grade = "F";
+        alert("Grade=" + grade + "and percentages=" + per);
+    }
+
+    </script>
+</body>
+
+</html>

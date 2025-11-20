@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Liner Array</title>
+</head>
+<body>
+    <h1> Liner Array :</h1>
+<script>
+    let arr, n, search_kay, flag =0;
+    arr = new Array();
+    n = parseInt(prompt("Enter number of Array element limit : "));
+    search_kay = parseInt(prompt(" Enter search_Kay to fund in Array Element : "));
+
+        for (i = 0; i< n;  i++) {
+arr[i] = parseInt(prompt("Enter Element of Array : "));
+        }
+            document.write("<br> Array Element Are : ");
+            for(i = 0; i<n; i++) {
+                document.write(arr[i] +" ");
+                if (arr[i] === search_kay) {
+                    flag = 0;
+                }
+            }
+            if(flag == 0) {
+                document.write("<br> Search kay" + search_kay + "Founded");
+            } else {
+                document.write("<br> Search Kay " + flag + "Not Found");
+            }
+</script>
+</body>
+</html>

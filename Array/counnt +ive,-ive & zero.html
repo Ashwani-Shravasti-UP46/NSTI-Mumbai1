@@ -1,0 +1,28 @@
+<html >
+    <title>+IVE, -IVE  & ZERO Array Element</title>
+<body>
+    <h1>+ve, -ve  & zero Array Element</h1>
+    <script>
+        let a,n,pc=0,nc=0,zs=0;
+        a= new Array();
+        n = parseInt(prompt("Enter limit of Element"));
+        for (i=0; i<n; i++){
+            a[i]= parseInt(prompt("Enter Array Element :"));
+        }
+        document.write("<br> Array Element are :");
+
+        for( i=0; i<n; i++){
+            document.write(a[i] + " , ");
+            if( a[i]>0){
+                pc++;
+            }else if (a[i] <0){
+                nc++;
+            }
+        }
+        document.write("<br>founded element are=: <br> positive element=:" +pc+ "<br>" );
+
+        document.write(" <br> positive element=:" +nc+ "<br>" );
+        document.write(" <br> positive element=:" +zc+ "<br>" );
+    </script>
+</body>
+</html>

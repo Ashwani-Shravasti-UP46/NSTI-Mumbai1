@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h1>Co-Ordnariation Discriminant</h1>
+    <h2>
+        -b+
+    </h2>
+    <script>
+         a = parseInt(prompt("Enter The value of a:"));
+        b = parseInt(prompt("Enter The value of b:"));
+        c = parseInt(prompt("Enter The value of c:"));
+        document.write("Roots of Quadratic Equation-<br>");
+        document.write(".............................<br>");
+        findRoots(a,b,c);
+ 
+        var a, b, c;
+        function findRoots(a, b, c) {
+            let discriminant= b*b-4*a*c;
+            let root1, root2;
+            if (discriminant > 0) {
+                root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                root2 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                document.write("The roots are real and distinet<br>");
+                document.write("Roots1=" + root1.toFixed(2) + "<br>");
+                document.write("Roots2=" + root2.toFixed(2) + "<br>");
+            }
+            else if (discriminant === 0) {
+                root1 = -b / (2 * a)
+                document.write("The root is real and equal<br>");
+                document.write("Roots =" + root1.toFixed(2) + "<br>");
+            }
+            else {
+                let realPart = -b / (2 * a)
+                let imaginaryPart = Math.sqrt(-discriminant) / (2 * a);
+                document.write(("The roots are complex<br>"));
+                document.write("Root1=" + realPart.toFixed(2) + "+" + imaginaryPart.toFixed(2)+"i<br>")
+                document.write("Root2=" + realPart.toFixed(2) + "+" + imaginaryPart.toFixed(2)+"i<br>")
+
+            }
+        }
+           </script>
+</body>
+
+</html>

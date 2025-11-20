@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Develop javasript code and two Display Matrix</h1>
+        <script>
+            var a,i,j,m,n,p ,q;
+            m=parseInt(prompt(" Enter the Rows Limit :"));
+            n=parseInt(prompt(" Enter the Column Limit :"));
+            p=parseInt(prompt(" Enter the Rows Limit :"));
+            q=parseInt(prompt(" Enter the Column Limit :"));
+            if(m==p && n==q)
+            a=new Array (m,n);
+            b=new Array (p,q);
+            c=new Array (m,n);
+            for(i=0; i<m; i++){
+                a[i]=new Array(n);
+            }
+            for(i=0; i<p; i++){
+                b[i]=new Array(q);
+            }
+            for(i=0; i<m; i++){
+                c[i]=new Array(n);
+            }
+            //+++++++++++++Read First Matrix++++++++++++++++++++++
+            for(i=0; i<m; i++){
+                for(j=0; j<n; j++){
+                    a[i][j]=parseInt(prompt(" Enter the First Matrix Element :"));
+                }
+            }
+            //+++++++++++++Read Second Matrix++++++++++++++++++++++
+            for(i=0; i<p; i++){
+                for(j=0; j<q; j++){
+                    b[i][j]=parseInt(prompt(" Enter the Second Matrix Element :"));
+                }
+            }
+            //+++++++++++++Add Two Matrix++++++++++++++++++++++++++
+            for(i=0; i<m; i++){
+                for(j=0; j<n; j++){
+                    c[i][j]=a[i][j]+b[i][j];
+                }
+            }
+            //+++++++++++++Display Resultant Matrix++++++++++++++++
+             document.write(" Resultant Matrix is : <br>");
+            for(i=0; i<m; i++){
+                for(j=0; j<n; j++){
+                    document.write(a[i][j]," ");
+                }
+                document.write("<br>");
+            }
+        </script> 
+</body>
+</html>

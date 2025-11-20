@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //  parseInt(prompt("Enter a Number:"));;
+        let no = parseInt((prompt("Enter a Number:")));
+        let dis=no;
+        let temp = 0;
+        ver = 0;
+        let sum = 0;
+        do {
+            temp = no % 10;
+            sum = sum + temp;
+            ver = ver * 10 + temp;
+            no = parseInt(no / 10);
+        }
+        while (no > 0);
+        document.write("You are number is:" + dis + "<br>");
+        document.write("Reviers number is:" + ver+ "<br>");
+        document.write("Sum of number is:" + sum);
+
+    </script>
+</body>
+
+</html>

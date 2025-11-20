@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Chech The Given Number is a <br> Parfect Number or Not</h1>
+    <script>
+        let num = parseInt(prompt("Enter a Number:"));
+        let sum = 0;
+        for (let i = 1; i <= num / 2; i++) {
+            if (num % i === 0) {
+                sum += i;
+            }
+        }
+        if (sum === num && num !== 0) {
+            document.write( "Is a perfect Number :- "  + num );
+        } else {
+            document.write( "Is a Not Perfect Number :-" + num);
+        }
+
+    </script>
+</body>
+
+</html>

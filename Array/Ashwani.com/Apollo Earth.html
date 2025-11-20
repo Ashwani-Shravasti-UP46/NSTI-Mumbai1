@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Rotating Earth in Space</title>
+<style>
+
+
+  /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #111;
+}
+
+/* Space background */
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: hsl(260, 73%, 49%);
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.space {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #000000c2 60%, #111 100%);
+}
+
+/* Earth styling */
+.earth {
+  width: 200px;
+  height: 200px;
+  background-image: url('Screenshot 2025-10-11 204228.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgb(37, 37, 153);
+  
+  /* Animation */
+  animation: spin 1s linear infinite;
+}
+
+/* Rotation animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+h1{
+  color: red;
+  font-size: 30px;
+  font-family: Algerian;
+}
+
+</style>  
+</head>
+<body>
+  <h1>Esme image ko apne hishab se add ke sakte ho ya internet se bhi <br> URL ke thro jode sakte ho</h1>
+  <div class="space">
+    <div class="earth"></div>
+  </div>
+</body>
+</html>

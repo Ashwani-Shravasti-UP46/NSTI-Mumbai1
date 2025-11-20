@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live TypingTest Ashwani.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #2207f0;
+        }
+        #sample-text {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; background-color: #ffe6e6; }
+        .current { background-color: #e6f7ff; }
+        #input-area {
+            width: 100%;
+            height: 150px;
+            font-size: 18px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: none;
+            margin-bottom: 20px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .stat { padding: 10px; background: #f0f0f0; border-radius: 8px; }
+        button {
+            margin: 10px;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background: #667eea;
+            color: white;
+            transition: background 0.3s;
+        }
+        button:hover { background: #5a6fd8; }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        #timer {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d9534f;
+            margin: 20px 0;
+        }
+        #progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #ddd;
+            border-radius: 5px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        #progress-fill {
+            height: 100%;
+            background: #28a745;
+            width: 0%;
+            transition: width 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Live TypingTest Ashwani.com</h1>
+        <p>Type the text below as fast and accurately as possible. Live stats update as you type!</p>
+        <div id="sample-text"></div>
+        <textarea id="input-area" placeholder="Start typing here..."></textarea>
+        <div class="stats">
+            <div class="stat">WPM: <span id="wpm">0</span></div>
+            <div class="stat">Accuracy: <span id="accuracy">0%</span></div>
+            <div class="stat">Errors: <span id="errors">0</span></div>
+        </div>
+        <div id="timer">Time: 5:00</div>
+        <div id="progress-bar"><div id="progress-fill"></div></div>
+        <button id="start-btn">Start Test</button>
+        <button id="reset-btn">Reset</button>
+    </div>
+
+    <script>
+        // Random text generator (array of sample texts)
+        const texts = [
+            "The quick brown fox jumps over the lazy dog. This is a sample paragraph for the typing test. Practice makes perfect, so keep typing to improve your skills. Remember to focus on accuracy as well as speed.",
+            "In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit-hole, and that means comfort.",
+            "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness.",
+            "To be or not to be, that is the question: Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune, or to take arms against a sea of troubles, and by opposing end them?",
+            "All happy families are alike; each unhappy family is unhappy in its own way. Everything was in confusion in the Oblonskys' house. The wife had discovered that the husband was carrying on an intrigue with a French girl."
+        ];
+
+        let sampleText = "";
+        let startTime;
+        let timerInterval;
+        let timeLeft = 300; // 5 minutes
+        let errors = 0;
+
+        const sampleTextDiv = document.getElementById('sample-text');
+        const inputArea = document.getElementById('input-area');
+        const startBtn = document.getElementById('start-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const timerDisplay = document.getElementById('timer');
+        const wpmSpan = document.getElementById('wpm');
+        const accuracySpan = document.getElementById('accuracy');
+        const errorsSpan = document.getElementById('errors');
+        const progressFill = document.getElementById('progress-fill');
+
+        function generateRandomText() {
+            sampleText = texts[Math.floor(Math.random() * texts.length)];
+            sampleTextDiv.textContent = sampleText;
+        }
+
+        function updateTimer() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerDisplay.textContent = `Time: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            progressFill.style.width = `${((300 - timeLeft) / 300) * 100}%`;
+            if (timeLeft <= 0) {
+                endTest();
+            } else {
+                timeLeft--;
+            }
+        }
+
+        function calculateWPM(typedText, timeTaken) {
+            const words = typedText.trim().split(/\s+/).length;
+            const minutes = timeTaken / 60;
+            return minutes > 0 ? (words / minutes).toFixed(2) : 0;
+        }
+
+        function calculateAccuracy(typed) {
+            let correct = 0;
+            errors = 0;
+            for (let i = 0; i < typed.length; i++) {
+                if (typed[i] === sampleText[i]) {
+                    correct++;
+                } else {
+                    errors++;
+                }
+            }
+            return typed.length > 0 ? ((correct / typed.length) * 100).toFixed(2) : 0;
+        }
+
+        function updateLiveStats() {
+            const typedText = inputArea.value;
+            const timeTaken = (Date.now() - startTime) / 1000;
+            const wpm = calculateWPM(typedText, timeTaken);
+            const accuracy = calculateAccuracy(typedText);
+            wpmSpan.textContent = wpm;
+            accuracySpan.textContent = `${accuracy}%`;
+            errorsSpan.textContent = errors;
+        }
+
+        function highlightText() {
+            const typedText = inputArea.value;
+            let highlighted = "";
+            for (let i = 0; i < sampleText.length; i++) {
+                if (i < typedText.length) {
+                    if (typedText[i] === sampleText[i]) {
+                        highlighted += `<span class="correct">${sampleText[i]}</span>`;
+                    } else {
+                        highlighted += `<span class="incorrect">${sampleText[i]}</span>`;
+                    }
+                } else if (i === typedText.length) {
+                    highlighted += `<span class="current">${sampleText[i]}</span>`;
+                } else {
+                    highlighted += sampleText[i];
+                }
+            }
+            sampleTextDiv.innerHTML = highlighted;
+        }
+
+        function startTest() {
+            generateRandomText();
+            startTime = Date.now();
+            inputArea.value = '';
+            inputArea.focus();
+            startBtn.disabled = true;
+            resetBtn.disabled = false;
+            timeLeft = 300;
+            errors = 0;
+            timerInterval = setInterval(updateTimer, 1000);
+            inputArea.addEventListener('input', () => {
+                updateLiveStats();
+                highlightText();
+            });
+        }
+
+        function endTest() {
+            clearInterval(timerInterval);
+            inputArea.removeEventListener('input', updateLiveStats);
+            inputArea.removeEventListener('input', highlightText);
+            startBtn.disabled = false;
+            resetBtn.disabled = false;
+            alert("Test ended! Check your stats.");
+        }
+
+        function resetTest() {
+            clearInterval(timerInterval);
+            timeLeft = 300;
+            timerDisplay.textContent = 'Time: 5:00';
+            progressFill.style.width = '0%';
+            inputArea.value = '';
+            sampleTextDiv.textContent = '';
+            wpmSpan.textContent = '0';
+            accuracySpan.textContent = '0%';
+            errorsSpan.textContent = '0';
+            startBtn.disabled = false;
+            resetBtn.disabled = true;
+        }
+
+        startBtn.addEventListener('click', startTest);
+        resetBtn.addEventListener('click', resetTest);
+        resetBtn.disabled = true;
+
+        // Initialize
+        generateRandomText();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Display the revars a Number</h1>
+    <script>
+        let no=98765;
+        //  parseInt((prompt("Enter a Number:")));
+        let dis=no;
+        let  temp=0;
+        let ver=0;
+        do{
+            temp=no%10;
+            ver=ver*10+temp;
+            no= parseInt(no/10);
+        }
+        while(no>0);
+        document.write("You are number is:" +dis+ "<br>");
+        document.write("Reviers number is:" +ver);
+    </script>
+</body>
+</html>

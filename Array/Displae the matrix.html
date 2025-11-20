@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Devlop javasript code and Display the matrix </h1>
+    <script>
+        var a, i, j,m,n;
+        m= parseInt(prompt("Enter the Rows Llimit :"));
+        n= parseInt(prompt("Enter the Column Llimit :"));
+        a= new Array(m,n);
+        for(i=0; i<m; i++){
+            a[i]=new Array(n);
+        }
+        //+++++++Read matrix++++++++++++++++++++++++++++++++
+        for(i=0; i<m; i++){
+            for(j=0; j<m; j++){
+                a[i][j]=parseInt(prompt("Enter the Array Limit  :"));
+            }
+        }
+        //++++++++++++Display Matrix++++++++++++++++++++++
+       
+            for(i=0; i<m; i++){
+                for (j=0; j<n; j++){
+                    document.write(a[i][j]," ");
+                }
+                document.write("<br>")
+            }
+    </script>
+    <body>
+       
+    </body>
+</body>
+</html>

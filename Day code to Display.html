@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        day Code  Number to Display
+    </h1>
+    <script>
+        let no =parseInt(prompt("Enter Day Code Numbber:(1 to 8)"));
+        let displayOut;
+        switch(no){
+            case 1:
+                displayOut="SUNDAY";
+                break;
+                 case 2:
+                displayOut="MONDAY";
+                 break;
+                 case 3:
+                displayOut="TUESDAY";
+                 break;
+                 case4:
+                displayOut="WEDNESDAY";
+                 break;
+                 case 5:
+                displayOut="THERSDAY";
+                 break;
+                 case 6:
+                displayOut="FRIDAY";
+                 break;
+                 case 7:
+                displayOut="STURDAY"; 
+                break;
+                 case 8:
+                displayOut="Incvalid ! Day Code.";
+                 default:
+               
+        }
+        document.write("Day is:" + displayOut);
+    </script>
+</body>
+</html>

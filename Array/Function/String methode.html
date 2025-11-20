@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string methode</title>
+</head>
+<body>
+    <h1>String METHODE</h1>
+<script>
+    let text = "Hello World!";
+    document.write("Original String: " + text + "<br>");
+
+    // LENGTH
+    document.write("<h3>Length of the string</h3>");
+    document.write("Length: " + text.length + "<br><hr>");
+
+    // TO UPPERCASE
+    document.write("<h3>Convert to Uppercase</h3>");
+    document.write("Uppercase: " + text.toUpperCase() + "<br><hr>");
+
+    // TO LOWERCASE
+    document.write("<h3>Convert to Lowercase</h3>");
+    document.write("Lowercase: " + text.toLowerCase() + "<br><hr>");
+
+    // SLICE
+    document.write("<h3>Slice Method</h3>");
+    document.write("Slice (0, 5): " + text.slice(0, 5) + "<br><hr>");
+
+    // REPLACE
+    document.write("<h3>Replace Method</h3>");
+    document.write("Replace 'World' with 'JavaScript': " + text.replace("World", "JavaScript") + "<br><hr>");
+
+    // CONCATENATE
+    document.write("<h3>Concatenate Strings</h3>");
+    let text2 = " How are you?";
+    document.write("Concatenated String: " + text.concat(text2) + "<br><hr>");
+
+    // TRIM
+    document.write("<h3>Trim Method</h3>");
+    let textWithSpaces = "   Hello World!   ";
+    document.write("Trimmed String: '" + textWithSpaces.trim() + "'<br><hr>");
+
+    // SPLIT
+    document.write("<h3>Split Method</h3>");
+    let fruits = "Apple, Banana, Cherry";
+    let fruitArray = fruits.split(", ");
+    document.write("Fruits Array: " + fruitArray + "<br><hr>");
+</script>
+</body>
+</html>

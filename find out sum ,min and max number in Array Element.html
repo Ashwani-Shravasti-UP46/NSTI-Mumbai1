@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>find out sum ,min and max number in Array Element</h2>
+    <script>
+         let a= parseInt(prompt("Enter the array element! :"));//[16,19,44,36,69,98,74,53]
+         document.write("the array element are : [ ");
+         let sum=0;
+         let min=a[0];
+        let  max=a[0];
+for(let  num of a){
+    sum+=num;
+    if(num < min) min=num;
+    if(num > max) max=num;
+    document.write(num+ " ")
+}
+
+document.write("]<br>the sum of Array is : " + sum);
+document.write("<br>the min of Array is : " + min);
+document.write("<br>the max of Array is : " + max);
+    </script>
+</body>
+</html>

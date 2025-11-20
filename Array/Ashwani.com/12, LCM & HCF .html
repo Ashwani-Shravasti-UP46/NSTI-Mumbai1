@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find LCM & HCF</title>
+</head>
+
+<body>
+    <h1>Find LCM and HCF of Two Numbers</h1>
+
+    <script>
+        let num1 = 4; // parseInt(prompt("Enter first number:"));
+        let num2 = 8; /// parseInt(prompt("Enter second number:"));
+
+        let a = num1;
+        let b = num2;
+
+        while (b !== 0) {
+            let temp = b;
+            b = a % b;
+            a = temp;
+        }                                                    
+
+        let hcf = a;
+        let lcm = (num1 * num2) / hcf;
+
+        document.write("First Number: " + num1 + "<br>");
+        document.write("Second Number: " + num2 + "<br>");
+        document.write("HCF (GCD): " + hcf + "<br>");
+        document.write("LCM: " + lcm);
+    </script>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+<h1> HCF  &&   LCM</h1>
+<script>
+    var a = 4;
+var b = 12;
+var c= 6;
+for(var i=1; i<= a * b*c; i++){
+    if (i%a ==0 && i%b ==0 && i%c ==0){
+        break
+    }
+}
+document.write("LCM =" +i);
+</script>
+ </body>
+ </html>

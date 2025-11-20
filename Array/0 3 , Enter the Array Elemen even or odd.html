@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> condition, Enter the Array Elemen even or odd</h1>
+
+    <script>
+        var a, i, n;
+        a = new Array(n);
+        n = parseInt(prompt("Enter the Array limit:  "));
+        document.write("The Array Elemente are : ");
+        for (i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Enter the Array Element : "));
+            //document.write(a[i] + " , ");
+        }
+        for (i = 0; i < n; i++) {
+            document.write(a[i] + " , ");
+        }
+        // even  sepretion +++++++++++++++
+        document.write("<br> Even Elemente of the Array:");
+        for (i = 0; i < n; i++) {
+            if (a[i] % 2 == 0)
+                document.write(a[i] + ", ");
+        }
+        // Odd sepretion +++++++++++++++
+
+        document.write("<br> Odd Elemente of the Array: ");
+        for (i = 0; i < n; i++) {
+            if (a[i] % 2 != 0)
+                document.write(+a[i] + ", ");
+        }
+    </script>
+</body>
+
+</html>

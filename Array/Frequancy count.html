@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+
+<body>
+    <h1>Frequancy count</h1>
+    <script>
+        var a = [];
+        var n, search_key, fc=0;
+        a = new Array();
+            n = parseInt(prompt("Enter the Bubble sorting array limit:"));
+        search_key = parseInt(prompt("Enter the Bubble sorting array limit:"));
+        for (i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Enter array element " + (i + 1) + ":"));
+        }
+
+        document.write("<br>Enter Array Elements are:<br>");
+        for (i = 0; i < n; i++) {
+            document.write(a[i] + ", ");
+            if (a[i] == search_key) {
+                fc++;
+            }
+        }
+
+         
+        if(fc>0){
+            document.write("<br><br>Element " + search_key + " found " + fc + " times in the array.<br>");
+        } else {
+            document.write("<br><br>Element " + search_key + " not found in the array.<br>");
+        }
+       
+        
+    </script>
+</body>
+
+</html>

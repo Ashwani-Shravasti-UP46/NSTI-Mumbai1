@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a, n, i, even, odd, ec = 0, oc = 0;
+        n =6; //parseInt(prompt("Enterr the limit:"));
+        a = new Array(n);
+        even = new Array(n);
+        odd = new Array(n);
+        for (i = 0; i < n; i++) {
+            a=12, 11, 45, 70, 33, 50,21; //parseInt(prompt("Enter the elements of the Array : "));
+        }
+        for (i = 0; i < n; i++) {
+            if (a[i] % 2 == 0) {
+                even[ec] = a[i]; ec++;
+            } else {
+                odd[oc] = a[i];
+                oc++;
+            }
+        }
+        for (i = 0; i < n; i++) {
+            document.wtite(a[i] + " , ");
+            document.write("Orignel Array:" + i + " ");
+        }
+        for (i = 0; i < n; i++) {
+            document.wtite(ec[i] + " , ");
+            document.write("Even Array:" + even + "<br>");
+        }
+        for (i = 0; i < n; i++) {
+            document.wtite(oc[i] + " , ");
+            document.write("Odd Array:" + odd + "<br>");
+        }
+    </script>
+</body>
+
+</html>

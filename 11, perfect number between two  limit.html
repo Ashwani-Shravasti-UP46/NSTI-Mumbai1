@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Numbers Between Two Numbers</title>
+</head>
+
+<body>
+    <h1>Perfect Numbers Between Two Numbers</h1>
+
+    <script>
+
+        let limit1 = parseInt(prompt("Enter starting number:"));
+        let limit2 = parseInt(prompt("Enter ending number:"));
+
+        // document.write("<h3>Perfect numbers between " + limit1 + " and " + limit2 + " are:</h3>");
+
+        for (let num = limit1; num <= limit2; num++) {
+            let sum = 0;
+            for (let i = 1; i <= num / 2; i++) {
+                if (num % i === 0) {
+                    sum += i;
+                }
+            }
+
+            if (sum === num && num !== 0) {
+                document.write(num + "<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

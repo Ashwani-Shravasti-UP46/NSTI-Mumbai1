@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polindrome or not</title>
+</head>
+
+<body>
+    <h2> Develop JavaScript code to this given Palindrom or not</h2>
+    <script>
+        var str1, revstr, l, i;
+        str1 = prompt("Enter the string :");
+        document.write(str1);
+        l = str1.length;
+        revstr = "";
+        document.write("<br>");
+        for (i = l - 1; i >= 0; i--) {
+            revstr = revstr + str1.charAt(i);
+        }
+        if (str1 == revstr) {
+            document.write(str1 + " is a palindrom");
+        }
+        else {
+            document.write(str1 + "is not palindrom")
+        }
+
+    </script>
+</body>
+
+</html>

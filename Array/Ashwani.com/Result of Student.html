@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Result Sheet</h1>
+    <script>
+        let JavaScript = parseInt(prompt("Enter JavaScript:"));
+        let Networking = parseInt(prompt("Enter Networking:"));
+        let PHP = parseInt(prompt("Enter PHP:"));
+        let Python = parseInt(prompt("Enter Python:"));
+        let MySql = parseInt(prompt("Enter MySql:"));
+
+        let totaleMark = JavaScript + Networking + PHP + Python + MySql;
+        let percentage = totaleMark / 5;
+
+        let grade; 
+        if (percentage > 90) grade = "A+";
+        else if (percentage > 80) grade = "A";
+        else if (percentage > 70) grade = "B+";
+        else if (percentage > 60) grade = "B";
+        else if (percentage > 50) grade = "C+";
+        else if (percentage > 40) grade = "C";
+        else if (percentage > 30) grade = "D";
+        else grade = "E";
+
+        let result = "Passed";
+        if (JavaScript < 30 || Networking < 30 || PHP < 30 || Python < 30 || MySql < 30)
+            result = "Failed!";
+
+        document.write("<h3>Result Sheet of Student</h3>");
+        document.write("<table border='1' cellpadding='6' cellspacing='1'>");
+        document.write("<tr><th>Subject</th><th>Mark</th></tr>");
+        document.write("<tr><td>JavaScript</td><td>" + JavaScript + "</td></tr>");
+        document.write("<tr><td>Networking</td><td>" + Networking + "</td></tr>");
+        document.write("<tr><td>PHP</td><td>" + PHP + "</td></tr>");
+        document.write("<tr><td>Python</td><td>" + Python + "</td></tr>");
+        document.write("<tr><td>MySQL</td><td>" + MySql + "</td></tr>");
+        document.write("<tr><th>Total</th><td>" + totaleMark + "</td></tr>");
+        document.write("<tr><th>Percentage</th><td>" + percentage.toFixed(2) + "%</td></tr>");
+        document.write("<tr><th>Grade</th><td>" + grade + "</td></tr>");
+        document.write("<tr><th>Result</th><td>" + result + "</td></tr>");
+        document.write("</table>");
+    </script>
+</body>
+
+</html>

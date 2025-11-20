@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>marcks %</title>
+    <style>
+        table,
+        th,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<h1>Result Sheet of Trainee</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Subject</th>
+            <th>Mark option</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Networking</td>
+            <td class="mark"></td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td class="mark"></td>
+        </tr>
+        <td>PHP</td>
+        <td class="mark"></td>
+        <tr>
+            <td>Python</td>
+            <td class="mark"></td>
+        </tr>
+        <tr>
+            <td>MySQL</td>
+            <td class="mark">
+            </td>
+        </tr>
+        
+        </tr>
+        </tr>
+    </tbody>
+</table>
+
+<body>
+    <script>
+        marksTable = document.getElementsByClassName("mark");
+        let i = 0,
+            gradeChek = true,
+            totalMark = 0,
+            mark = [];
+        mark[0] = parseInt(prompt("1 Enter mark of Networking:"));
+        mark[1] = parseInt(prompt("2 Enter mark of JavaScript:"));
+        mark[2] = parseInt(prompt("3 Enter mark of PHP:"));
+        mark[3] = parseInt(prompt("4 Enter mark of Python:"));
+        mark[4] = parseInt(prompt("5 Enter mark of MySQL:"));
+        mark.forEach((element) => {
+            marksTable[i].innerText = element;
+            i++;
+            totalMark = totalMark + element;
+            if (element < 30) {
+                gradeChek = false;
+            }
+        });
+        percentage = Number((totalMark / 5).toFixed(2));
+        let grade;
+        if (percentage >= 90 && percentage <= 100)
+            document.write("<br> Grade:A+");
+        else if (percentage >= 80 && percentage <= 90)
+            document.write("<br>Grade: A" + grade);
+        else if (percentage >= 70 && percentage <= 80)
+            document.write("<br>Grade:B+");
+        else if (percentage >= 60 && percentage < 70)
+            document.write("<br>Grade: B");
+        else if (percentage >= 50 && percentage <= 60)
+            document.write("<br>Grade:C+");
+        else if (percentage >= 40 && percentage < 50)
+            document.write("<br>Grade:D+")
+        else if (percentage >= 30 && percentage <= 40)
+            document.write("<br>Grade: D");
+        else if (percentage < 30) document.write("<br>Grade: E");
+        gradeChek ? (gradeChek = "Passed") : (gradeChek = "Faild !");
+        document.write("<br>Totale Mark:" + totalMark);
+        document.write("<br>Percentage:" + percentage + "%<br>");
+        document.write(gradeChek);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

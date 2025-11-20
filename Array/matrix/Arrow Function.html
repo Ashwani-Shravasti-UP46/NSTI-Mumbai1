@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+
+<body>
+    <h1>Develop JavaScript code and find the Arrow Function </h1>
+    <script>
+        let num = [10, 20, 30, 40, 50];
+
+        // Arrow Function to calculate Total number in the array
+        let total = a => a.reduce((sum, n) => sum + n, 0);
+
+        // Arrow function to find the average of the numbers in the array
+        let average = a => total(a) / a.length;
+
+        // Display results in the browser
+        document.write("<h3>Numbers:</h3> " + num.join(",") + "<br>");
+        document.write("sum = " + total(num) + "<br>");
+        document.write("Average: " + average(num).toFixed(2));
+    </script>
+</body>
+
+</html>
+ 

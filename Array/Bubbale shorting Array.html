@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sorting Array</title>
+</head>
+<body>          
+    <h1>Bubble Sorting Array</h1>
+    <script>
+       var a = [];
+        var n, i, j, temp;
+
+        n = parseInt(prompt("Enter the Bubble sorting array limit:"));
+
+        for (i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Enter array element " + (i + 1) + ":"));
+        }
+
+        document.write("<br>Array before sorting:<br>");
+        for (i = 0; i < n; i++) {
+            document.write(a[i] + ", ");
+        }
+
+        // Bubble sort logic
+        for (i = 0; i < n ; i++) {
+            for (j = 0; j < n - i - 1; j++) {
+                if (a[j] < a[j + 1]) {
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+
+        document.write("<br><br>Array after sorting:<br>");
+        for (j = 0; j < n; j++) {
+            document.write(a[j] + ", ");
+        }
+    </script>
+</body>
+</html>

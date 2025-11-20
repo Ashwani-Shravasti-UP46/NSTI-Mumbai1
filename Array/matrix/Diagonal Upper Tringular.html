@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagonal Tringular</title>
+</head>
+<body>
+    <h1>Develop JavaScript code to find the Diagonal Upper Tringuler</h1>
+<script>
+        // function to read matrix
+        function readmatrix(c, a) {
+            for (i = 0; i < c; i++) {
+                a[i] = [];
+                for (j = 0; j < c; j++) {
+                    a[i][j] = parseInt(prompt("Enter value for Matrix Element"));
+                }
+            }
+        }
+        // function to display matrix
+        function displaymatrix(c, a) {
+            for (i = 0; i < c; i++) {
+                for (j = 0; j < c; j++) {
+                    document.write(a[i][j] + " ");
+                }
+                document.write("<br>");
+            }
+        }
+        // function to display diagonal tringular matrix
+        function diagonaltringularofmatrix(c, a) {
+            for (i = 0; i < c; i++) {
+                for (j = 0; j < c; j++) {
+                    if (i <= j) {
+                        document.write(a[i][j] + " ");
+                    } else {
+                        document.write("&nbsp;&nbsp;&nbsp;");
+                    }
+                }
+                document.write("<br>");
+            }
+        }   
+        // main code
+        let a, r, c, i, j;
+        // input number of rows and columns
+        r = parseInt(prompt("Enter number of rows of Matrix: "));
+        c = parseInt(prompt("Enter number of columns of Matrix: "));
+        if (r != c) {
+            document.write("Diagonal Tringular is only possible in square matrix. Please reload and enter valid");
+        } else {
+            a = new Array(r);
+            // initialize 2D arrays
+            for (i = 0; i < r; i++)   a[i] = new Array(c);
+            
+            // read matrix
+            readmatrix(c, a);
+            // display matrix
+            document.write("<br><br>Matrix is: <br>");
+            displaymatrix(c, a);
+            // display diagonal tringular matrix
+            document.write("<br><br>Diagonal Tringular of Matrix is: <br>");
+            diagonaltringularofmatrix(c, a);
+        }
+</script>
+
+</body>
+</html>

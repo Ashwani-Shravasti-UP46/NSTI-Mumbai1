@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Recursion Function to Calculate Factorial</h2>
+    <script>
+        // Function to calculate factorial using recursion
+        function factorial(n) {
+            // Base case: if n is 0 or 1, return 1
+            if (n === 0 || n === 1) {
+                return 1;
+            } else {  
+                return n * factorial(n - 1);// Recursive case: n * factorial of (n-1)
+            }
+        }
+        // Example usage
+        let num =6  // parseInt(prompt("Enter a number to calculate its factorial:")); 
+        document.write(`<hr>`);
+        let result = factorial(num);
+        document.write(`Your input value is: ${num} <hr> The factorial of Number is ${result}`);
+        document.write(`..<hr>..`);
+        
+
+    </script>
+</body>
+</html> 

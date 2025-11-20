@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Amstrong num between mux 2 number</h1>
+    <script>
+        let limit1 = parseInt(prompt("Enter your amstrong num1:"));
+        let limit2 =parseInt(prompt("Enter your amstrong num2:"));
+        //     let temp=num;
+        //     let sum=0;
+        // document.write("your number is :" +num+ "and" +num2);
+
+        for (var num = limit1; num <= limit2; num++) {
+            var dup = num;
+            var temp = 0;
+            var digit = num.toString().length;
+
+        }
+        while (temp > 0) {
+            var digit = temp % 10;
+            sum = sum + (digit * digit* digit);
+            temp = Math.floor(temp / 10);
+
+        }
+        if (dup == num) {
+            document.write("Number:" + num + " Number is Armstrong:")
+         } else{                                                                                                         
+        document.write(num+" Number is not Armstrong:")
+
+           }
+    </script>
+</body>
+
+</html>

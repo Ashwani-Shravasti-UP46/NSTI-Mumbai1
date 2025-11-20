@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object methode</title>
+</head>
+
+<body>
+    <h2>Develop JavaScript code to creat object employee deteals</h2>
+    <script>
+
+        let emp = {
+            id: 118,
+            name: "Ashwani",
+            salary: 25000,
+        }
+        document.write("Employee ID: " + emp.id + "<br>");
+        document.write("Employee Name: " + emp.name + "<br>");
+        document.write("Employee Salary: " + emp.salary + "<br>");
+        document.write("<hr>");
+    </script>
+    <script>
+        var emp1 = new Object();
+
+        emp1.id = 118;
+        emp1.name = "Ashwani";
+        emp1.salary = 25000;
+
+        document.write("Employee ID: " + emp1.id + "<br>");
+        document.write("Employee Name: " + emp1.name + "<br>");
+        document.write("Employee Salary: " + emp1.salary + "<br>");
+        document.write("<hr>");
+    </script>
+    <script>
+        //conctructor function
+        function Emp(id, name, salary) {
+            this.id = id;
+            this.name = name;
+            this.salary = salary;
+        }
+
+        let emp2 = new Emp(118, "Ashwani", 25000);
+
+        document.write("Employee ID: " + emp2.id + "<br>");
+        document.write("Employee Name: " + emp2.name + "<br>");
+        document.write("Employee Salary: " + emp2.salary + "<br>");
+        document.write("<hr>");
+    </script>
+    <script>
+        //display employee details by using array of objects
+        var emp3 = [107, "Ashwani", 45000];
+
+        for (var i = 0; i < emp3.length; i++) {
+            if (i == 0) {
+                document.write("Employee ID: " + emp3[i] + "<br>");
+            }
+            else if (i == 1) {
+                document.write("Employee Name: " + emp3[i] + "<br>");
+            }
+            else if (i == 2) {
+                document.write("Employee Salary: " + emp3[i] + "<br>");
+            }
+        }
+        // document.write("Employee ID: " + emp3.id + "<br>");
+        // document.write("Employee Name: " + emp3.name + "<br>");
+        // document.write("Employee Salary: " + emp3.salary + "<br>");
+        document.write("<hr>");
+    </script>
+    <script>
+        //creating an array using the 'new array()' method
+        var emp4 = new Array();
+        emp4[0]= "Ashwani";
+        emp4[1]= "arun";
+        emp4[2]= "rahul";
+        for(var j=0; j<emp4.length; j++){
+            document.write("    : " + emp4[j] + "");
+        }
+document.write("<hr>");
+    </script>
+    <script>
+        //constructor function for product details
+        function product(pid,pname, price,qty) {
+            this.pid = pid;
+            this.pname = pname;
+            this.price = price;
+        }
+        let prod1 = new product(101, "mobile", 25000);
+        document.write("Product ID: " + prod1.pid + "<br>");
+        document.write("Product Name: " + prod1.pname + "<br>");
+        document.write("Product Price: " + prod1.price + "<br>");
+        document.write("<hr>");
+        
+
+    </script>
+</body>
+
+</html>

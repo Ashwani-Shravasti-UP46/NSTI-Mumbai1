@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <h1>Nth power of a number using function</h1>
+    <script>
+        var p, n;
+        //Function 
+        function power(x, n) {
+            for (i = 1;  i <= n; i++) {
+                //++++++++++++++++c calculate +++++++++++++++++
+                result = p **i;
+            }
+            return result;
+        }
+        var p, n, result;
+        //++++++++++++ Inout  the value++++++++++++++++++++++++++++++++
+        p =2 // parseInt(prompt("Enter the number value :"));
+        n =3   // parseInt(prompt("Enter the limit Value :"));
+        //+++++++++++++++++++ Display the Nth power of a number+++++++++++++++++++++++++++
+        document.write("<br> Enter the Nuber :" + p);
+                
+        document.write("<br> Enter the exponent limit :" + n);
+        rresult = power(p,n);
+        document.write("<br> " + p + "<sup>" + n + "</sup>=" + result);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+
+<html >
+<body>
+    multiple matrix
+    <script>
+        function readMatrix(a, m, n) {
+            var i, j;
+            for (i = 0; i < m; i++) {
+                for (j = 0; j < n; j++) {
+                    a[i][j] = parseInt(prompt(" Enter the Matrix Element :"));
+                }
+            }
+        }
+        function displayMatrix(a, m, n) {
+            var i, j;
+            for (i = 0; i < m; i++) {
+                for (j = 0; j < n; j++) {
+                    document.write(a[i][j] + " ");
+                }
+                document.write("<br>");
+            }
+        }
+        function multiplyMatrix(a, b, c, m, n,q) {
+            var i, j, k=0;
+            for (i = 0; i < m; i++) {
+                for (j = 0; j < p; j++) {
+                    c[i][j] = 0;
+                    for (k = 0; k < n; k++) {
+                        c[i][j] =c[i][j]+ a[i][k] * b[k][j];
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        var a, b, c, m, n, p, q, i, j;
+         m = parseInt(prompt(" Enter the number of first rows matrix :"));
+         n = parseInt(prompt(" Enter the number of second columns matrix :"));
+         p = parseInt(prompt(" Enter the number of first row  matrix :"));
+         q = parseInt(prompt(" Enter the number of second columns  matrix :"));
+        if (n == p) {
+         a = new Array(m, n);
+         b = new Array(p, q);
+         c = new Array(m, n);
+        for (var i = 0; i < m; i++)  a[i] = new Array(n);
+        for (var i = 0; i < n; i++)  b[i] = new Array(q);
+        for (var i = 0; i < m; i++)  c[i] = new Array(n);
+        readMatrix(a, m, n);
+        readMatrix(b, p, q);
+        // atrix(b,p,q);
+        document.write(" First Matrix :<br>");
+        displayMatrix(a, m, n);
+        document.write(" Second Matrix :<br>");
+        displayMatrix(b, p, q);
+        multiplyMatrix(a, b, c, m, n, q);
+        document.write(" Resultant Matrix after multiplication :<br>");
+        displayMatrix(c, m, q);
+        }
+else
+ document.write(" Matrix multiplication not possible ");
+    </script>
+</body>
+
+</html>

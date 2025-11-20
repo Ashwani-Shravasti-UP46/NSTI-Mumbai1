@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>even or odd sepration</title>
+</head>
+
+<body>
+    <h2>Develop JavaScript code to display Even or Odd sepration </h2>
+    <script>
+        var a, i, n, even, odd, ec = 0, oc = 0, sum = 0;
+        n = parseInt(prompt("Enter the array limit :"));
+        document.write("The array limit is :" + n + "<br>");
+
+        a = new Array();
+        even = new Array();
+        odd = new Array();
+
+        for (i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Enter the array element :"));
+            sum = sum + a[i];
+            if (a[i] % 2 == 0) {
+                even[ec] = a[i];
+                ec++;
+            } else {
+                odd[oc] = a[i];
+                oc++;
+            }
+        }
+
+        document.write("The even numbers are :<br>");
+        for (i = 0; i < ec; i++)
+            document.write(even[i] + "<br>");
+
+        document.write("The odd numbers are :<br>");
+        for (i = 0; i < oc; i++)
+            document.write(odd[i] + " <br>");
+
+        document.write("The sum of all array elements is :" + sum);
+    </script>
+</body>
+
+</html>
