@@ -1,30 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bubble Sorting Array</title>
 </head>
-<body>          
+
+<body>
     <h1>Bubble Sorting Array</h1>
     <script>
-       var a = [];
-        var n, i, j, temp;
-
+        var a, n, i, j, temp;
         n = parseInt(prompt("Enter the Bubble sorting array limit:"));
-
+        var a = new Array();
         for (i = 0; i < n; i++) {
-            a[i] = parseInt(prompt("Enter array element " + (i + 1) + ":"));
+            a[i] = parseInt(prompt("Enter array element "));
         }
-
         document.write("<br>Array before sorting:<br>");
         for (i = 0; i < n; i++) {
-            document.write(a[i] + ", ");
+            document.write(a[i] + " ");
+        }
+        ////Ascending Array
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < n - i - 1; j++) {
+                if (a[j] > a[j + 1]) {
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
         }
 
-        // Bubble sort logic
-        for (i = 0; i < n ; i++) {
+        document.write("<br><br>Ascendiing Array after sorting:<br>");
+        for (j = 0;  < n; j++) {
+            document.write(a[j] + ", ");
+        }
+
+
+        //decending Array Bubble sort logic
+        for (i = 0; i < n; i++) {
             for (j = 0; j < n - i - 1; j++) {
                 if (a[j] < a[j + 1]) {
                     temp = a[j];
@@ -34,10 +48,14 @@
             }
         }
 
-        document.write("<br><br>Array after sorting:<br>");
-        for (j = 0; j < n; j++) {
-            document.write(a[j] + ", ");
+        document.write("<br><br>Decendiing Array after sorting:<br>");
+        for (i = 0; i < n; i++) {
+            document.write(a[i] + ", ");
         }
+
+        //++++++++++++++++++++++++++++++++++++
+
     </script>
 </body>
+
 </html>

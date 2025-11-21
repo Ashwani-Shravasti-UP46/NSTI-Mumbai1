@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOMs using by gender</title>
+</head>
+<body>
+    <script>
+        function getgender(){
+            var gender=document.getElementsByName("gender");
+            alert("Total Gender: " + gender.length);
+        }
+    </script>
+       <form >
+        male=<input type="radio" name="gender" value="male">
+        female=<input type="radio" name="gender" value="female">
+        other=<input type="radio" name="gender" value="other">  
+        <input type="button" value="Submit" onclick="getgender()">
+       </form>
+</body>
+</html>

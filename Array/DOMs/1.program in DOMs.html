@@ -8,15 +8,15 @@
  <body>
     <script>
       function printvalue(){
-         var name=document.form1.name.valu;
-         alert("Welcome: "+name);
+         let name1 = document.form1.name.value;
+         alert("Welcome: "+ name1);
       }
     </script>
-    <form mane="form1">
+    <form name ="form1">
       Enter Your Name:
-      <input type="name">
-      <input type="button" value="Submit" onclick="printvalue()">
-      
+      <input type="text" name="name" />
+      <input type="button" value ="Submit" onclick =" printvalue()"/>
+
 
     </form>
  </body>
