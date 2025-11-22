@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hobbies Table </title>
+</head>
+<body>
+    <h2>Devlop JavaScript code to find Your Hobbies</h2>
+    <form id="hobbyForm">
+        <label><input type="checkbox" name="hobby" value="Studying"> Studying</label><br>
+        <label><input type="checkbox" name="hobby" value="Traveling"> Traveling</label><br>
+        <label><input type="checkbox" name="hobby" value="Music"> Music Listening</label><br>
+        <label><input type="checkbox" name="hobby" value="Programming"> Programming</label><br>
+        <label><input type="checkbox" name="hobby" value="Cricket"> Playing Cricket</label><br>
+        <label><input type="checkbox" name="hobby" value="Adventuring"> Adventuring</label><br>
+        <input type="button" value="Show Selected Hobbies" onclick="buildTable()" />
+    </form>
+    <p id="tableContainer"></p>
+    <script>
+        function buildTable() {
+            // 1.  checkbox elements get  
+            const checkboxes = document.getElementsByName("hobby");
+            // 2.   checkbox   values  array  
+            const selected = [];
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    selected.push(checkboxes[i].value);
+                }
+            }
+            // 3.  select message 
+            if (selected.length === 0) {
+                document.getElementById("tableContainer").innerHTML = "Pleas select your hobby ।";
+                return;
+            }
+            // 4. HTML table 
+            let html = "<table border='1' cellpadding='10' cellspacing='0'>";
+            html += "<tr><th>Your Hobbies is:</th></tr>";
+            // 5.  selected hobby
+            for (let i = 0; i < selected.length; i++) {
+                html += "<tr><td>" + selected[i] + "</td></tr>";
+            }
+            html += "</table>";
+            // 6. Table page 
+            document.getElementById("tableContainer").innerHTML = html;
+        }
+    </script>
+</body>
+
+</html>
