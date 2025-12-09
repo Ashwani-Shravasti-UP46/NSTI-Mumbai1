@@ -1,0 +1,26 @@
+<html>
+
+<body>
+    <script>
+        var a, n, min, max;
+        n = parseInt(prompt("Entere your array element limit! "));
+        a = new Array(n);
+        for (i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Enter the Array Element are ! "));
+        }
+        document.write("The original Array is : ");
+        for (i = 0; i < n; i++) {
+            document.write(a[i] + " , ");
+        }
+        min = a[0];
+        max = [0];
+        for (i = 0; i < n; i++) {
+            if (a[i] < min) min = a[i];
+            if (a[i] > max) max = a[i]
+        }
+        document.write("<br>The Minium array is = " + min);
+        document.write("<br>The Maximum array is = " + max);
+    </script>
+</body>
+
+</html> 
