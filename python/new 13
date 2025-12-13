@@ -7,9 +7,9 @@ color("red")
 pensize(2)
 circle(1)
 
-for i in range(260):
+for i in range(360):
     rt(i)
-    circle(150, i)
+    circle(160, i)
     fd(i)
     rt(90)
 

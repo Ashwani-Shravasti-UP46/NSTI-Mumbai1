@@ -4,10 +4,10 @@ import pyttsx3
 engine = pyttsx3.init()
 
 # ----------- SETTINGS -------------
-engine.setProperty("rate", 150)     # voice speed
+engine.setProperty("rate", 180)     # voice speed
 engine.setProperty("volume", 0.8)   # voice loudness
 
-# Available Voices List
+ # Available Voices List
 voices = engine.getProperty("voices")
 
 # ---------- VOICE SELECTION -------------
@@ -17,8 +17,8 @@ engine.setProperty("voice", voices[0].id)  # male voice
 
 # ----------- YOUR TEXT -----------------
 text = """
-Hello! Hello Ashwani, You are  using the generated language Python.
-You can change my speed, tone and voice easily.
+Hello! Ashwani, You are  using the most beutifull language Python.
+Python is a popular, high level general-purpose programming languagee known for its simple readable syntax,maaking it beginner-frendly.
 """
 
 # Speak the text
