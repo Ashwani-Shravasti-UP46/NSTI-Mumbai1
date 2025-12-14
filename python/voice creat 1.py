@@ -6,7 +6,6 @@ engine = pyttsx3.init()
 # ----------- SETTINGS -------------
 engine.setProperty("rate", 180)     # voice speed
 engine.setProperty("volume", 0.8)   # voice loudness
-
  # Available Voices List
 voices = engine.getProperty("voices")
 
