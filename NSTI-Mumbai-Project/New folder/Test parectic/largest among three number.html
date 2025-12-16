@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a,b,c;
+        a= parseInt(prompt("Enter the first number"));
+        b= parseInt(prompt("Enter the second number")); 
+        c= parseInt(prompt("Enter the third number"));
+        document.write(`The three number are:a= ${a} <br>b=${b} <br>c=${c} <br>`);
+        if(a>=b && a>=c){
+            document.write("The largest number is: " + a);
+        }else if(b>=a && b>=c){
+            document.write("The largest number is: " + b);
+        }else{
+            document.write("The largest number is: " + c);
+        }
+    </script>
+</body>
+</html>

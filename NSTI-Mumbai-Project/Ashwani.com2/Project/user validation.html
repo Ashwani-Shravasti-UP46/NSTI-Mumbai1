@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <style>
-        body{
+        body {
             margin: 0;
             padding: 0;
         }
-        .user{
-            border: 2px solid;
+
+        .user {
+            border: 2px solid black;
             border-radius: 20px;
             margin-top: 200px;
+            padding: 20px;
+            width: 400px;
         }
-
     </style>
-    
+
 </head>
+
 <body>
     <center>
         <div class="user">
-    <h1>Enter user Id & Password to compleate Login Prosses</h1>
-  Enter The userId :  <input type="text" name="userId" id="userId" placeholder="Eiter the userId">
-    <p id="userIdMessage"></p>
-    Enter The Password:
-    <input type="password" id="userPassword" placeholder="Enter the userPassword">
-    <p id="passwordMessage"></p>
-    Enter The ConformPassword:
-    <input type="text" name="conformPassword" id="conformPassword" placeholder="Ente the conformPassword">
-        <p id="conformMessage"></p>
-        <button onclick="valideUser()">Submit
-        </button>
-        <input type="reset" name="button" id="resetBtn">
+            <h1>Enter user Id & Password to compleate Login Prosses</h1>
+
+            Enter The user Id : <input type="text" id="userId" placeholder="Eiter the userId">
+            <p id="userIdMessage"></p>
+
+            Enter The Password:
+            <input type="password" id="userPassword" placeholder="Enter the userPassword">
+            <p id="passwordMessage"></p>
+
+            Enter The ConformPassword:
+            <input type="text" id="conformPassword" placeholder="Ente the conformPassword">
+            <p id="conformMessage"></p>
+            <button onclick="valideUser()">Submit
+            </button>
+            <input type="reset" name="button" id="resetBtn">
         </div>
 
         <script>
-            function valideUser(){
+            function valideUser() {
 
-                var userId= document.getElementById("userId").value;
-                var userPassword= document.getElementById("userPassword").value;
-                var conformPassword= document.getElementById("conformPassword").value;
-                var userIdMessage= document.getElementById("userMessage");
-                var passwordMessage= document.getElementById("passwordMessage");
-                var conformMessage= document.getElementById("conformMessage");
-                
-                var userIdRegex=/^(?=.*[A-Za-z])(?=.*\d)(?=.*[A-Za-z\d@#$%!*?&]){5,}$/;
-                var passwordRegex=/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])(?=.*[A-Za-z\d@#$%!*?&]){5,}$/;
-            if(userIdRegex.text(userId)){
-                userIdMessage.style.color="blue";
-                userIdMessage.textContent="userId valide";
-            }else{
-                userIdMessage.style.color="red";
-                userIdMessage.style.text.color="userId in not Valide";
+                var userId = document.getElementById("userId").value;
+                var userPassword = document.getElementById("userPassword").value;
+                var conformPassword = document.getElementById("conformPassword").value;
+                var userIdMessage = document.getElementById("userIdMessage");
+                var passwordMessage = document.getElementById("passwordMessage");
+                var conformMessage = document.getElementById("conformMessage");
 
-            }
-            
-            
+                var userIdRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[A-Za-z\d@#$%!*?&]){5,}$/;
+                var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])(?=.*[A-Za-z\d@#$%!*?&]){5,}$/;
+                if (userIdRegex.test(userId)) {
+                    userIdMessage.style.color = "blue";
+                    userIdMessage.textContent = "userId valide";
+                } else {
+                    userIdMessage.style.color = "red";
+                    userIdMessage.textContent = "userId in not Valide";
+
+                }
+                if (passwordRegex.test(userPassword)) {
+                    passwordMessage.style.color = "blue";
+                    passwordMessage.textContent = "Password valide";
+                } else {
+                    passwordMessage.style.color = "red";
+                    passwordMessage.textContent = "Password in not Valide";
+                }
+                if (userPassword === conformPassword) {
+                    conformMessage.style.color = "blue";
+                    conformMessage.textContent = "Password matched";
+                } else {
+                    conformMessage.style.color = "red";
+                    conformMessage.textContent = "Password not matched";
+                }
             }
         </script>
-</center>
+    </center>
 </body>
+
 </html>

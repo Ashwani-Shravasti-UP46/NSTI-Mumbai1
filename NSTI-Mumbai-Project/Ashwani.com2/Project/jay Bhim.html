@@ -85,25 +85,24 @@
             box-sizing: border-box;
         }
 
-      img{ 
-        height: 90px;
-        width: 90px;
-        border-radius: 50px;
-        margin-top: 2px;
-        box-shadow: #194cff;
-      }
-        
+        img {
+            height: 90px;
+            width: 90px;
+            border-radius: 50px;
+            margin-top: 2px;
+            box-shadow: #194cff;
+        }
     </style>
 </head>
 
 <body background="bk.jpg" alt="">
 
-  
-    <button id="login" >Login</button>
+
+    <button id="login">Login</button>
     <br><br>
-    
-   <!-- <input type="" name="" id="">      -->
-<img src="bk.jpg" alt="">
+
+    <!-- <input type="" name="" id="">      -->
+    <img src="bk.jpg" alt="">
 
     <!-- LOGIN PANEL -->
     <div class="loginM" id="loginPanel">
@@ -116,7 +115,7 @@
             <label>Mobile Number</label>
             <input type="text" id="loginMobile" required>
             <button type="submit">Login</button>
-            <p>Don't have an account? <a href="">create an account</a></p>
+            <p>Don't have an account? <a href="user validation.html">create an account</a></p>
 
         </form>
     </div>
@@ -381,8 +380,8 @@
             let today = new Date();
             let age = today.getFullYear() - birthDate.getFullYear();
             let m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m === 0 && today.getDate() 
-            < birthDate.getDate())) {
+            if (m < 0 || (m === 0 && today.getDate()
+                < birthDate.getDate())) {
                 age--;
             }
             document.getElementById("age").value = age;
