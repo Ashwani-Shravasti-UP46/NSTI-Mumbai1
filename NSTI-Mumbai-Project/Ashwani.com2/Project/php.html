@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <a href="/progran2 Ashwani.html"></a>
+    <title>Login & Registration Form</title>
+    <style>
+        * {
+            height: auto;
+            width: auto;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        .loginM {
+            width: 30%;
+            height: 100vh;
+            position: fixed;
+            transition: 0.5s;
+            padding: 40px;
+            right: -500px;
+            top: 0;
+            background-color: #ccc;
+        }
+
+        .loginM span {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .headM {
+            display: flex;
+            margin-top: 100px;
+            justify-content: space-between;
+        }
+
+        .headM h3 {
+            font-size: 20px;
+        }
+
+        .loginM form {
+            margin-top: 40px;
+        }
+
+        .loginM form label {
+            display: block;
+        }
+
+        .loginM form input {
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .loginM form button {
+            width: 100%;
+            margin-top: 30px;
+            padding: 10px 0;
+            color: white;
+            border: none;
+            font-size: 20px;
+            background-color: #194cff;
+        }
+
+        .showM {
+            right: 0px;
+        }
+
+        #registrationForm {
+            display: none;
+            margin-top: 50px;
+        }
+
+        table td {
+            padding: 10px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+      img{ 
+        height: 90px;
+        width: 90px;
+        border-radius: 50px;
+        margin-top: 2px;
+        box-shadow: #194cff;
+      }
+        
+    </style>
+</head>
+
+<body background="bk.jpg" alt="">
+
+  
+    <button id="login" >Login</button>
+    <br><br>
+    
+   <!-- <input type="" name="" id="">      -->
+<img src="bk.jpg" alt="">
+
+    <!-- LOGIN PANEL -->
+    <div class="loginM" id="loginPanel">
+        <span>&times;</span>
+        <div class="headM">
+            <h3>Login</h3>
+            <p>Enter Mobile Number to continue</p>
+        </div>
+        <form id="loginForm">
+            <label>Mobile Number</label>
+            <input type="text" id="loginMobile" required>
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="">create an account</a></p>
+
+        </form>
+    </div>
+    <!-- REGISTRATION FORM -->
+    <div id="registrationForm">
+        <center>
+            <form method="post" action="">
+                <table cellspacing="20" align="center">
+                    <tr>
+                        <td colspan="2" align="center"><b><u>Registration Form</u></b></td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name" placeholder="Enter Your Name" size="40" required></td>
+                    </tr>
+                    <tr>
+                        <td>Father's Name:</td>
+                        <td><input type="text" name="fname" placeholder="Enter Father's Name" size="40" required></td>
+                    </tr>
+                    <tr>
+                        <td>Mother's Name:</td>
+                        <td><input type="text" name="mname" placeholder="Enter Mother's Name" size="40" required></td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth:</td>
+                        <td><input type="date" name="dob" id="dob" onblur="getAge()" required> <input type="text"
+                                name="age" id="age" size="5" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td>
+                            <input type="radio" name="gender" value="Male">Male
+                            <input type="radio" name="gender" value="Female">Female
+                            <input type="radio" name="gender" value="Other">Other
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Religion & Cast:</td>
+                        <td>
+                            <select name="religion">
+                                <option>selector</option>
+                                <option>Buddhism</option>
+                                <option>Hinduism</option>
+                                <option>Tribal Religions</option>
+                                <option>Islam</option>
+                                <option>Sikhism</option>
+                                <option>Christian</option>
+                                <option>Jainism</option>
+                                <option>Judaism</option>
+                                <option>Taoism</option>
+                                <option>Zoroastrianism</option>
+                                <option>Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td>
+                            <select name="state">
+                                <option>selector</option>
+                                <option>Other</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chhattisgarh</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Telangana</option>
+                                <option>Tripura</option>
+                                <option>Uttar Pradesh</option>
+                                <option>Uttarakhand</option>
+                                <option>West Bengal</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>District:</td>
+                        <td>
+                            <select name="district">
+                                <option>selector</option>
+                                <option>Other</option>
+                                <option>Agra</option>
+                                <option>Aligarh</option>
+                                <option>Ambedkar Nagar</option>
+                                <option>Amethi</option>
+                                <option>Amroha</option>
+                                <option>Auraiya</option>
+                                <option>Ayodhya</option>
+                                <option>Azamgarh</option>
+                                <option>Baghpat</option>
+                                <option>Bahraich</option>
+                                <option>Ballia</option>
+                                <option>Balrampur</option>
+                                <option>Banda</option>
+                                <option>Barabanki</option>
+                                <option>Bareilly</option>
+                                <option>Basti</option>
+                                <option>Bhadohi</option>
+                                <option>Bijnor</option>
+                                <option>Budaun</option>
+                                <option>Bulandshahr</option>
+                                <option>Chandauli</option>
+                                <option>Chitrakoot</option>
+                                <option>Deoria</option>
+                                <option>Etah</option>
+                                <option>Etawah</option>
+                                <option>Farrukhabad</option>
+                                <option>Fatehpur</option>
+                                <option>Firozabad</option>
+                                <option>Gautam Buddha Nagar</option>
+                                <option>Ghaziabad</option>
+                                <option>Ghazipur</option>
+                                <option>Gonda</option>
+                                <option>Gorakhpur</option>
+                                <option>Hamirpur</option>
+                                <option>Hapur</option>
+                                <option>Hardoi</option>
+                                <option>Hathras</option>
+                                <option>Jalaun</option>
+                                <option>Jaunpur</option>
+                                <option>Jhansi</option>
+                                <option>Kannauj</option>
+                                <option>Kanpur Dehat</option>
+                                <option>Kanpur Nagar</option>
+                                <option>Kasganj</option>
+                                <option>Kaushambi</option>
+                                <option>Kushinagar</option>
+                                <option>Lakhimpur Kheri</option>
+                                <option>Lalitpur</option>
+                                <option>Lucknow</option>
+                                <option>Maharajganj</option>
+                                <option>Mahoba</option>
+                                <option>Mainpuri</option>
+                                <option>Mathura</option>
+                                <option>Mau</option>
+                                <option>Meerut</option>
+                                <option>Mirzapur</option>
+                                <option>Moradabad</option>
+                                <option>Muzaffarnagar</option>
+                                <option>Pilibhit</option>
+                                <option>Pratapgarh</option>
+                                <option>Rae Bareli</option>
+                                <option>Rampur</option>
+                                <option>Saharanpur</option>
+                                <option>Sant Kabir Nagar</option>
+                                <option>Sant Ravidas Nagar</option>
+                                <option>Shamli</option>
+                                <option>Shravasti</option>
+                                <option>Siddharthnagar</option>
+                                <option>Sitapur</option>
+                                <option>Sonbhadra</option>
+                                <option>Sultanpur</option>
+                                <option>Unnao</option>
+                                <option>Varanasi</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Country:</td>
+                        <td>
+                            <select name="country">
+                                <option>selector</option>
+                                <option>Other</option>
+                                <option>India</option>
+                                <option>Nepal</option>
+                                <option>Bangladesh</option>
+                                <option>Bhutan</option>
+                                <option>Myanmar</option>
+                                <option>SriLanka</option>
+                                <option>Germany</option>
+                                <option>China</option>
+                                <option>Pakistan</option>
+                                <option>Afghanistan</option>
+                                <option>England</option>
+                                <option>Saudi Arabia</option>
+                                <option>Brazil</option>
+                                <option>Japan</option>
+                                <option>Russia</option>
+                                <option>USA</option>
+                                <option>UK</option>
+                                <option>Canada</option>
+                                <option>Australia</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" name="email" placeholder="Enter Email" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td><input type="text" name="phone" placeholder="Enter Phone Number" size="40" required></td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><textarea name="address" rows="5" cols="42"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </center>
+    </div>
+    <!-- <?php if($success): ?>
+    <script>alert('<?php echo $success; ?>');</script>
+    <?php endif; ?> -->
+
+    <script>
+        // LOGIN PANEL
+        let loginBtn = document.querySelector("#login");
+        let closeBtn = document.querySelector(".loginM span");
+        let loginPanel = document.getElementById("loginPanel");
+        let registrationForm = document.getElementById("registrationForm");
+
+        loginBtn.addEventListener("click", () => {
+            loginPanel.classList.add("showM");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            loginPanel.classList.remove("showM");
+        });
+
+        // When login form is submitted, show registration form
+        document.getElementById("loginForm")
+            .addEventListener("submit", function (e) {
+                e.preventDefault();
+                let mobile = document.getElementById("loginMobile").value;
+                if (mobile.length < 10) {
+                    alert("Please enter a valid mobile number");
+                    return;
+                }
+                loginPanel.classList.remove("showM");
+                registrationForm.style.display = "block";
+            });
+
+        // AGE CALCULATION
+        function getAge() {
+            let dob = document.getElementById("dob").value;
+            if (dob === "") return;
+            let birthDate = new Date(dob);
+            let today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            let m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() 
+            < birthDate.getDate())) {
+                age--;
+            }
+            document.getElementById("age").value = age;
+        }
+    </script>
+
+</body>
+
+</html>

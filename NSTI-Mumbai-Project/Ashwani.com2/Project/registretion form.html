@@ -1,0 +1,310 @@
+<html>
+
+<body>
+  <center>
+    <table cellspacing="20" align="center">
+      <form>
+        <tr>
+          <td olspan="2" align="center">
+            <b><u>Regestation form</u></b>
+          </td>
+        </tr>
+        <tr>
+          <td>Name:</td>
+          <td>
+            <input type="Enter your Name" placeholder="Enter Yoyr Name" size="40" id="n1">
+          </td>
+        </tr>
+        <tr>
+          <td>Fathers Name:</td>
+          <td><input type="text" placeholder="Enter Father's Yoyr Name" size="40" id="n2"></td>
+        </tr>
+        <tr>
+          <td>
+            Mothers Name:
+          </td>
+          <td>
+            <input type="text" placeholder="Enter Yoyr Mother's Name" size="40" id="n3">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Date/Birth :
+          </td>
+          <td>
+            <input type="Date" name="Dater1" id="n4" onblur="getage()">
+            <input type="text" name="Age" size="5" disabled id="n">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Gender :
+          </td>
+          <td>
+            <input type="radio" name="gender" id="n5" value="Male">Male:
+            <input type="radio" name="gender" id="n5" value="Female">Female:
+            <input type="radio" name="gender" id="n5" value="Other">Other:
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Religion & Cast :
+
+          <td>
+            <select name="" id="n10">
+              <option>selector</option>
+              <option>Buddhism</option>
+              <option>Hinduism</option>
+              <option>Tribal Religions</option>
+              <option>Islam</option>
+              <option>Sikhism</option>
+              <option>Christian</option>
+              <option>Jainism</option>
+              <option>Judaism</option>
+              <option>Taoism</option>
+              <option>Zoroastrianism</option>
+              <option>Other</option>
+            </select>
+          <td>
+        </tr>
+        <tr>
+          <td>
+            State :
+          </td>
+          <td>
+            <select id="n9">
+              <option>selector</option>
+              <option>Other</option>
+              <option>Andhra Pradesh</option>
+              <option>Arunachal Pradesh</option>
+              <option>Assam</option>
+              <option>Bihar</option>
+              <option>Chhattisgarh</option>
+              <option>Goa</option>
+              <option>Gujarat</option>
+              <option>Haryana</option>
+              <option>Himachal Pradesh</option>
+              <option>Jharkhand</option>
+              <option>Karnataka</option>
+              <option>Kerala</option>
+              <option>Madhya Pradesh</option>
+              <option>Maharashtra</option>
+              <option>Manipur</option>
+              <option>Meghalaya</option>
+              <option>Mizoram</option>
+              <option>Nagaland</option>
+              <option>Odisha</option>
+              <option>Punjab</option>
+              <option>Rajasthan</option>
+              <option>Sikkim</option>
+              <option>Tamil Nadu</option>
+              <option>Telangana</option>
+              <option>Tripura</option>
+              <option>Uttar Pradesh</option>
+              <option>Uttarakhand</option>
+              <option>West Bengal</option>
+            </select>
+        </tr>
+        <tr>
+          <td>
+            District :
+          </td>
+          <td>
+            <select>
+              <option>selector</option>
+              <option>Other</option>
+              <option>Agra</option>
+              <option>Aligarh</option>
+              <option>Ambedkar Nagar</option>
+              <option>Amethi</option>
+              <option>Amroha</option>
+              <option>Auraiya</option>
+              <option>Ayodhya</option>
+              <option>Azamgarh</option>
+              <option>Baghpat</option>
+              <option>Bahraich</option>
+              <option>Ballia</option>
+              <option>Balrampur</option>
+              <option>Banda</option>
+              <option>Barabanki</option>
+              <option>Bareilly</option>
+              <option>Basti</option>
+              <option>Bhadohi</option>
+              <option>Bijnor</option>
+              <option>Budaun</option>
+              <option>Bulandshahr</option>
+              <option>Chandauli</option>
+              <option>Chitrakoot</option>
+              <option>Deoria</option>
+              <option>Etah</option>
+              <option>Etawah</option>
+              <option>Farrukhabad</option>
+              <option>Fatehpur</option>
+              <option>Firozabad</option>
+              <option>Gautam Buddha Nagar</option>
+              <option>Ghaziabad</option>
+              <option>Ghazipur</option>
+              <option>Gonda</option>
+              <option>Gorakhpur</option>
+              <option>Hamirpur</option>
+              <option>Hapur</option>
+              <option>Hardoi</option>
+              <option>Hathras</option>
+              <option>Jalaun</option>
+              <option>Jaunpur</option>
+              <option>Jhansi</option>
+              <option>Kannauj</option>
+              <option>Kanpur Dehat</option>
+              <option>Kanpur Nagar</option>
+              <option>Kasganj</option>
+              <option>Kaushambi</option>
+              <option>Kushinagar</option>
+              <option>Lakhimpur Kheri</option>
+              <option>Lalitpur</option>
+              <option>Lucknow</option>
+              <option>Maharajganj</option>
+              <option>Mahoba</option>
+              <option>Mainpuri</option>
+              <option>Mathura</option>
+              <option>Mau</option>
+              <option>Meerut</option>
+              <option>Mirzapur</option>
+              <option>Moradabad</option>
+              <option>Muzaffarnagar</option>
+              <option>Pilibhit</option>
+              <option>Pratapgarh</option>
+              <option>Rae Bareli</option>
+              <option>Rampur</option>
+              <option>Saharanpur</option>
+              <option>Sant Kabir Nagar</option>
+              <option>Sant Ravidas Nagar</option>
+              <option>Shamli</option>
+              <option>Shravasti</option>
+              <option>Siddharthnagar</option>
+              <option>Sitapur</option>
+              <option>Sonbhadra</option>
+              <option>Sultanpur</option>
+              <option>Unnao</option>
+              <option>Varanasi</option>
+            </select>
+
+          </td>
+        </tr>
+        <td>
+          Country :
+        </td>
+        <td>
+          <select id="n12">
+            <option>selector</option>
+            <option>Other</option>
+            <option>India</option>
+            <option>Nepal</option>
+            <option>Bangladesh</option>
+            <option>Bhutan</option>
+            <option>Myanmar</option>
+            <option>SriLanka</option>
+            <option>Germany</option>
+            <option>China</option>
+            <option>Pakistan</option>
+            <option>Afghanistan</option>
+            <option>England</option>
+            <option>Saudi Arabia</option>
+            <option>Brazil</option>
+            <option>Japan</option>
+            <option>Russia</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Canada</option>
+            <option>Australia</option>
+          </select>
+        </td>
+        </tr>
+        <tr>
+          <td>
+            E-Mail ID :
+          </td>
+          <td>
+            <input type="text" placeholder="Enter your Email ID" size="40" id="n5">
+          </td>
+
+        </tr>
+        <tr>
+          <td>
+            Phone Number :
+          </td>
+          <td>
+            <input type="text" placeholder="Enter your Phone Number" size="40" id="n6">
+          </td>
+        <tr>
+          <td>
+            Address:
+          </td>
+          <td>
+            <textarea rows="5" cols="42" id="n12" name="add"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" id value="Submit" >
+            <input type="reset" value="Reset">
+          </td>
+
+
+
+          
+      </form>
+    </table>
+  </center>
+
+
+  <script>
+/* AGE CALCULATION */
+function getage() {
+  let dob = document.getElementById("n4").value;
+  if (dob === "") return;
+
+  let birthDate = new Date(dob);
+  let today = new Date();
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+  let m = today.getMonth() - birthDate.getMonth();
+
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  document.getElementById("n").value = age;
+}
+
+/* FORM VALIDATION */
+document.querySelector("form").addEventListener("submit", function(e) {
+  let name = document.getElementById("n1").value;
+  let fname = document.getElementById("n2").value;
+  let mname = document.getElementById("n3").value;
+  let dob = document.getElementById("n4").value;
+  let phone = document.getElementById("n6").value;
+
+  if (name === "" || fname === "" || mname === "") {
+    alert("Name, Father Name aur Mother Name zaroori hai");
+    e.preventDefault();
+    return;
+  }
+
+  if (dob === "") {
+    alert("Date of Birth select karo");
+    e.preventDefault();
+    return;
+  }
+
+  if (phone === "" || phone.length < 10) {
+    alert("Sahi Phone Number dalo");
+    e.preventDefault();
+    return;
+  }
+
+  alert("Form Successfully Submit ho gaya ✅");
+});
+</script>
+</body>
+
+</html>
