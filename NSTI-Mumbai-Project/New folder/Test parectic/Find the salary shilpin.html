@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Salari shlip</title>
+</head>
+<body>
+     <h1>Find the salary shlip</h1>
+     <script>
+        let 
+empName, empID, empDesignation, basicPay, dect, hra, da, ta, totalesalary, netSalary;
+empName=prompt("Enter Employ Name:-");
+mepID=prompt("Enter Employ ID:-"); 
+empDesignation=prompt("Enter Employ designation:-");
+basicPay=prompt("Enter Basic Pay:-");
+dect=prompt("Enter Basic Dectiction:-");
+
+hra=basicPay*0.3;
+da=basicPay*0.53;
+ta=basicPay*0.15;
+totalesalary=basicPay+hra+da+ta;
+netSalary=totalesalary-dect;
+
+document.write("Enter Employ Name:-" + empName);
+document.write("<br>Enter Employ ID:-"+empID); 
+document.write("<br>Enter Employ designation:-"+empDesignation);
+document.write("<br>Enter Basic Pay:-"+basicPay);
+document.write("<br>Enter Basic Dectiction:-"+dect);
+document.write("<br>Enter Basic Total Salary:-"+totalesalary);
+document.write("<br>Enter Basic Net Salaryt:-"+netSalary);
+     </script>
+</body>
+</html>

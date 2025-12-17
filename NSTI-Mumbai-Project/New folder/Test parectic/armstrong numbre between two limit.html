@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Armstrong Number</title>
+</head>
+<body>
+    <h2>Armstrong numbers between two limits</h2>
+
+    <script>
+        let limit1 = parseInt(prompt("Enter first number:"));
+        let limit2 = parseInt(prompt("Enter second number:"));
+
+        for (let num = limit1; num <= limit2; num++) {
+            let temp = num;
+            let sum = 0;
+            let digits = num.toString().length;
+
+            while (temp > 0) {
+                let rem = temp % 10;
+                sum += Math.pow(rem, digits);
+                temp = Math.floor(temp / 10);
+            }
+
+            if (sum === num) {
+                document.write(num + " is an Armstrong number<br>");
+            }
+        }
+    </script>
+</body>
+</html>

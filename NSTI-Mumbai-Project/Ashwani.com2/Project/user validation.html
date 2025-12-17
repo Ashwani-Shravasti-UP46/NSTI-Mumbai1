@@ -49,7 +49,7 @@
                 var passwordMessage = document.getElementById("passwordMessage");
                 var conformMessage = document.getElementById("conformMessage");
 
-                var userIdRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[A-Za-z\d@#$%!*?&]){5,}$/;
+                var userIdRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[A-Za-z\d]){5,}$/;
                 var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])(?=.*[A-Za-z\d@#$%!*?&]){5,}$/;
                 if (userIdRegex.test(userId)) {
                     userIdMessage.style.color = "blue";
