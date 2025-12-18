@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find the Quadiretic Equation</title>
+</head>
+<body>
+    <h2>find the Quadiretic Equation in HTML/script</h2>
+    <script>
+        let a, b, c, discriminant, root1, root2;
+        a = parseFloat(prompt("Enter coefficient a:"));
+        b = parseFloat(prompt("Enter coefficient b:"));
+        c = parseFloat(prompt("Enter coefficient c:"));
+
+        discriminant = b * b - 4 * a * c;
+
+        if (discriminant > 0) {
+            root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+            root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+            document.write("Roots are real and different.<br>");
+            document.write("Root 1: " + root1 + "<br>");
+            document.write("Root 2: " + root2 + "<br>");
+        } else if (discriminant === 0) {
+            root1 = root2 = -b / (2 * a);
+            document.write("Roots are real and the same.<br>");
+            document.write("Root: " + root1 + "<br>");
+        } else {
+            let realPart = -b / (2 * a);
+            let imaginaryPart = Math.sqrt(-discriminant) / (2 * a);
+            document.write("Roots are complex and different.<br>");
+            document.write("Root 1: " + realPart + " + " + imaginaryPart + "i<br>");
+            document.write("Root 2: " + realPart + " - " + imaginaryPart + "i<br>");
+        }
+    </script>
+</body>
+</html>
