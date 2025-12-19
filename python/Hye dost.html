@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlled Output</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        #output{
+            font-size: 20px;
+            padding: 20px;
+        }
+        button{
+            padding: 10px 15px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Hello ji 🤗</h2>
+
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+
+    <div id="output"></div>
+
+    <script>
+        const output = document.getElementById("output");
+        let count = 1;
+        const max = 100;
+        let interval = null;
+
+        function start(){
+            if(interval) return; // already running
+
+            interval = setInterval(() => {
+                output.innerHTML += "Hii 👋🥰 Dost 🥰<br>";
+
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth"
+                });
+
+                if(count === max){
+                    stop();
+                }
+                count++;
+            }, 1000); // 1 second
+        }
+
+        function stop(){
+            clearInterval(interval);
+            interval = null;
+        }
+    </script>
+
+</body>
+</html>
