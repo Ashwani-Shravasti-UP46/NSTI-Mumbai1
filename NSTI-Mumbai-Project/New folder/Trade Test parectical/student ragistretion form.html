@@ -1,0 +1,72 @@
+<html>
+
+<body>
+    <center>
+        <!-- <inout type="text" id="text" pascholder="" -->
+        <labele for="Roll Number">Roll Number :</labele>
+        <input type="roll" name="Roll Number" id="roll" placeholder="Roll Number"><br><br>
+
+        <labele for="Name">Student Name :</labele>
+        <input type="text" name="Student Name" id="name" placeholder="Student Name"><br><br>
+
+        <labele for="Roll Number">Fathers Name :</labele>
+        <input type="roll" name="Roll Number" id="fname" placeholder="Father's Name"><br><br>
+
+        <labele for="Roll Number">Mobail Number :</labele>
+        <input type="text" name="" id="monu" placeholder="Mobail Number"><br><br>
+
+        <labele for="Roll Number">Date of Birth :</labele>
+        <input type="date" name="Date of Birth" id="dob" placeholder="Date of Birth"><br><br>
+        <h3>Gender:
+            <input type="radio" name="gender" id="male" value="male">
+            <labele for="male">Male</labele>
+            <input type="radio" name="gender" id="female" value="female">
+            <labele for="female">Female</labele>
+            <input type="radio" name="gender" id="other" value="other">
+            <labele for="other">Other</labele><br><br>
+            course:
+            <select name="course" id="course>
+        <button type=" submit" id="submit">Submit</button>">
+                <option value="">Select Course</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="M.Tech">M.Tech</option>
+                <option value="B.Sc">B.Sc</option>
+                <option value="M.Sc">M.Sc</option>
+            </select><br><br>
+        </h3>
+        <button onclick="studentForm()">Submit</button>
+        <button onclick="resetForm()">Reset</button>
+
+
+        <script>
+            function studentForm() {
+                var roll = document.getElementById("roll").value;
+                var name = document.getElementById("name").value;
+                var fname = document.getElementById("fname").value;
+                var monu = document.getElementById("monu").value;
+                var dob = document.getElementById("dob").value;
+                var gender = document.querySelector('input[name="gender"]:checked').value;
+                var course = document.getElementById("course").value;
+                alert("Roll Number: " + roll + "\nStudent Name: " + name + "\nFather's Name: "
+                 + fname + "\nMobail Number: " + monu + "\nDate of Birth: " + dob + "\nGender: " 
+                 + gender + "\nCourse: " + course);
+            }
+            function resetForm() {
+                document.getElementById("roll").value = "";
+                document.getElementById("name").value = "";
+                document.getElementById("fname").value = "";
+                document.getElementById("monu").value = "";
+                document.getElementById("dob").value = "";
+                document.getElementById("course").value = "";
+                var genderRadios = document.getElementsByName("gender");
+                for (var i = 0; i < genderRadios.length; i++) {
+                    genderRadios[i].checked = false;
+                }
+            }
+
+
+        </script>
+    </center>
+</body>
+
+</html>

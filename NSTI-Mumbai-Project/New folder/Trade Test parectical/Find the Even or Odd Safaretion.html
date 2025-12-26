@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a,n,even,odd,ec=0,oc=0;
+         n= parseInt(prompt("Enter the array limit :"));
+         a= new Array();
+         for(i=0; i<n; i++){
+            a[i]=parseInt(prompt("Enter the Array Element are :"));
+         }
+         document.write("<br> Orignale Array is :-");
+         for (i=0; i<n; i++){
+            document .write(a[i] + "");
+         }
+         even=new Array();
+         odd=new Array();
+         for(i=0; i<n; i++){
+            if(a[i] % 2 == 0) {
+    even[ec] = a[i];
+    ec++;
+} else {
+    odd[oc] = a[i];
+    oc++;
+}}
+         document.write("<br> Even Array is :-");
+         for (i=0; i<ec; i++){
+            document.write(even[i] + "");
+         }
+         document.write("<br> Odd Array is :-");
+         for (i=0; i<oc; i++){
+            document.write(odd[i] + "");
+         }
+
+    </script>
+</body>
+</html>

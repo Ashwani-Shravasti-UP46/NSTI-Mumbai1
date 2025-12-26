@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Happy Birthday My Dear</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+        }
+        button{
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Happy Birthday My Dear 🎉</h1>
+<div id="output"></div>
+<script>
+       let count = 1;
+    let maxCount = 100;
+
+    let interval = setInterval(()=>{
+        if (count <= maxCount){
+            document.getElementById("output").innerHTML +=
+            "🎂Ha🎉pp🎈y🎇🎂 B🎈i🎉r🍕th🎇day🎂<br>";
+            count++;
+        } else {
+            clearInterval(interval);
+            document.getElementById("output").innerHTML +=
+            "Program Finished ✅💠";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>

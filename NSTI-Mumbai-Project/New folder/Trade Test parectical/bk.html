@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>JavaScript Questions</title>
+    
+</head>
+<body>
+
+<h2>Q1. Accept two dates and find difference in days</h2>
+<input type="date" id="date1">
+<input type="date" id="date2">
+<br><br>
+<button onclick="dateDifference()">Find Difference</button>
+<p id="dateAns"></p>
+
+<hr>
+
+<h2>Q2. Print Square of a number</h2>
+<button onclick="squareOfNum()">Click Me</button>
+<p id="squareAns"></p>
+
+<hr>
+
+<h2>Q3. Find perimeter of trapezium (a+b+c+d)</h2>
+<button onclick="trapeziumPerimeter()">Click Me</button>
+<p id="periAns"></p>
+
+<script>
+    // Q1: Date Difference
+    function dateDifference() {
+        let d1 = new Date(document.getElementById("date1").value);
+        let d2 = new Date(document.getElementById("date2").value);
+
+        let diffTime = Math.abs(d2 - d1);
+        let diffDays = diffTime / (1000 * 60 * 60 * 24);
+
+        document.getElementById("dateAns").innerHTML =
+            "Difference is " + diffDays + " days";
+    }
+
+    // Q2: Square of number
+    function squareOfNum() {
+        let num = parseFloat(prompt("Enter a number:"));
+        let square = num * num;
+
+        document.getElementById("squareAns").innerHTML =
+            "Square is: " + square;
+    }
+
+    // Q3: Perimeter of trapezium
+    function trapeziumPerimeter() {
+        let a = parseFloat(prompt("Enter value of a:"));
+        let b = parseFloat(prompt("Enter value of b:"));
+        let c = parseFloat(prompt("Enter value of c:"));
+        let d = parseFloat(prompt("Enter value of d:"));
+
+        let perimeter = a + b + c + d;
+
+        document.getElementById("periAns").innerHTML =
+            "Perimeter of Trapezium is: " + perimeter;
+    }
+</script>
+
+</body>
+</html>

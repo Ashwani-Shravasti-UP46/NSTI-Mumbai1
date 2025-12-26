@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Love Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="output"></div>
+
+<script>
+    let count = 1;
+    let maxCount = 100;
+
+    let interval = setInterval(() => {
+        if (count <= maxCount) {
+            document.getElementById("output").innerHTML +=
+                "I 💓 You dost 😘<br>";
+            count++;
+        } else {
+            clearInterval(interval);
+            document.getElementById("output").innerHTML +=
+                "<br>Program finished ✅";
+        }
+    }, 1000); // 1 second delay
+</script>
+
+</body>
+</html>
