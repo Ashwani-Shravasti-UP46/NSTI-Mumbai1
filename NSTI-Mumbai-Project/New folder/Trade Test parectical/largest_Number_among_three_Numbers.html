@@ -1,0 +1,28 @@
+
+<html lang="en">
+<head>
+    <title>largest Number</title>
+</head>
+<body>
+    <h1>Find the largest Number among three numbers</h1>
+    <script>
+    //==================== Variable Declaration && Intialization ======================
+        let a,b,c;
+    // ==================== Input Reading from User =================================
+        a = parseInt(prompt("Enter the first value :"));
+        b = parseInt(prompt("Enter the Second value : "));
+        c = parseInt(prompt("Enter the Third value : "));
+    // ===========================Input Printing and  Calculation for get result ==========================
+        document.write("A = " + a);
+        document.write("<br>B = " + b);
+        document.write("<br>C = " +c);
+        if(a>b && a>c) {
+            document.write("<br>A is greater");
+        } else if(b>c) {
+            document.write("<br>B is greater");
+        }else{
+            document.write("<br>C is greater");
+        }
+    </script>
+</body>
+</html>
