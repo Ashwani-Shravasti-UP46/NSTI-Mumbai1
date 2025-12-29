@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Find the salary Shlip in Employee </h2>
+    <script>
+        let //empName,empId,empJob,dect,basicPay,hra,da,ta,totalsary,netSalary;
+            empName, empID, empDesi, basicPay, dect, hra, da, ta, totalesalary, netSalary;
+        empName = prompt("Enter Employ Name:-");
+        mepID = prompt("Enter Employ ID:-");
+        empDesi = prompt("Enter Employ designation:-");
+        basicPay = prompt("Enter Basic Pay:-");
+        dect = prompt("Enter Basic Dectiction:-");
+
+        hra = basicPay * 0.30; // House Rent Allowance
+        da = basicPay * 0.53;  // Dearness Allowance
+        ta = basicPay * 0.15;  // Travel Allowance
+
+        totalsary = basicPay + hra + da + ta;
+
+        netSalary = totalsary - dect; // Assuming 10% deduction for taxes and other contributions
+        document.write("Enter Employ Name:-" + empName);
+        document.write("<br>Enter Employ ID:-" + empID);
+        document.write("<br>Enter Employ designation:-" + empDesi);
+        document.write("<br>Enter Basic Pay:-" + basicPay);
+        
+        document.write("<br>Travel: $+++++++++++++++++++++++++++++++++$<br>");
+        document.write("<br>Employment Type: ₹ " + dect + "<br>");
+        document.write("Basic Salary: ₹ " + basicPay + "<br>");
+        document.write("<br>Travel: $+++++++++++++++++++++++++++++++++$<br>");
+
+        document.write("<br>House Rent Allowance (HRA):₹ " + hra + "<br>");
+        document.write("Dearness Allowance (DA):₹ " + da + "<br>");
+        document.write("Travel Allowance (TA): ₹ " + ta + "<br>");
+        document.write("<br>Travel ): $+++++++++++++++++++++++++++++++++$<br>");
+        
+        document.write("<br>Total Salary: ₹ " + totalsary + "<br>");
+        document.write("Net Salary after Deductions: ₹ " + netSalary + "<br>");
+        
+        document.write("<br>Travel ): $+++++++++++++++++++++++++++++++++$<br>");
+        </script>
+
+</body>
+
+</html>

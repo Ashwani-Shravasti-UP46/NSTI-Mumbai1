@@ -1,0 +1,66 @@
+/* Including Style External StyleSheet */
+/* Color Property ➡️foreground */
+h2{
+    color: rgb(110, 2, 110);
+}
+
+/*  <!-- background color property */
+body{
+    background-color: hsl(0, 14%, 69%);
+}
+
+
+/* Color Systems */
+/* RGB ➡️ (255,255,255)*/
+/* Hex (Hexadecimal)➡️#ff,ff,ff */
+
+/* Univarsal Selector *{}*/
+
+/* Element Selector */
+#ind{
+    font-size: 30px;
+    color: rgb(19, 255, 2);
+}
+#ste{
+    font-size: 25px;
+    color: #ff5733;
+}
+#dis{
+    color: aquamarine;
+}
+#blo{
+    color: rgb(255, 0, 255);
+    font-size: 28px;
+}
+#vill{
+    color: #72891c;
+    font-size: 22px;
+}
+/* Class Selector */
+.red{
+    color: red;
+}
+.rem{
+    color: red;
+    text-decoration: line-through;
+    font-size: 24px;}
+    #box{
+     background-color: aqua; 
+     font-size: 30px;
+    }
+    .div,h1,h2,h3{
+        text-align: center;
+        border: #021b3a 2px solid;
+        border-radius: 40px;
+        margin: 10px;
+        padding: 10px;
+        background-repeat: space;
+        height: auto;
+        cursor: pointer;
+        transition: 0.5s;
+        word-wrap: break-word;
+    }
+    .div:hover,h1:hover,h2:hover,h3:hover,.box:hover{
+        background-color: rgb(123, 57, 229);
+        color: white;
+        animation: move 0.5s linear infinite; }

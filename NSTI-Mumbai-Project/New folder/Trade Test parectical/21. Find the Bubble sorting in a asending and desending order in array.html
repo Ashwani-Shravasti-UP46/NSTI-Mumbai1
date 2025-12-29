@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Sort</title>
+</head>
+<body>
+    <h2>Bubble Sort in Ascending and Descending Order</h2>
+
+    <script>
+        let a = [];
+        let n = parseInt(prompt("Enter the array limit:"));
+        let i, j, temp;
+
+        // Input array
+        for (i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Enter array element:"));
+        }
+
+        document.write("Original Array: ");
+        for (i = 0; i < n; i++) {
+            document.write(a[i] + " ");
+        }
+
+        // Ascending Order (Bubble Sort)
+        for (i = 0; i < n - 1; i++) {
+            for (j = 0; j < n - 1 - i; j++) {
+                if (a[j] > a[j + 1]) {
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+
+        document.write("<br><br>Ascending Order: ");
+        for (i = 0; i < n; i++) {
+            document.write(a[i] + " ");
+        }
+
+        // Descending Order (Bubble Sort)
+        for (i = 0; i < n - 1; i++) {
+            for (j = 0; j < n - 1 - i; j++) {
+                if (a[j] < a[j + 1]) {
+                    temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
+                }
+            }
+        }
+
+        document.write("<br><br>Descending Order: ");
+        for (i = 0; i < n; i++) {
+            document.write(a[i] + " ");
+        }
+    </script>
+</body>
+</html>

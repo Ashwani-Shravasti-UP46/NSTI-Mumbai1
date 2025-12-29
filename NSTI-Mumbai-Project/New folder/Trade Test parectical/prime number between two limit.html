@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Prime Numbers Between Two Limits</h2>
+    <script>
+        let num1 = 10; //parseInt(prompt("Enter the lower limit: "));
+        let num2 = 50; //parseInt(prompt("Enter the upper limit: "));
+
+        document.write("Prime numbers between " + num1 + " and " + num2 + " are:<br>");
+
+        for (let num = num1; num <= num2; num++) {
+            let Prime = true;
+
+            if (num <= 1) {
+                Prime = false;
+            } else {
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        Prime = false;
+                        break;
+                    }
+                }
+            }
+
+            if (Prime) {
+                document.write(num + " ");
+            }
+        }
+    </script>
+</body>
+
+</html>

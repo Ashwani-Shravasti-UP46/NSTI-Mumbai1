@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity bill</title>
+
+</head>
+<body>
+    <h2>Find the Electricity bill</h2>
+     <script>
+        var conName, conID, unit, bill, sur = 0;
+        conName = prompt("Ente r costomare Name:");
+        ConID = prompt("Enter costomer ID:");
+        unit = parseInt(prompt("Enter unit:"));
+        if (unit < 100) {
+            bill = (unit * 5);r
+        }
+        else if (unit < 200) {
+            bill = (100 * 5) + ((unit - 100) * 7);
+        }
+        else {
+            bill = ((100 * 5) + (100 * 7) + ((unit - 200) * 10));
+        }
+        if (bill > 1000) {
+            sur = bill * 0.1;
+        }
+        document.write("---------------------------");
+        document.write("<h3>Electricity Rate-</h3>")
+        document.write("---------------------------");
+        document.write("<br>0-100 unit @ ₹5");
+        document.write("<br>101-200 unit @ ₹7");
+        document.write("<br>200 above unit @ ₹10");
+        document.write("<br>---------------------------");
+        document.write("<h3> Your Bill<//h3><br>");
+        document.write("<br>---------------------------<br>");
+
+        document.write("Consumer Namr:-" + conName);
+        document.write("<br>Consumer ID :-" + ConID);
+        document.write("<br>Unit :-" + unit);
+        document.write("<br>sursarch :-" + sur);
+        document.write("<br>Bill :-" + (bill + sur));
+        document.write("<br>---------------------------");
+    </script>
+</body>
+</html>

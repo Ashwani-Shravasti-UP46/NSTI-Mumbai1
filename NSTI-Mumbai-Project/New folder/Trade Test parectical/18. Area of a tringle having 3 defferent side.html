@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Area</title>
+</head>
+<body>
+    <h2>Find the Area of a Triangle (3 different sides)</h2>
+
+    <script>
+        let a = parseFloat(prompt("Enter the length of side a:"));
+        let b = parseFloat(prompt("Enter the length of side b:"));
+        let c = parseFloat(prompt("Enter the length of side c:"));
+
+        document.write("Sides of the triangle are:<br>");
+        document.write("a = " + a + "<br>");
+        document.write("b = " + b + "<br>");
+        document.write("c = " + c + "<br>");
+
+        // Semi-perimeter
+        let s = (a + b + c) / 2;
+
+        // Heron's Formula
+        let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+        document.write("<br>Area of the triangle is: " + area.toFixed(2) + " cm<sup>2</sup>");
+    </script>
+</body>
+</html>

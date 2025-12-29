@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Word</title>
+</head>
+<body>
+    <h2>Search a Word present in a main string</h2>
+
+    <script>
+        let mainStr = prompt("Enter the main string:");
+        let word = prompt("Enter the word to search:");
+
+        if (mainStr.includes(word)) {
+            document.write("The word '" + word + "' is present in the string.");
+        } else {
+            document.write("The word '" + word + "' is NOT present in the string.");
+        }
+    </script>
+</body>
+</html>

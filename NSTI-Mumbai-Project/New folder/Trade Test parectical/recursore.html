@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Fectorial Recursor </h2>
+    <script>
+        let num =7 //parseInt(prompt("Enter the Number to find Factorial:"));
+        function fact(num){
+            if (num ==0 || num ==1){
+                return 1;
+            }else{
+                return num * fact (num - 1);
+             document.write("Factors =" + num);   
+            }
+        }
+        let result = fact(num);
+        document.write("Factorial of " + num + " is: " + result);
+        
+    </script>
+</body>
+</html>

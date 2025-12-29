@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arthmatic operator useng to switch</title>
+</head>
+<body>
+    <h1>arthmatic operator useng to switch</h1>
+    <script>
+        let a=parseInt(prompt("Enter first number: "));
+        let b=parseInt(prompt("Enter second number: "));
+        let op=prompt("Enter an operator (+, -, *, /): ");
+
+        switch(op){
+            case '+':
+                document.write("Addition of "+a+" and "+b+" is: "+(a+b));
+                break;
+            case '-':
+                document.write("Subtraction of "+a+" and "+b+" is: "+(a-b));
+                break;
+            case '*':
+                document.write("Multiplication of "+a+" and "+b+" is: "+(a*b));
+                break;
+            case '/':
+                if(b!==0){
+                    document.write("Division of "+a+" and "+b+" is: "+(a/b));
+                } else {
+                    document.write("Error: Division by zero is not allowed.");
+                }
+                break;
+            default:
+                document.write("Invalid operator! Please use +, -, *, or /.");
+        }
+        
+        
+    </script>
+</body>
+</html>
