@@ -2,7 +2,7 @@ from turtle import *
 import math
 
 bgcolor("black")
-speed(90)
+speed(200)
 color("red")
 pensize(2)
 

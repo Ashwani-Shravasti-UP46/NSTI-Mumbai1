@@ -10,11 +10,11 @@
     <script>
         let weight = parseFloat(prompt("Enter your weight in (kilograms):"));
         let height = parseFloat(prompt("Enter your height in( meters):"));
+        // document.write("your Enterd Number is : <br> H = " +h+ "<br> W = " +w);
 
         let bmi = weight / (height * height);
         bmi = bmi.toFixed(2);
-
-        document.write("Your BMI is: " + bmi + "<br>");
+        // document.write("Your BMI is: " + bmi + "<br>");
 
         if (bmi < 18.5) {
             document.write("You are underweight.");
