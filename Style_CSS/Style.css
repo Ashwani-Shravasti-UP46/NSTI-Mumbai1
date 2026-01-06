@@ -1,11 +1,11 @@
 /* Including Style External StyleSheet */
 /* Color Property ➡️foreground */
-h2{
+h2 {
     color: rgb(110, 2, 110);
 }
 
 /*  <!-- background color property */
-body{
+body {
     background-color: hsl(0, 14%, 69%);
 }
 
@@ -17,50 +17,80 @@ body{
 /* Univarsal Selector *{}*/
 
 /* Element Selector */
-#ind{
+#ind {
     font-size: 30px;
     color: rgb(19, 255, 2);
 }
-#ste{
+
+#ste {
     font-size: 25px;
     color: #ff5733;
 }
-#dis{
+
+#dis {
     color: aquamarine;
 }
-#blo{
+
+#blo {
     color: rgb(255, 0, 255);
     font-size: 28px;
 }
-#vill{
+
+#vill {
     color: #72891c;
     font-size: 22px;
 }
+
 /* Class Selector */
-.red{
+.red {
     color: red;
 }
-.rem{
+
+.rem {
     color: red;
     text-decoration: line-through;
-    font-size: 24px;}
-    #box{
-     background-color: aqua; 
-     font-size: 30px;
-    }
-    .div,h1,h2,h3{
-        text-align: center;
-        border: #021b3a 2px solid;
-        border-radius: 40px;
-        margin: 10px;
-        padding: 10px;
-        background-repeat: space;
-        height: auto;
-        cursor: pointer;
-        transition: 0.5s;
-        word-wrap: break-word;
-    }
-    .div:hover,h1:hover,h2:hover,h3:hover,.box:hover{
-        background-color: rgb(123, 57, 229);
-        color: white;
-        animation: move 0.5s linear infinite; }
+    font-size: 24px;
+}
+
+.div,
+h1,
+h2,
+h3 {
+    text-align: center;
+    border: #021b3a 2px solid;
+    color: rgb(0, 255, 47);
+    border-radius: 40px;
+    margin: 10px;
+    padding: 10px;
+    background-repeat: space;
+    height: auto;
+    cursor: pointer;
+    transition: 0.5s;
+    word-wrap: break-word;
+}
+
+.div:hover,
+h1:hover,
+h2:hover,
+h3:hover {
+    background-color: rgb(152, 230, 153);
+    border-radius: 20px;
+    color: rgb(4, 0, 218);
+    text-shadow: 2px 2px #000000;
+    animation: move 0.5s linear infinite;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6:hover {
+    background-color: #ff5733;
+    background-color: #968896;
+    color: rgb(225, 5, 5);
+    text-shadow: 3px 3px #000000;
+    margin-bottom: 20px;
+    animation: move 0.5s linear infinite; 
+
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body {
+    background-color: lightblue;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    height: 200px;
+   width: 400px;
+    background-color: rgb(48, 246, 4);
+    border: solid 8px;
+    border-radius: 20px;
+    color: rgb(255, 14, 14);
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 60px;
+    margin: 4px;
+}
+button:hover {
+
+    background-color: #b90505;
+    color: navy;
+      text-shadow:2px 2px;
+      margin-bottom: 20px;
+}
+h1{
+    background-color: rgb(64, 119, 167);
+    border: solid 10px;
+    border-radius: 20px;
+    border-color: rgb(164, 9, 9);
+    padding: 20px;
+    font-size: 50px;
+}
+h1:hover {
+    background-color: #b41f91;
+    color: navy;
+    text-shadow: 3px 3px #000000;
+    margin-bottom: 20px;
+}
+    </style>
+<body>
+    
+    <h1>Display the "n"th power of a Number</h1>
+<button id="pow"> 
+<script> 
+      
+        let num = parseInt(prompt("Enter a number:"));
+        let n = parseInt(prompt("Enter the power:"));
+        let result = 1;
+        result = num ** n;
+        // document.write(num + " to the power " + n + " is: " + result);    
+         document.write(num + "<sup>" +n+ " </sup>is: " + result);
+
+    </script>    
+    </button>
+</body>
+</html>
