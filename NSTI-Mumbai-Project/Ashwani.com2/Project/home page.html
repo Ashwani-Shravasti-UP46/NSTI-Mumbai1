@@ -3,30 +3,65 @@
 <head>
     <title>home page</title>
     <style>
+        *{
+            text-shadow: 2px 2px #042aff;
+        }
         body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
 /* Header */
 header {
-    background: #333;
-    color: white;
+    background: #1512ee;
+    color: rgb(248, 248, 248);
     padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-shadow: 2px 2px #ff0404;
+    animation: move 2s infinite;
+    transition: all 0.3s ease;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+} 
+header .logo {
+    font-size: 30px;
+    cursor: pointer;
+} 
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+header nav a {
+    color: #f80053;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+} 
+header nav a:hover {
+    color: #0deff7;
+}
+header nav a:active {
+    color: hsl(325, 96%, 53%);
+}
+header nav a:focus {
+    outline: none;
+    color: #56ff2b;
 }
 
 header a {
-    color: white;
+    color: rgb(236, 128, 56);
     margin-left: 20px;
     text-decoration: none;
 }
 
 /* Hero Section */
 .hero {
-    background: #f4f4f4;
+    background: #c484e9;
     text-align: center;
     padding: 80px 20px;
 }
@@ -38,7 +73,7 @@ header a {
 .hero button {
     padding: 10px 25px;
     background: #007BFF;
-    color: white;
+    color: rgb(252, 252, 252);
     border: none;
     cursor: pointer;
 }
@@ -63,7 +98,7 @@ header a {
 
 /* Footer */
 footer {
-    background: #333;
+    background: #8671e7;
     color: white;
     text-align: center;
     padding: 15px;
