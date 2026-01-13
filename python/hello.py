@@ -1,6 +1,6 @@
 print("hello");
-a=7;
-b=5;
+a=int(input("enter a value:"));
+b=int(input("enter b value:"));
 c=a+b;
 print(c);
 print("addition is",c);
