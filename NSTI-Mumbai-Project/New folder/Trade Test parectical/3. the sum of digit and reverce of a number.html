@@ -14,11 +14,10 @@
 
     while (num > 0) {
         let digit = num % 10;
-        sum += digit;
         reverse = reverse * 10 + digit;
         num = Math.floor(num / 10);
+        sum += digit;
     }
-
     document.write("The sum of the digits of " + originalNum + " is: " + sum + "<br>");
     document.write("The reverse of the number " + originalNum + " is: " + reverse);
 </script>

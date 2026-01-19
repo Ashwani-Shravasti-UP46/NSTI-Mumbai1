@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>fectoriyal recorcion</title>
+</head>
+<body>
+<script>
+ let num = parseInt(prompt("Enter the number"));
+function fact (num){
+if(num==0 || num==1){
+return 1;
+}else{
+return num * fact (num-1);
+}
+}
+let ans = fact(num);
+document.write("factor is = " + ans);
+</script>
+</body>
+</html>

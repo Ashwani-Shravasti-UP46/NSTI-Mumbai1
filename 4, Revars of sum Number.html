@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,22 +11,47 @@
     <script>
 
         //  parseInt(prompt("Enter a Number:"));;
-        let no = parseInt((prompt("Enter a Number:")));
+        let no = parseInt(prompt("Enter a Number:"));
         let dis=no;
         let temp = 0;
         ver = 0;
         let sum = 0;
-        do {
+        do { 
             temp = no % 10;
             sum = sum + temp;
             ver = ver * 10 + temp;
             no = parseInt(no / 10);
         }
         while (no > 0);
-        document.write("You are number is:" + dis + "<br>");
+        // document.write(`Original number is: ${dis} <br> Reviers number is: ${ver} <br> Sum of number is: ${sum}`);
+       document.write("Original number is:" + dis + "<br>");
         document.write("Reviers number is:" + ver+ "<br>");
         document.write("Sum of number is:" + sum);
 
+    </script>
+</body>
+
+</html> -->
+<html>
+
+<head>
+    <title>Largest Among Three Number</title>
+</head>
+
+<body>
+    <script>
+        let a, b, c;
+        a = parseInt(prompt("Enter the Number of A :"));
+        b = parseInt(prompt("Enter the Number of B :"));
+        c = parseInt(prompt("Enter the Number of C :"));
+        document.write('Your Entered Number is <br> A = ' + a + '  <br> B = ' + b + ' <br> C = ' + c);
+			if (a>=b && a>=c){
+                document.write("the largest number is A = " +a);
+			} else if(b>=a && b>=c) {
+                document.write("the largest number is B = " +b);
+			} else {
+                document.write("the largest number is C = " +c);
+				}
     </script>
 </body>
 

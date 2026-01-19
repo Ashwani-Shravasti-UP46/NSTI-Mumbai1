@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Triangular Diagonal Array Matrix Using Function</title>
+</head>
+
+<body>
+    <script>
+
+        // Function to Read Matrix Elements
+        function readmatrix(cols, arr) {
+            for (i = 0; i < cols; i++) {
+                arr[i] = [];
+                for (j = 0; j < cols; j++) {
+                    arr[i][j] = parseInt(prompt("Enter value for Matrix Element"));
+                }
+            }
+        }
+
+        // Function to Display Matrix Elements
+        function displaymatrix(cols, arr) {
+            for (i = 0; i < cols; i++) {
+                for (j = 0; j < cols; j++) {
+                    document.write(arr[i][j] + " ");
+                }
+                document.write("<br>");
+            }
+        }
+        // Function to Display Apper Triangular Matrix
+        function appertringularofmatrix(cols, arr) {
+            for (i = 0; i < cols; i++) {
+                for (j = 0; j < cols; j++) {
+                    if (i <= j) {
+                        document.write(arr[i][j] + " ");
+                    } else {
+                        document.write("&nbsp;&nbsp;&nbsp;&nbsp;");
+                    }
+                }
+                 document.write("<br>");
+            }
+        }
+        // Main Code
+        let arr, row, col, i, j;
+        // Input number of rows and columns
+        row = parseInt(prompt("Enter number of rows of Matrix: "));
+        col = parseInt(prompt("Enter number of columns of Matrix: "));
+        if (row != col) {
+            document.write("Apper Triangular is only possible in square matrix. Please reload and enter valid");
+        } else {
+            arr = new Array(row);
+            // Initialize 2D Arrays 
+            for (i = 0; i < row; i++) {
+                arr[i] = new Array(col);
+            }
+            // Read 1st and 2nd Matrix
+            readmatrix(col, arr);
+            // Display 1st Matrix
+            document.write("<br><br>1st Matrix is: <br>");
+            displaymatrix(col, arr);
+            // Display Apper Triangular of Matrix
+            document.write("<br><br>Display Apper Triangular Array is: <br>");
+            appertringularofmatrix(col, arr);
+        }
+    </script>
+</body>
+
+</html> 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array Merge Program</title>
+</head>
+<body>
+
+<h2>Array Merge Program</h2>
+
+<script>
+    // User se array input lena
+    let arr1 = prompt("Enter first array elements (comma se):").split(",");
+    let arr2 = prompt("Enter second array elements (comma se):").split(",");
+
+    let merged = [];
+    let i;
+
+    document.write("First Array: " + arr1 + "<br>");
+    document.write("Second Array: " + arr2 + "<br><br>");
+
+    // First array copy
+    for (i = 0; i < arr1.length; i++) {
+        merged[i] = arr1[i];
+    }
+
+    // Second array copy
+    for (i = 0; i < arr2.length; i++) {
+        merged[arr1.length + i] = arr2[i];
+    }
+
+    document.write("Merged Array: " + merged);
+</script>
+
+</body>
+</html>

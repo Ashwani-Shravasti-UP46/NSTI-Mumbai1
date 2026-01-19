@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recursion Function to Calculate Factorial </title>
+</head>
+<body>
+    <h2>Recursion Function to Calculate Factorial </h2>
+    <script>
+        // Function to calculate factorial using recursion
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+        }
+        // Main Code
+        var number, result;
+        number = parseInt(prompt("Enter a number to calculate its factorial: "));
+        // Validate input 
+        if (isNaN(number) || number < 0) {
+            document.write("PLease Enter a Valid non-Negative numbers.");
+        } else {
+            result = factorial(number);
+            document.write("<br><br> Factorial of = " + number + " And Sum of Factorial Result is " + result);
+        }
+    </script>
+</body>
+
+</html>

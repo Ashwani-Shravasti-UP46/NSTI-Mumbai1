@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Details using Array Constructor Method</title>
+</head>
+
+<body>
+
+    <h2>Employee Details using Array Constructor Method</h2>
+
+    <script>
+        // Creating an array of employee objects using the Array constructor method
+        var employees = new Array(
+            { id: 101, name: "Alice", salary: 60000 },
+            { id: 102, name: "Bob", salary: 55000 },
+            { id: 103, name: "Charlie", salary: 75000 }
+
+        );
+        // Displaying employee details
+        for (var i = 0; i < employees.length; i++) {
+            document.write("<h3>Employee ID: " + employees[i].id + "</h3>");
+            document.write("<p>Name: " + employees[i].name + "</p>");
+            document.write("<p>Salary: " + employees[i].salary + "</p>");
+            document.write("<hr>");
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiplication of Two Matrix Using Function</title>
+</head>
+
+<body>
+    <script>
+
+        // Function to Read Matrix Elements
+        function readmatrix(rows, cols, arr) {
+            for (i = 0; i < rows; i++) {
+                arr[i] = [];
+                for (j = 0; j < cols; j++) {
+                    arr[i][j] = parseInt(prompt("Enter value for Matrix Element  [" + i + "][ " + j + "]"));
+                }
+            }
+        }
+
+        // Function to Display Matrix Elements
+        function displaymatrix(rows, cols, arr) {
+            for (i = 0; i < rows; i++) {
+                for (j = 0; j < cols; j++) {
+                    document.write(arr[i][j] + " ");
+                }
+                document.write("<br>");
+            }
+        }
+
+        // Function to Calculate Sum of Two Matrices
+        function sumofmatrix(arr1, arr2, arr3, rows, cols) {
+            for (i = 0; i < rows; i++) {
+                for (j = 0; j < cols; j++) {
+                    arr3[i][j] = arr1[i][j] + arr2[i][j];
+                }
+            }
+        }
+
+        // Main Code
+        let arr1, arr2, arr3, rows1, cols1, rows2, cols2, i, j;
+
+        // Input number of rows and columns for both matrices
+        rows1 = parseInt(prompt("Enter number of rows of 1st Matrix: "));
+        cols1 = parseInt(prompt("Enter number of columns of 1st Matrix: "));
+        rows2 = parseInt(prompt("Enter number of rows of 2nd Matrix: "));
+        cols2 = parseInt(prompt("Enter number of columns of 2nd Matrix: "));
+
+        // Check if Matrix Addition is Possible
+        if (rows1 == rows2 && cols1 == cols2) {
+            arr1 = new Array(rows1);
+            arr2 = new Array(rows1);
+            arr3 = new Array(rows1);
+
+            // Initialize 2D Arrays
+            for (i = 0; i < rows1; i++) {
+                arr1[i] = new Array(cols1);
+                arr2[i] = new Array(cols1);
+                arr3[i] = new Array(cols1);
+            }
+
+            // Read 1st and 2nd Matrix
+            readmatrix(rows1, cols1, arr1);
+            readmatrix(rows2, cols2, arr2);
+
+            // Display 1st Matrix
+            document.write("<br><br>1st Matrix is: <br>");
+            displaymatrix(rows1, cols1, arr1);
+
+            // Display 2nd Matrix
+            document.write("<br><br>2nd Matrix is: <br>");
+            displaymatrix(rows2, cols2, arr2);
+
+            // Sum of 2 Matrices
+            sumofmatrix(arr1, arr2, arr3, rows1, cols1);
+
+            // Display Sum of 2 Matrices
+            document.write("<br><br>Sum of 2 Matrices is: <br>");
+            displaymatrix(rows1, cols1, arr3);
+
+        } else {
+            document.write("<br><br>Matrix Addition is Not Possible!");
+        }
+    </script>
+</body>
+
+</html>

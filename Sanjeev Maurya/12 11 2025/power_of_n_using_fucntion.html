@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Powetr of 'n' Using Function </title>
+</head>
+<body>
+    <h2>Power of 'n' Using Function </h2>
+    <script>
+        // Function to calculate power of n
+        function powerofBase(base, limit) {
+            for (let i = 1; i <= limit; i++) {
+                // document.write("Base Value: " + base + "and " + i + "<br>");
+                result = base ** i;
+            }
+            return result;
+        }
+        // Main Code
+        var base, limit, result;
+        base = parseInt(prompt("Enter the base value: "));
+        limit = parseInt(prompt("Enter the limit value: "));
+
+        document.write("Base Value: " + base + "<br>");
+        document.write("Limit Value: " + limit + "<br>");
+
+        result = powerofBase(base, limit);
+
+        document.write("<br><br> " + base + "<sup>" + limit + "</sup> = " + result);
+
+
+    </script>
+
+
+</body>
+
+</html>
