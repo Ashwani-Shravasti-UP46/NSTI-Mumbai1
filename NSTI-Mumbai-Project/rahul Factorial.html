@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Factorial</title>
+</head>
+<body>
+    <script>
+        function fact(num){
+            if(num == 1 || num == 0){
+                return 1;
+            }
+            return num * fact(num - 1); 
+        }
+        let num = parseInt(prompt("Enter any number"));
+        if(isNaN(num) || num < 0){
+            document.write("Enter the vailed inteder values");
+        }else{
+            let factorial = fact(num);
+            document.write("Entered Number is =" +num);
+            document.write("<br>Factorial =" +factorial);
+        }
+    </script>
+</body>
+</html>
