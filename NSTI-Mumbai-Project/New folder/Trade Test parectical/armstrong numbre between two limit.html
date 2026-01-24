@@ -2,30 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Armstrong Number</title>
+    <title>Armstrong Between Limits</title>
 </head>
 <body>
-    <h2>Armstrong numbers between two limits</h2>
 
-    <script>
-        let limit1 = parseInt(prompt("Enter first number:"));
-        let limit2 = parseInt(prompt("Enter second number:"));
+<script>
+let start = parseInt(prompt("Enter starting limit"));
+let end = parseInt(prompt("Enter ending limit"));
 
-        for (let num = limit1; num <= limit2; num++) {
-            let temp = num;
-            let sum = 0;
-            let digits = num.toString().length;
+for (let num = start; num <= end; num++) {
+    let temp = num;
+    let sum = 0;
 
-            while (temp > 0) {
-                let rem = temp % 10;
-                sum += Math.pow(rem, digits);
-                temp = Math.floor(temp / 10);
-            }
+    while (temp > 0) {
+        let d = temp % 10;
+        sum += d * d * d;   // 3-digit Armstrong
+        temp = Math.floor(temp / 10);
+    }
 
-            if (sum === num) {
-                document.write(num + " is an Armstrong number<br>");
-            }
-        }
-    </script>
+    if (sum == num) {
+        document.write(num + " is an Armstrong number<br>");
+    }
+}
+</script>
+
 </body>
 </html>
