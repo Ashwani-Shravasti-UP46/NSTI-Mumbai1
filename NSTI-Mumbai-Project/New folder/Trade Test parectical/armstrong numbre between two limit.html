@@ -9,22 +9,23 @@
 <script>
 let start = parseInt(prompt("Enter starting limit"));
 let end = parseInt(prompt("Enter ending limit"));
+document.write("Armstrong numbers between " + start + " and " + end + " <br>");
 
+document.write("Armstrong numbers between ");
 for (let num = start; num <= end; num++) {
     let temp = num;
     let sum = 0;
-
+    let length = num.toString().length; // to handle n-digit Armstrong numbers
     while (temp > 0) {
         let d = temp % 10;
-        sum += d * d * d;   // 3-digit Armstrong
-        temp = Math.floor(temp / 10);
-    }
+        sum += d ** length; 
+        temp = Math.floor(temp / 10); 
+    } 
+    if (sum === num) { 
+        document.write(num + "<br>"); 
+    } 
+} 
 
-    if (sum == num) {
-        document.write(num + " is an Armstrong number<br>");
-    }
-}
-</script>
-
-</body>
+</script> 
+</body> 
 </html>

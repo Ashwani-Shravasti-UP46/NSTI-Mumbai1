@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>palindrom or not</title>
-</head>
-<body>
-    <h2>Check the given number is palindrom or not</h2>
-    <script>
-        let rev = 0;
-        let temp;
-        let num = prompt("Enter a number:");
-        let orgNum = num;
-        while (num > 0) {
-            temp = num % 10;
-            rev = rev * 10 + temp;
-            num = Math.floor(num / 10);
-        }
-        if (orgNum == rev) {
-            document.write(orgNum + " is a Palindrome number");
-        } else {
-            document.write(orgNum + " is not a Palindrome number");
-        }
-       
-    </script>
-</body>
-</html>
+<script>
+    let rev = 0; 
+    let temp;
+    let num = Number(prompt("Enter a number:")); // yaha fix
+    let orgNum = num;
+
+    while (num > 0) {
+        temp = num % 10;
+        rev = rev * 10 + temp;
+        num = Math.floor(num / 10);  //parseInt can also be used
+    }
+  
+    if (orgNum === rev) {
+        document.write(orgNum + " is a Palindrome number");
+    } else {
+        document.write(orgNum + " is not a Palindrome number");
+    }
+</script>
