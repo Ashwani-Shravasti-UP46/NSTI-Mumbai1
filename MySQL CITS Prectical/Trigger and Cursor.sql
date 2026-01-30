@@ -83,7 +83,7 @@ mysql> DELIMITER //
 mysql> CREATE TRIGGER after_salary_update
     -> AFTER UPDATE ON EMPLOYEE
     -> FOR EACH ROW
-    -> BEGIN
+    -> BEGIN  
     -> IF OLD.salary <> NEW.salary THEN
     -> INSERT INTO salary_audit(empid, old_salary,new_salary)
     -> VALUES(OLD.empid, OLD.salary, NEW.salary);
