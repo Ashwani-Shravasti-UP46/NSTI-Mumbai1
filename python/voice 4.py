@@ -1,5 +1,6 @@
 import pyttsx3
-engine =pyttsx3.init()
+engine = pyttsx3.init()
+engine = pyttsx3.init()
 #---------------- ettings -----------------------
 # +++++++++++++++ VOICE SPEED ++++++++++++++++
 engine.setProperty("rate", 180)
@@ -22,3 +23,4 @@ engine.save_to_file(text, "output_voice.mp3")
 #++++++++++++ RUN AND SPEEK+++++++++++++
 engine.runAndWait()
 print("voices creaated successfully!")
+
