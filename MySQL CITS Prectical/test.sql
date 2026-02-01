@@ -198,7 +198,7 @@ mysql> CREATE PROCEDURE process_employee_rows()
     ->
     ->     DECLARE emp_cursor CURSOR FOR
     ->         SELECT id, name, salary FROM EMPLOYEE;
-    ->
+    -> 
     ->     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
     ->
     ->     OPEN emp_cursor;
@@ -317,7 +317,7 @@ mysql> Create procedure AddEmployee(
     ->     in p_emp_name VARCHAR(100),
     ->     in p_salary DECIMAL(10,2),
     ->     in p_department VARCHAR(100)
-    ->     )
+    ->     )  
     ->     begin
     -> INSERT INTO employees(emp_name, salary, department) VALUES
     -> (p_emp_name, p_salary, p_department);
@@ -358,7 +358,7 @@ Query OK, 0 rows affected (0.03 sec)
 
 mysql> CALL AddEmployee ('Sneha Joshi', 60000.00, 'IT');
 +--------+----------------+----------+------------+
-| emp_id | emp_name       | salary   | department |
+| emp_id | emp_name       | salary   | department | 
 +--------+----------------+----------+------------+
 |      1 | Rahul          | 50000.00 | IT         |
 |      2 | Sneha          | 62000.50 | HR         |
@@ -421,7 +421,7 @@ Query OK, 0 rows affected (0.01 sec)
 mysql> Delimiter ;
 mysql> call safeInsert('Gulshan',154202,'IT');
 Query OK, 1 row affected (0.00 sec)
-
+ 
 mysql> call safeInsert('Gulshan',-154202,'IT');
 ERROR 1644 (45000): Salary must be grater then 0
 mysql> -- drop procedure if exists safeInsert;
@@ -463,7 +463,7 @@ Query OK, 7 rows affected (0.01 sec)
 Records: 7  Duplicates: 0  Warnings: 0
 
 mysql> Select * from student;
-+--------+--------+-------+---------+---------+
++--------+--------+-------+---------+ ---------+
 | RollNo | Name   | Maths | Science | English |
 +--------+--------+-------+---------+---------+
 |    101 | Rahul  |    92 |      85 |      78 |
@@ -529,7 +529,7 @@ mysql> use pg101_StoredProcedures;
 Database changed
 mysql>
 mysql> CREATE TABLE EMPLOYEES (
-    ->     EMP_ID INT NOT NULL UNIQUE AUTO_INCREMENT,
+    ->     EMP_ID INT NOT NULL UNIQUE AUTO_INCREMENT, 
     ->     NAME VARCHAR(100) NOT NULL,
     ->     AGE INT
     -> );
@@ -558,12 +558,12 @@ mysql> Delimiter //
 mysql> Create trigger AgeVerify
     -> Before Insert On Employees
     -> For Each Row
-    -> Begin
+    -> Begin 
     -> If New.Age<0 then
     -> Set New.Age=0;
     -> End If;
     -> End //
-Query OK, 0 rows affected (0.01 sec)
+Query OK, 0 rows affected (0.01 sec) 
 
 mysql> Delimiter ;
 mysql> -- Step 4: Insert More Records (After Trigger)
