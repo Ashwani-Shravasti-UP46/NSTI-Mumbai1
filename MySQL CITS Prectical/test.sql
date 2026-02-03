@@ -161,6 +161,100 @@ mysql>
 mysql> CREATE DATABASE RECORD;
 Query OK, 1 row affected (0.07 sec)
 
+
+
+##########################################################################################
+##########################################################################################
+mysql> SHOW DATABASES;
++------------------------+
+| Database               |
++------------------------+
+| ashwani                |
+| information_schema     |
+| mysql                  |
+| nsti                   |
+| performance_schema     |
+| pg101_storedprocedures |
+| record                 |
+| sys                    |
+| test                   |
++------------------------+
+9 rows in set (0.20 sec)
+
+mysql> USE NSTI;
+Database changed
+mysql> SHOW TABLES;
++----------------+
+| Tables_in_nsti |
++----------------+
+| department     |
+| dept           |
+| emp            |
+| emp_details    |
+| emp_join       |
+| empl           |
+| employee_1     |
+| employees      |
+| new_emp        |
++----------------+
+9 rows in set (0.06 sec)
+
+mysql> SELECT * FROM EMPL;
++-------+---------+-----------+--------+----------+---------+--------+------------+
+| EmpNo | Fname   | Lname     | DeptNo | Edulevel | Jobcode | salary | Hiredate   |
++-------+---------+-----------+--------+----------+---------+--------+------------+
+| 10001 | Deepak  | Mathew    |    100 | Degree   |       1 |  20000 | 2017-05-10 |
+| 10002 | Ashwani | Bouddhist |    100 | PG       |       1 |  22000 | 2016-01-05 |
+| 10003 | Deepa   | Raj       |    101 | Diploma  |       3 |  16000 | 2019-01-04 |
+| 10004 | Divya   | Jayan     |    102 | MBA      |       2 |  28000 | 2017-10-10 |
+| 10005 | Karthik | Satyan    |    102 | MBA      |       4 |  30000 | 2018-12-01 |
+| 10006 | Manu    | George    |    101 | ITI      |       3 |  12000 | 2016-03-20 |
+| 10007 | Amal    | Davis     |    103 | Degree   |       2 |  20000 | 2017-02-01 |
+| 10008 | Sanal   | Krishnan  |    104 | Degree   |       2 |  21000 | 2016-02-21 |
+| 10009 | Kiran   | Lal       |    104 | Degree   |       2 |  22000 | 2015-02-21 |
+| 10010 | Syam    | Nair      |    104 | Degree   |       2 |  20000 | 2017-02-10 |
++-------+---------+-----------+--------+----------+---------+--------+------------+
+10 rows in set (0.05 sec)
+
+mysql> select * from dept;
++--------+------------+---------------+
+| deptNo | DeptName   | Location      |
++--------+------------+---------------+
+|    100 | HR         | Trivandrum    |
+|    101 | Production | Kazhakkoottam |
+|    102 | Marketing  | Trivandrum    |
+|    103 | Purchase   | Trivandrum    |
+|    104 | Sales      | Attingal      |
++--------+------------+---------------+
+5 rows in set (0.00 sec)
+
+mysql> create table Ashwani As
+    -> SELECT empl.EMPNO AS Emp_ID, empl.Fname As Emp_Name, empl.Deptno As Dept_ID, empl.Edulevel As Education, empl.Jobcode As Job_ID, dept.deptName, dept.Location, salary
+    -> from empl
+    -> inner join dept
+    -> on empl.deptno = dept.deptno;
+Query OK, 10 rows affected (0.08 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> select * from Ashwani;
++--------+----------+---------+-----------+--------+------------+---------------+--------+
+| Emp_ID | Emp_Name | Dept_ID | Education | Job_ID | deptName   | Location      | salary |
++--------+----------+---------+-----------+--------+------------+---------------+--------+
+|  10001 | Deepak   |     100 | Degree    |      1 | HR         | Trivandrum    |  20000 |
+|  10002 | Ashwani  |     100 | PG        |      1 | HR         | Trivandrum    |  22000 |
+|  10003 | Deepa    |     101 | Diploma   |      3 | Production | Kazhakkoottam |  16000 |
+|  10006 | Manu     |     101 | ITI       |      3 | Production | Kazhakkoottam |  12000 |
+|  10004 | Divya    |     102 | MBA       |      2 | Marketing  | Trivandrum    |  28000 |
+|  10005 | Karthik  |     102 | MBA       |      4 | Marketing  | Trivandrum    |  30000 |
+|  10007 | Amal     |     103 | Degree    |      2 | Purchase   | Trivandrum    |  20000 |
+|  10008 | Sanal    |     104 | Degree    |      2 | Sales      | Attingal      |  21000 |
+|  10009 | Kiran    |     104 | Degree    |      2 | Sales      | Attingal      |  22000 |
+|  10010 | Syam     |     104 | Degree    |      2 | Sales      | Attingal      |  20000 |
++--------+----------+---------+-----------+--------+------------+---------------+--------+
+10 rows in set (0.00 sec)
+mysql>
+##########################################################################################
+##########################################################################################
 mysql> USE RECORD;
 Database changed
 mysql> CREATE TABLE EMPLOYEE(ID INT PRIMARY KEY,
