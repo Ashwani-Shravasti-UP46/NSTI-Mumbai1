@@ -210,3 +210,21 @@ Query OK, 0 rows affected (0.07 sec)
 
 mysql>
 
+mysql>
+mysql> ################# INDEXING #############################
+mysql>
+mysql> CREATE INDEX idx_acc_on
+    -> on accounts(acc_no);
+Query OK, 0 rows affected (0.17 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql>  select * from accounts
+    -> where acc_no = 102;
++--------+---------------+---------+
+| acc_no | customer_Name | balance |
++--------+---------------+---------+
+|    102 | Bob           |    8000 |
++--------+---------------+---------+
+1 row in set (0.05 sec)
+
+mysql>
