@@ -111,3 +111,85 @@ mysql> INSERT INTO MARKS VALUES (5,'dbms',120);
 ERROR 1644 (45000): marks cannot exceed 100
 mysql>
 
+###############  CURSOR #############################
+mysql>
+mysql> DELIMITER ##
+mysql>
+mysql> CREATE PROCEDURE SHOW_STUDENTS()
+    -> BEGIN
+    ->     DECLARE done INT DEFAULT 0;
+    ->     DECLARE Sname VARCHAR(50);
+    ->
+    ->     DECLARE cur_student CURSOR FOR
+    ->         SELECT name FROM STUDENTS;
+    ->
+    ->     DECLARE CONTINUE HANDLER FOR NOT FOUND
+    ->         SET done = 1;
+    ->
+    ->     OPEN cur_student;
+    ->
+    ->     read_loop: LOOP
+    ->         FETCH cur_student INTO Sname;
+    ->
+    ->         IF done = 1 THEN
+    ->             LEAVE read_loop;
+    ->         END IF;
+    ->
+    ->         SELECT Sname AS Students_Name;
+    ->     END LOOP;
+    ->
+    ->     CLOSE cur_student;
+    ->
+    -> END##
+Query OK, 0 rows affected (0.07 sec)
+
+mysql>
+mysql> DELIMITER ;
+mysql> call SHOW_STUDENTS();
++---------------+
+| Students_Name |
++---------------+
+| Rakesh        |
++---------------+
+1 row in set (0.14 sec)
+
++---------------+
+| Students_Name |
++---------------+
+| Mahesh        |
++---------------+
+1 row in set (0.14 sec)
+
++---------------+
+| Students_Name |
++---------------+
+| Karan         |
++---------------+
+1 row in set (0.15 sec)
+
++---------------+
+| Students_Name |
++---------------+
+| Ashwani       |
++---------------+
+1 row in set (0.16 sec)
+
+Query OK, 0 rows affected (0.17 sec)
+
+
+mysql> ######### index ################
+mysql> create index idx_student_id
+    -> on students(student_id);
+Query OK, 0 rows affected (0.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> select * from students
+    -> where student_id = 2;
++------------+--------+------------+
+| student_id | Name   | department |
++------------+--------+------------+
+|          2 | Mahesh | SCE        |
++------------+--------+------------+
+1 row in set (0.04 sec)
+
+mysql>
