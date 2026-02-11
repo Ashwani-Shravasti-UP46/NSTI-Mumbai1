@@ -1,0 +1,38 @@
+<html>
+<head>
+      <title>Calculate Electricity Bill</title>
+</head>
+<body>
+<h1>Customer Electricity Bill</h1>
+<script>
+    let custId = prompt("Enter the customer ID: ");
+    let custNm = prompt("Enter the customer Name: ");
+    let un = parseInt(prompt("Enter the unit: "));
+    let bill, srcg = 0, tb;
+    if (un <= 100) 
+        bill = un * 5;
+     else if (un > 100 && un <= 200) 
+        bill = (100 * 5) + ((un - 100) * 7);
+     else 
+        bill = (100 * 5) + (100 * 7) + ((un - 200) * 10);
+    if (bill > 1000) 
+        srcg = (bill * 10) / 100;
+    tb = srcg + bill;
+    document.write("Customer Id: " + custId + "<br>");
+    document.write("Customer Name: " + custNm + "<br>");
+    document.write("Unit: " + un + "<br>");
+    document.write("----------------------------<br>");
+    document.write("Unit consumed rate per unit <br>");
+    document.write("----------------------------<br>");
+    document.write("<p> 0 - 100 ₹ 5 per unit </p>");
+    document.write("<p> 100 - 200 ₹ 7 per unit </p>");
+    document.write("<p> above 200 ₹ 10 per unit </p>");
+    document.write("----------------------------<br>");
+    document.write("Surcharge: " + srcg + "<br>");
+    document.write("Total bill: " + tb + "<br>");
+    document.write("----------------------------<br>");
+    document.write("Thank you!!!");
+
+</script>
+</body>
+</html>

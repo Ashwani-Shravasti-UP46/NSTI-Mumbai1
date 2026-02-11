@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     
@@ -30,4 +30,60 @@ document.write("<br>Enter Basic Total Salary:-"+totalesalary);
 document.write("<br>Enter Basic Net Salaryt:-"+netSalary);
      </script>
 </body>
+</html> -->
+
+
+<html>
+<body>
+<h2>
+</h2>
+<script>
+
+let  empName,empID,empDesi,bpay,dect;
+empName = prompt("Enter the Employee Name ");
+empID = prompt("Enter the Employee ID");
+empDesi = prompt("Enter the Designassion");
+bpay = prompt("Enter the Basic pay");
+dect = prompt("Enter the Dedections ");
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+let hra,da,ta,totalsalary,netsalary;
+hra = bpay * 0.3;
+da = bpay * 0.53;
+ta = bpay * 0.15;
+totalsalary = bpay + hra + da + ta;
+netsalary = totalsalary - dect;
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+document.write("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$: <br>");
+document.write("Employee Name  : " + empName);
+document.write("<br>Employee ID : " + empID);
+document.write("<br>Employee Designation : " + empDesi);
+document.write("<br>Basic Pay : " + bpay);
+document.write("<br>Didection : " + dect);
+document.write("<br>$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$: <br>");
+document.write("<br>Total Salary : " + totalsalary); 
+document.write("<br> Net salary : " + netsalary);
+document.write("<br>$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$: <br>");
+</script>
+<br>
+<><><><><><> 
+<br>
+<>
+<br>
+<>
+<br>
+<><><><><><>
+<br>
+<>
+<br>
+<>
+<br>
+<><><><><><>
+<br>
+<>
+</body>
 </html>
+<br>
