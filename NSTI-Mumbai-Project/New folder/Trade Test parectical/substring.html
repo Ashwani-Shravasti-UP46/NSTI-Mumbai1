@@ -1,0 +1,71 @@
+<!-- <html>
+
+<head>
+	<h1>
+		<center>Find the substring from the Main string
+	</h1>
+	</center><br>
+	<hr>
+</head>
+
+<body>
+	<center>
+		<script>
+			var num1, num2, i, j, k, l, ch, c, falg, p;
+
+			num1 = prompt("Enter the Main String");
+			num2 = prompt("Enter the substring");
+			document.write("Main String:- " + num1);
+			document.write("<br>Substring:- " + num2);
+			l = num1.length;
+			k = num2.length;
+			j = 0;
+			flag = true;
+			for (i = 0; i < l; i++) {
+				ch = num1.charAt(i);
+				c = num2.charAt(j);
+				if ((ch == c) && (j < k)) {
+					j++;
+					flag = true;
+				} else {
+					flag = false;
+					j = 0;
+				}
+				if ((flag == true) && (j == k)) {
+					p = i - k + 2;
+					document.write("<br>The string " + num2 + " is found in " + num1 + " at the position :" + p);
+					break;
+				}
+			}
+			if (i == l) {
+				document.write("<br>The string" + num2 + " not found in " + num1);
+			}		
+		</script>
+	</center>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+<h2>
+	search string
+</h2>
+<script>
+	let mainString = prompt("Enter the Main String").toLocaleUpperCase();
+	let wordToSearch = prompt("Enter the word to search").toLocaleUpperCase();
+	let index = mainString.indexOf(wordToSearch);
+	if (index !== -1) {
+		document.write("The string "+wordToSearch+" is found in  "+index);
+	} else {
+		document.write("The string "+wordToSearch+" not found in "+mainString);
+	}
+</script>
+</body>
+</html>
