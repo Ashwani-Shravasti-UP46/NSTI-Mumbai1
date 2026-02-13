@@ -28,6 +28,6 @@ mysql> show tables;
 2 rows in set (0.00 sec)
 
 mysql>
-
+ 
 
  

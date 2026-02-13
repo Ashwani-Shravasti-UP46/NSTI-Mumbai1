@@ -3,7 +3,7 @@ from turtle import *
 
 tracer(0)
 bgcolor("black")
-speed(0)
+speed(10)
 pensize(3)
 
 h = 0
@@ -11,11 +11,11 @@ h = 0
 def heart_curve():
     for i in range(200):
         h = i / 200
-        color = hsv_to_rgb(h % 1, 1, 1)
+        color = hsv_to_rgb(h % 1, 2, 1)
         pencolor(color)
         angle = 180 - i * 1.8
         right(angle)
-        forward(1.5)
+        forward(15)
 
 penup()
 goto(0, -100)   # Start at bottom center of heart

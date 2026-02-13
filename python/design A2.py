@@ -3,7 +3,7 @@ ht()
 speed(150)
 bgcolor("black")
 for i in range(300):
-    color("aqua")
+    color("red")
     circle(200-i)
     # left(90)
     # color("red")
