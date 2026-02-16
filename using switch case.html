@@ -1,0 +1,33 @@
+<html>
+	<body>
+		<script>
+		let a = parseInt(prompt("Entr the Number of a :"));
+		let operator = prompt("Enter the operator(+,-,*,/,%) :");
+		let b = parseInt(prompt("Enter the Number of b : "));
+             document.write("Ypur operator is :  +, -, *, % or / <br>");
+		 switch(operator){
+			case "+":
+			document.write("Addition of " +a+ " and " +b+ " is = " +(a+b));
+				break;
+			case "-":
+			document.write("Substructioms of " +a+ " and " +b+ " is = " +(a-b));
+				break;
+			case "*":
+			document.write("Multiple of " +a+ " and " +b+ " is = " +(a*b));
+				break;
+			case "%":
+			document.write("Modulus of " +a+ " and " +b+ " is = " +(a%b));
+				break;
+			case "/":
+			if (b !== 0){
+			document.write("Devisions of " +a+ " and" +b+ " is = " +(a/b));
+				}else{
+				document.write("Error: please try to again and Enter the vilade value! ");
+				}
+				break;
+			default:
+                document.write("Invalid operator! Please use +, -, *, % or /");
+        }
+		</script>
+	</body>
+</html>

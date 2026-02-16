@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<script>
+		let num;
+		num = parseInt(prompt("Enter the number :"));
+	       let digit=num,temp=0,rev=0,sum=0;
+		 do{
+			temp = num % 10;
+			sum = sum + temp;
+			rev = rev * 10 + temp;
+			num = parseInt(num / 10);
+                     }
+	        while(num>0);
+		      document.write("Your number is : " + digit);
+		      document.write("<br> Reviers number is : " + rev);
+		      document.write("<br>Sum of number is : " + sum);
+
+
+		</script>
+	</body>
+</html>

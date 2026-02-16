@@ -1,16 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
 <body>
-    <h1>area parimeter of square</h1>
-    <script>
-        let side =parseInt(prompt("Enter the value of side="));
-        alert("Area of Square="+(side**2)+""+"perimeter of square="+(4*side));
-        document.write("Area of Square="+(side**2)+"<br>"+"perimeter of square="+(4*side))
-    </script>
+
+<script>
+
+let n = parseInt(prompt("Enter size:"));
+let arr = [];
+
+for (let i = 0; i < n; i++) {
+  arr[i] = parseInt(prompt("Enter element:"));
+}
+
+// Ascending sort (IMPORTANT)
+arr.sort((a, b) => a - b);
+
+document.write("Sorted Array: " + arr + "<br>");
+
+let key = parseInt(prompt("Enter number to search:"));
+
+let start = 0;
+let end = arr.length - 1;
+let found = false;
+
+while (start <= end) {
+
+  let mid = Math.floor((start + end) / 2);
+
+  if (arr[mid] === key) {
+    document.write("Element found at position: " + (mid + 1));
+    found = true;
+    break;
+  }
+
+  if (arr[mid] < key)
+    start = mid + 1;
+  else
+    end = mid - 1;
+}
+
+if (!found)
+  document.write("Element not found");
+
+</script>
+
 </body>
 </html>
