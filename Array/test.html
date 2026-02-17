@@ -1,0 +1,47 @@
+<html>
+
+<body>
+
+    <script>
+        let arr, n, i, even, odd, ec = 0, oc = 0;
+        n = parseInt(prompt("Enter Limit of Arrat "));
+        arr = new Array(n);
+
+        //read array
+
+        for (i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Enter the Array Element "));
+        }
+
+        //display
+
+        document.write("<hr>Original Array is : ");
+        for (i = 0; i < n; i++) {
+            document.write(arr[i] + " ");
+        }
+        even = new Array();
+        odd = new Array();
+
+        for (i < 0; i < n; i++) {
+            if (arr[i] % 2 == 0) {
+                even[ec] = arr[i];
+                ec++;
+            } else {
+                odd[oc] = arr[i];
+                oc++;
+            }
+        }
+        // Even Element 
+        document.write(" <hr><br>Even Element : ");
+        for (i = 0; i < ec; i++) {
+            document.write(even[i] + " ");
+        }
+        //Odd  Element
+        document.write(" <hr><br>Even Element : ");
+        for (i = 0; i < oc; i++) {
+            document.write(odd[i] + " ");
+        }
+    </script>
+</body>
+
+</html>

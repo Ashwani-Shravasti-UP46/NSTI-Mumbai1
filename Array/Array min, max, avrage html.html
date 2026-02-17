@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Operations</title>
+</head>
+<body>
+    <h2>Find Sum, Min, Max and Average in Array</h2>
+
+    <script>
+        // Take comma separated input
+        let input = prompt("Enter array elements separated by comma (e.g. 16,19,44,36):");
+
+        // Convert string into array of numbers
+        let a = input.split(",").map(Number);
+
+        document.write("The array elements are: [ ");
+
+        let sum = 0;
+        let min = a[0];
+        let max = a[0];
+
+        for (let num of a) {
+            sum += num;
+            if (num < min) min = num;
+            if (num > max) max = num;
+            document.write(num + " ");
+        }
+
+        let average = sum / a.length;
+
+        document.write(" ]");
+        document.write("<br>The sum of Array is: " + sum);
+        document.write("<br>The min of Array is: " + min);
+        document.write("<br>The max of Array is: " + max);
+        document.write("<br>The average of Array is: " + average);
+    </script>
+</body>
+</html>
