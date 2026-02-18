@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Remove Duplicate Elements from Array</title>
+</head>
+<body>
+    <h1>Remove Duplicate Elements from Array in JavaScript</h1>
+
+    <script>
+        // Step 1: Define an array with duplicate elements
+        let num = [1, 2, 2, 3, 4, 4, 5, 6, 6, 7];
+
+        document.write("<h2>Original Array: " + num.join(", ") + "</h2>");
+
+        // Step 2: Remove duplicates using Set
+        let uniqueNum = [...new Set(num)];
+
+        document.write("<h2>Array after removing duplicates: " + uniqueNum.join(", ") + "</h2>");
+
+        // Step 3: Another method using filter() and indexOf()
+        let uniqueNum2 = num.filter((item, index) => {
+            return num.indexOf(item) === index;
+        });
+
+        document.write("<h2>Unique Array using filter(): " + uniqueNum2.join(", ") + "</h2>");
+    </script>
+</body>
+</html>

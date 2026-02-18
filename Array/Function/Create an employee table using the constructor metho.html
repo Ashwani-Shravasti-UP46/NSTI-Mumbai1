@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Example</title>
+</head>
+<body>
+<h1>Create an employee table using the constructor metho</h1>
+<script>
+// constructor function
+function Emp(id, name, salary) {
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+}
+
+// Taking input from user
+let id = parseInt(prompt("Enter Employee ID:"));
+let name = prompt("Enter Employee Name:");
+let salary = parseFloat(prompt("Enter Employee Salary:"));
+
+// Creating object using user input
+let emp2 = new Emp(id, name, salary);
+
+// Displaying output
+document.write("Employee ID: " + emp2.id + "<br>");
+document.write("Employee Name: " + emp2.name + "<br>");
+document.write("Employee Salary: " + emp2.salary + "<br>");
+document.write("<hr>");
+</script>
+</body>
+</html>
