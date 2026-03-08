@@ -1,36 +1,34 @@
 <html>
-
 <head>
     <title>Employee Details using Array Constructor Method</title>
 </head>
-
 <body>
     <h2>Employee Details using Array Constructor Method</h2>
     <script>
-        var hra, ta, da, totalsalary = 0, netsalary = 0;
-        // Creating an array of employee objects using the Array constructor method
         function employee(eid, ename, bp, dedu) {
             this.eid = eid;
             this.ename = ename;
-            this.hra = bp * 0.30; // 30% of Basic Pay
-            this.ta = bp * 0.53; // 53 % of Basic Pay
-            this.da = bp * 0.15; //15% of Basic Pay
+            this.hra = bp * 0.30;
+            this.ta = bp * 0.53;
+            this.da = bp * 0.15;
             this.totalsalary = bp + this.hra + this.ta + this.da;
             this.netsalary = this.totalsalary - dedu;
-        };
-        // Assign Employee details
-        var employees = [
-            new employee(1001, "Sanjeev Maurya", 22000, 2000),
-            new employee(1002, "Bablesh Kumar", 32000, 5000),
-            new employee(1003, "Sandeep Yadav", 52000, 2000),
-            new employee(1004, "Gulshan Maurya", 82000, 5000),
-            new employee(1005, "Vasudev", 42000, 2000)
-        ];
-        // Display Employees Detials
+        }
+        var employees = [];
+        var n = parseInt(prompt("Kitne employees ka data enter karna hai?"));
+
+        for (var i = 0; i < n; i++) {
+            var id = parseInt(prompt("Employee ID enter karein:"));
+            var name = prompt("Employee Name enter karein:");
+            var basicPay = parseFloat(prompt("Basic Pay enter karein:"));
+            var deduction = parseFloat(prompt("Deduction enter karein:"));
+
+            employees.push(new employee(id, name, basicPay, deduction));
+        }
         document.write("<table border='1' cellspacing='0' cellpadding='10'>");
         document.write("<tr><th>Employee Id</th><th>Name</th><th>HRA</th><th>TA</th><th>DA</th><th>Total Salary</th><th>Net Salary</th></tr>");
 
-        for (i = 0; i < employees.length; i++) {
+        for (var i = 0; i < employees.length; i++) {
             document.write("<tr>");
             document.write("<td>" + employees[i].eid + "</td>");
             document.write("<td>" + employees[i].ename + "</td>");
@@ -43,6 +41,6 @@
         }
         document.write("</table>");
     </script>
-</body>
 
+</body>
 </html>

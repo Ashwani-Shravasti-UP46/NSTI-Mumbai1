@@ -302,7 +302,7 @@ document.querySelector("form").addEventListener("submit", function(e) {
     return;
   }
 
-  alert("Form Successfully Submit ho gaya ✅");
+  alert("Form Successfully Submit ho gaya ");
 });
 
 
@@ -326,7 +326,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Simple validation
     if ($name && $fname && $mname && $dob && $phone) {
-        $success = "Form Successfully Submitted ✅";
+        $success = "Form Successfully 🙏 ";
         // Yaha aap database insert code bhi laga sakte ho
     } else {
         $success = "Please fill all required fields!";

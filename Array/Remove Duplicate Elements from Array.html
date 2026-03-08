@@ -1,28 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Remove Duplicate Elements from Array</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Duplicate Elements</title>
 </head>
+
 <body>
-    <h1>Remove Duplicate Elements from Array in JavaScript</h1>
+
+    <h1>Develop JavaScript code to Remove Duplicate Elements from Array</h1>
 
     <script>
-        // Step 1: Define an array with duplicate elements
-        let num = [1, 2, 2, 3, 4, 4, 5, 6, 6, 7];
+        var a, b;
+        var i, j, n, k = 0;
+        var isDuplicate;
 
-        document.write("<h2>Original Array: " + num.join(", ") + "</h2>");
+        a = new Array();
+        b = new Array();
 
-        // Step 2: Remove duplicates using Set
-        let uniqueNum = [...new Set(num)];
+        n = parseInt(prompt("Enter the Array limit: "));
 
-        document.write("<h2>Array after removing duplicates: " + uniqueNum.join(", ") + "</h2>");
+        // Input Array
+        for (i = 0; i < n; i++) {
+            a[i] = parseInt(prompt("Enter the Array Element: "));
+        }
 
-        // Step 3: Another method using filter() and indexOf()
-        let uniqueNum2 = num.filter((item, index) => {
-            return num.indexOf(item) === index;
-        });
+        document.write("<br>Entered Array Elements are: " + a + "<br><br>");
 
-        document.write("<h2>Unique Array using filter(): " + uniqueNum2.join(", ") + "</h2>");
+        // Remove Duplicates
+        for (i = 0; i < n; i++) {
+            isDuplicate = false;
+
+            for (j = 0; j < k; j++) {
+                if (a[i] == b[j]) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            if (!isDuplicate) {
+                b[k] = a[i];
+                k++;
+            }
+        }
+
+        // Display Array without Duplicates
+        document.write("Array after Removing Duplicates: " + b + "<br><br>");
+
+        document.write("Elements individually:<br>");
+        for (i = 0; i < k; i++) {
+            document.write(b[i] + " ");
+        }
+
     </script>
+
 </body>
+
 </html>
