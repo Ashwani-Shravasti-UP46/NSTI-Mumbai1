@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government ITI Bhinga Shravasti | Apprentice Recruitment 2026</title>
+<meta name="description" content="Government ITI Bhinga Shravasti - NAPS Apprentice Recruitment 2026. Electrician, Fitter, Welder, Turner, Machinist, COPA">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --saffron: #FF6B00;
+  --deep-orange: #E85000;
+  --green: #0A7C3E;
+  --light-green: #12A852;
+  --navy: #0D2D5A;
+  --gold: #FFB300;
+  --cream: #FFF8F0;
+  --white: #FFFFFF;
+  --dark: #1A1A2E;
+  --grey: #6B7280;
+  --light: #F0F4FF;
+  --shadow-card: 0 8px 32px rgba(13,45,90,0.12);
+  --shadow-hover: 0 20px 60px rgba(13,45,90,0.2);
+  --radius: 20px;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Mukta', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  overflow-x: hidden;
+}
+
+/* ============================
+   NAVBAR
+============================ */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(13,45,90,0.97);
+  backdrop-filter: blur(20px);
+  padding: 0.7rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--saffron);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-emblem {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--saffron), var(--gold));
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 4px 15px rgba(255,107,0,0.4);
+  flex-shrink: 0;
+}
+
+.logo-text .main { font-family: 'Baloo 2', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--white); line-height: 1.2; }
+.logo-text .sub { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.5px; }
+
+.nav-links {
+  display: flex; list-style: none; gap: 0.2rem; align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.nav-links a:hover { background: rgba(255,107,0,0.2); color: var(--gold); }
+
+.nav-cta {
+  background: linear-gradient(135deg, var(--saffron), var(--deep-orange)) !important;
+  color: white !important;
+  padding: 0.5rem 1.2rem !important;
+  border-radius: 25px !important;
+  box-shadow: 0 4px 15px rgba(255,107,0,0.4);
+}
+
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.hamburger span { width:26px; height:3px; background:white; border-radius:2px; transition:0.3s; }
+
+/* ============================
+   HERO
+============================ */
+.hero {
+  min-height: 100vh;
+  padding-top: 80px;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(255,107,0,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(10,124,62,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(255,179,0,0.08) 0%, transparent 50%);
+}
+
+/* Geometric pattern */
+.hero-bg::before {
+  content:'';
+  position:absolute; inset:0;
+  background-image: 
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px, transparent 1px, transparent 40px);
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  width: 100%; max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Ashoka Chakra inspired decoration */
+.hero-visual {
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+}
+
+.chakra-ring {
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,179,0,0.3);
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  animation: spin-slow 30s linear infinite;
+}
+
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+
+.chakra-ring::before {
+  content: '';
+  position: absolute; inset: -15px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255,107,0,0.2);
+}
+
+.chakra-center {
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,107,0,0.15), rgba(10,124,62,0.15));
+  border: 2px solid rgba(255,179,0,0.4);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  animation: spin-slow 30s linear infinite reverse;
+  box-shadow: 0 0 60px rgba(255,107,0,0.2), inset 0 0 40px rgba(10,124,62,0.1);
+}
+
+.chakra-center .emblem { font-size: 4rem; margin-bottom: 0.5rem; }
+.chakra-center h4 { color: var(--gold); font-family:'Baloo 2',sans-serif; font-size:1rem; text-align:center; font-weight:800; line-height:1.3; }
+
+.stat-badges {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.stat-badge {
+  position: absolute;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  color: white;
+  animation: float 4s ease-in-out infinite;
+}
+
+.stat-badge:nth-child(1) { top: 5%; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+.stat-badge:nth-child(2) { bottom: 5%; left: 50%; transform: translateX(-50%); animation-delay: 1.5s; }
+.stat-badge:nth-child(3) { top: 50%; left: -5%; transform: translateY(-50%); animation-delay: 0.8s; }
+.stat-badge:nth-child(4) { top: 50%; right: -5%; transform: translateY(-50%); animation-delay: 2.3s; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0) translateX(-50%); }
+  50% { transform: translateY(-8px) translateX(-50%); }
+}
+.stat-badge:nth-child(3), .stat-badge:nth-child(4) {
+  animation: float2 4s ease-in-out infinite;
+}
+@keyframes float2 {
+  0%,100% { transform: translateY(-50%); }
+  50% { transform: translateY(calc(-50% - 8px)); }
+}
+
+.stat-badge .num { font-family:'Baloo 2',sans-serif; font-size:1.4rem; font-weight:800; color:var(--gold); display:block; }
+.stat-badge .lbl { font-size:0.7rem; opacity:0.8; }
+
+/* Hero Text */
+.hero-text {}
+
+.govt-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,179,0,0.15);
+  border: 1px solid rgba(255,179,0,0.4);
+  color: var(--gold);
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
+  font-size: 0.85rem; font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.hero-text h1 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+}
+
+.hero-text h1 span { color: var(--saffron); }
+
+.hero-text .subtitle {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-info-pills {
+  display: flex; flex-wrap: wrap; gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.pill {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.85);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+
+.pill i { color: var(--saffron); }
+
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.btn-main {
+  background: linear-gradient(135deg, var(--saffron), var(--deep-orange));
+  color: white; text-decoration: none;
+  padding: 0.9rem 2rem; border-radius: 50px;
+  font-weight: 700; font-size: 1rem;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  box-shadow: 0 8px 25px rgba(255,107,0,0.4);
+  transition: all 0.3s;
+  border: none; cursor: pointer;
+}
+.btn-main:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(255,107,0,0.5); }
+
+.btn-outline {
+  background: transparent;
+  color: white; text-decoration: none;
+  padding: 0.9rem 2rem; border-radius: 50px;
+  font-weight: 700; font-size: 1rem;
+  border: 2px solid rgba(255,255,255,0.4);
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  transition: all 0.3s;
+}
+.btn-outline:hover { background: white; color: var(--navy); border-color: white; transform: translateY(-3px); }
+
+/* ============================
+   SECTION COMMON
+============================ */
+.section { padding: 5rem 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+.section-header { text-align: center; margin-bottom: 3.5rem; }
+.section-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(255,107,0,0.1), rgba(10,124,62,0.1));
+  border: 1px solid rgba(255,107,0,0.3);
+  color: var(--saffron);
+  padding: 0.3rem 1rem; border-radius: 20px;
+  font-size: 0.85rem; font-weight: 700;
+  margin-bottom: 0.8rem; letter-spacing: 1px; text-transform: uppercase;
+}
+.section-header h2 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800; color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.section-header p { color: var(--grey); font-size: 1.05rem; }
+.title-bar {
+  width: 60px; height: 4px;
+  background: linear-gradient(90deg, var(--saffron), var(--green));
+  border-radius: 2px; margin: 0.8rem auto 0;
+}
+
+/* ============================
+   ADDRESS CARD
+============================ */
+.address-section {
+  background: var(--navy);
+  padding: 4rem 0;
+}
+
+.address-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.addr-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 2rem;
+  color: white;
+  transition: all 0.3s;
+}
+
+.addr-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-5px); }
+
+.addr-card h3 {
+  font-family: 'Baloo 2', sans-serif; font-size: 1.2rem; font-weight: 800;
+  color: var(--gold); margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+
+.addr-line { display: flex; align-items: flex-start; gap: 0.7rem; margin: 0.7rem 0; font-size: 0.95rem; color: rgba(255,255,255,0.8); }
+.addr-line i { color: var(--saffron); margin-top: 3px; flex-shrink: 0; width: 16px; }
+
+.contact-chip {
+  display: flex; align-items: center; gap: 0.7rem;
+  background: rgba(255,255,255,0.07);
+  border-radius: 10px; padding: 0.7rem 1rem;
+  margin: 0.6rem 0; font-size: 0.9rem;
+  transition: all 0.2s; cursor: pointer;
+  text-decoration: none; color: rgba(255,255,255,0.85);
+}
+
+.contact-chip:hover { background: rgba(255,107,0,0.2); color: white; }
+.contact-chip i { color: var(--saffron); width: 18px; }
+.contact-chip.green i { color: #25D366; }
+.contact-chip.mail i { color: var(--gold); }
+
+/* ============================
+   TRADES SECTION
+============================ */
+.trades-section { background: var(--white); }
+
+.trades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.trade-card {
+  background: var(--cream);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  position: relative; overflow: hidden;
+}
+
+.trade-card::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--saffron), var(--gold));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.trade-card:hover::after { transform: scaleX(1); }
+
+.trade-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(255,107,0,0.2);
+  background: white;
+}
+
+.trade-icon {
+  width: 80px; height: 80px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255,107,0,0.1), rgba(10,124,62,0.1));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.2rem; margin: 0 auto 1.2rem;
+  transition: all 0.3s;
+}
+
+.trade-card:hover .trade-icon {
+  background: linear-gradient(135deg, var(--saffron), var(--deep-orange));
+  color: white;
+}
+
+.trade-card h3 {
+  font-family: 'Baloo 2', sans-serif; font-size: 1.3rem; font-weight: 800;
+  color: var(--navy); margin-bottom: 0.5rem;
+}
+.trade-card .meta { color: var(--grey); font-size: 0.9rem; margin-bottom: 1rem; }
+
+.stipend-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--green), var(--light-green));
+  color: white; padding: 0.4rem 1.2rem; border-radius: 20px;
+  font-weight: 700; font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(10,124,62,0.3);
+}
+
+/* ============================
+   JOBS SECTION
+============================ */
+.jobs-section { background: var(--light); }
+
+.filter-bar {
+  display: flex; gap: 1rem; margin-bottom: 2.5rem;
+  flex-wrap: wrap; align-items: center;
+  background: white; padding: 1.2rem 1.5rem; border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.filter-bar select,
+.filter-bar input {
+  flex: 1; min-width: 160px;
+  padding: 0.7rem 1rem;
+  border: 2px solid #E5E7EB; border-radius: 10px;
+  font-family: 'Mukta', sans-serif; font-size: 0.95rem;
+  color: var(--dark); outline: none; transition: 0.2s;
+  background: var(--cream);
+}
+.filter-bar select:focus, .filter-bar input:focus { border-color: var(--saffron); }
+
+.filter-btn {
+  background: linear-gradient(135deg, var(--navy), #1a4080);
+  color: white; border: none; border-radius: 10px;
+  padding: 0.7rem 1.5rem; font-family: 'Mukta', sans-serif;
+  font-weight: 700; font-size: 0.95rem; cursor: pointer;
+  display: flex; align-items: center; gap: 0.4rem;
+  transition: all 0.2s; white-space: nowrap;
+}
+.filter-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(13,45,90,0.3); }
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.5rem;
+}
+
+.job-card {
+  background: white; border-radius: var(--radius);
+  padding: 1.8rem; box-shadow: var(--shadow-card);
+  border-left: 5px solid var(--saffron);
+  transition: all 0.3s; display: flex; flex-direction: column; gap: 1rem;
+}
+
+.job-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+
+.job-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+.job-title { font-family:'Baloo 2',sans-serif; font-size:1.2rem; font-weight:800; color:var(--navy); margin-bottom:0.3rem; }
+.job-company { color: var(--saffron); font-weight: 700; font-size: 0.9rem; }
+.job-loc { color: var(--grey); font-size: 0.85rem; display:flex; align-items:center; gap:0.3rem; margin-top:0.2rem; }
+.job-stipend-tag {
+  background: linear-gradient(135deg, var(--green), var(--light-green));
+  color: white; padding: 0.5rem 0.9rem; border-radius: 12px;
+  font-weight: 800; font-size: 0.9rem; white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(10,124,62,0.3);
+}
+
+.job-desc { color: #555; font-size: 0.9rem; line-height: 1.6; }
+
+.job-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.job-tag {
+  background: var(--light); color: var(--navy); border-radius: 6px;
+  padding: 0.25rem 0.7rem; font-size: 0.8rem; font-weight: 600;
+}
+
+.job-footer { display: flex; gap: 0.7rem; padding-top: 0.8rem; border-top: 1px solid #F0F0F0; }
+
+.jbtn {
+  flex: 1; padding: 0.7rem; border: none; border-radius: 10px;
+  font-family: 'Mukta', sans-serif; font-weight: 700; font-size: 0.9rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  gap: 0.4rem; transition: all 0.2s;
+}
+.jbtn-apply { background: linear-gradient(135deg, var(--saffron), var(--deep-orange)); color: white; }
+.jbtn-apply:hover { transform:translateY(-2px); box-shadow: 0 6px 20px rgba(255,107,0,0.4); }
+.jbtn-wa { background: #25D366; color: white; }
+.jbtn-wa:hover { transform:translateY(-2px); box-shadow: 0 6px 20px rgba(37,211,102,0.4); }
+
+/* ============================
+   APPLY FORM
+============================ */
+.apply-section {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a4080 100%);
+  padding: 5rem 0;
+  position: relative; overflow: hidden;
+}
+
+.apply-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0, rgba(255,255,255,0.02) 1px, transparent 0, transparent 50%);
+  background-size: 30px 30px;
+}
+
+.form-wrap {
+  max-width: 780px; margin: 0 auto;
+  background: white; border-radius: 28px;
+  overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+  position: relative; z-index: 1;
+}
+
+.form-header {
+  background: linear-gradient(135deg, var(--saffron), var(--deep-orange));
+  padding: 2rem 2.5rem;
+  display: flex; align-items: center; gap: 1.2rem; color: white;
+}
+
+.form-header-icon {
+  width: 60px; height: 60px; border-radius: 15px;
+  background: rgba(255,255,255,0.2); display: flex;
+  align-items: center; justify-content: center; font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.form-header h3 { font-family:'Baloo 2',sans-serif; font-size:1.4rem; font-weight:800; }
+.form-header p { opacity: 0.85; font-size: 0.9rem; margin-top: 0.2rem; }
+
+.form-body { padding: 2.5rem; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.form-group.full { grid-column: 1 / -1; }
+
+.form-group label { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem 1rem; border: 2px solid #E5E7EB; border-radius: 12px;
+  font-family: 'Mukta', sans-serif; font-size: 0.95rem; color: var(--dark);
+  outline: none; transition: 0.2s; background: var(--cream);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--saffron); background: white;
+  box-shadow: 0 0 0 4px rgba(255,107,0,0.08);
+}
+
+.form-group textarea { resize: vertical; min-height: 90px; }
+
+.submit-btn {
+  width: 100%; padding: 1rem;
+  background: linear-gradient(135deg, var(--saffron), var(--deep-orange));
+  color: white; border: none; border-radius: 14px;
+  font-family: 'Baloo 2', sans-serif; font-size: 1.1rem; font-weight: 800;
+  cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+  transition: all 0.3s; margin-top: 0.5rem;
+  box-shadow: 0 8px 25px rgba(255,107,0,0.4);
+}
+
+.submit-btn:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(255,107,0,0.5); }
+
+/* ============================
+   NOTICE / MARQUEE
+============================ */
+.notice-bar {
+  background: var(--saffron); color: white;
+  padding: 0.6rem 0; overflow: hidden;
+  position: relative; z-index: 2;
+}
+
+.notice-inner { display: flex; align-items: center; }
+.notice-label {
+  background: var(--deep-orange); padding: 0.6rem 1.2rem;
+  font-weight: 800; font-size: 0.9rem; white-space: nowrap; letter-spacing:1px;
+  margin-right: 1rem;
+}
+.notice-inner marquee { flex: 1; font-weight: 600; font-size: 0.95rem; }
+
+/* ============================
+   FOOTER
+============================ */
+.footer {
+  background: var(--dark); color: rgba(255,255,255,0.8);
+  padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem; margin-bottom: 3rem;
+}
+
+.footer-brand .brand-logo {
+  display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;
+}
+.brand-icon {
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, var(--saffron), var(--gold));
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+}
+.brand-name { font-family:'Baloo 2',sans-serif; font-size:1rem; font-weight:800; color:white; }
+.brand-sub { font-size: 0.75rem; color: var(--gold); }
+.footer-desc { font-size:0.9rem; line-height:1.7; color:rgba(255,255,255,0.6); margin-bottom:1.2rem; }
+
+.footer-addr { display:flex; flex-direction:column; gap:0.5rem; font-size:0.88rem; }
+.footer-addr span { display:flex; align-items:flex-start; gap:0.5rem; color:rgba(255,255,255,0.7); }
+.footer-addr i { color:var(--saffron); margin-top:3px; flex-shrink:0; }
+
+.footer-col h4 { font-family:'Baloo 2',sans-serif; font-size:1rem; font-weight:800; color:white; margin-bottom:1rem; }
+.footer-links { list-style:none; display:flex; flex-direction:column; gap:0.5rem; }
+.footer-links a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.9rem; transition:0.2s; display:flex; align-items:center; gap:0.4rem; }
+.footer-links a:hover { color:var(--gold); padding-left:4px; }
+.footer-links a::before { content:'›'; color:var(--saffron); font-size:1.1rem; }
+
+.social-btns { display:flex; flex-direction:column; gap:0.7rem; }
+.soc-btn {
+  display: flex; align-items: center; gap: 0.7rem;
+  padding: 0.6rem 1rem; border-radius: 10px;
+  text-decoration: none; font-size: 0.9rem; font-weight: 600;
+  transition: all 0.2s;
+}
+.soc-btn.wa { background: rgba(37,211,102,0.15); color: #25D366; border: 1px solid rgba(37,211,102,0.3); }
+.soc-btn.tg { background: rgba(0,136,204,0.15); color: #0088cc; border: 1px solid rgba(0,136,204,0.3); }
+.soc-btn.fb { background: rgba(66,103,178,0.15); color: #4267B2; border: 1px solid rgba(66,103,178,0.3); }
+.soc-btn:hover { opacity: 0.85; transform: translateX(4px); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 2rem; text-align: center;
+  font-size: 0.85rem; color: rgba(255,255,255,0.5);
+}
+.footer-bottom strong { color: var(--gold); }
+
+/* ============================
+   MODAL / POPUP
+============================ */
+.modal-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5); z-index: 9999;
+  align-items: center; justify-content: center;
+  backdrop-filter: blur(5px);
+}
+.modal-overlay.active { display: flex; }
+
+.modal {
+  background: white; border-radius: 24px; padding: 2.5rem;
+  max-width: 450px; width: 90%; text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+  animation: popIn 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-icon { font-size: 4rem; margin-bottom: 1rem; }
+.modal h3 { font-family:'Baloo 2',sans-serif; font-size:1.5rem; font-weight:800; color:var(--navy); margin-bottom:0.5rem; }
+.modal p { color: var(--grey); margin-bottom: 1.5rem; line-height:1.6; }
+.modal-btns { display:flex; gap:1rem; }
+.modal-btns button, .modal-btns a {
+  flex:1; padding:0.8rem; border-radius:12px; font-family:'Mukta',sans-serif;
+  font-weight:700; font-size:0.95rem; cursor:pointer; text-decoration:none;
+  display:flex; align-items:center; justify-content:center; gap:0.4rem; border:none;
+  transition: all 0.2s;
+}
+.modal-cancel { background: var(--light); color: var(--navy); }
+.modal-cancel:hover { background: #E5E7EB; }
+.modal-confirm { background: linear-gradient(135deg, var(--saffron), var(--deep-orange)); color:white; }
+.modal-confirm:hover { transform:translateY(-2px); }
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .address-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display:none; position:fixed; top:70px; left:0; right:0; background:var(--navy); flex-direction:column; padding:1rem; gap:0; border-top:1px solid rgba(255,255,255,0.1); }
+  .nav-links.active { display:flex; }
+  .nav-links a { padding:0.8rem 1rem; border-bottom:1px solid rgba(255,255,255,0.05); }
+  .hamburger { display:flex; }
+
+  .hero-content { grid-template-columns: 1fr; text-align:center; gap:2rem; }
+  .hero-visual { display:none; }
+  .hero-info-pills, .hero-btns { justify-content: center; }
+
+  .address-grid { grid-template-columns: 1fr; }
+  .trades-grid { grid-template-columns: 1fr 1fr; }
+  .jobs-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap:2rem; }
+  .footer-brand { order: -1; }
+}
+
+@media (max-width: 480px) {
+  .trades-grid { grid-template-columns: 1fr; }
+  .navbar { padding: 0.6rem 1rem; }
+  .filter-bar { flex-direction: column; }
+  .filter-bar select, .filter-bar input { min-width: unset; width: 100%; }
+}
+
+/* ============================
+   SCROLL ANIMATIONS
+============================ */
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Stagger children */
+.trades-grid .trade-card,
+.jobs-grid .job-card {
+  opacity: 0; transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.trades-grid .trade-card.visible,
+.jobs-grid .job-card.visible {
+  opacity: 1; transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- NOTICE BAR -->
+<div class="notice-bar">
+  <div class="notice-inner">
+    <div class="notice-label">🔔 NOTICE</div>
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      📢 NAPS Apprentice Recruitment 2026 जारी है! | Last Date: 31 March 2026 | सीटें सीमित हैं, जल्दी करें! | NAPS Portal पर Registration अनिवार्य है | ITI Bhinga Shravasti में 156 नई वैकेंसी!
+    </marquee>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo-section">
+    <div class="logo-emblem">🏭</div>
+    <div class="logo-text">
+      <div class="main">GOVT. ITI BHINGA</div>
+      <div class="sub">Shravasti, Uttar Pradesh</div>
+    </div>
+  </div>
+  <ul class="nav-links" id="navMenu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#trades">Trades</a></li>
+    <li><a href="#jobs">Vacancies</a></li>
+    <li><a href="#apply">Apply</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#apply" class="nav-cta">📝 Apply Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <!-- Left: Text -->
+    <div class="hero-text reveal">
+      <div class="govt-badge">
+        <i class="fas fa-certificate"></i> Government of Uttar Pradesh
+      </div>
+      <h1>
+        ITI Bhinga<br>
+        <span>Apprentice</span><br>
+        Recruitment 2026
+      </h1>
+      <p class="subtitle">
+        NAPS / NATS Portal के माध्यम से अप्रेंटिसशिप करें। Electrician, Fitter, Welder, Turner, Machinist और COPA Trades में सुनहरा अवसर!
+      </p>
+      <div class="hero-info-pills">
+        <div class="pill"><i class="fas fa-rupee-sign"></i> ₹9500 - ₹12500/Month</div>
+        <div class="pill"><i class="fas fa-clock"></i> 6 - 12 Months</div>
+        <div class="pill"><i class="fas fa-map-marker-alt"></i> Bhinga, Shravasti, UP</div>
+        <div class="pill"><i class="fas fa-calendar-alt"></i> Last Date: 31 March 2026</div>
+      </div>
+      <div class="hero-btns">
+        <a href="#apply" class="btn-main"><i class="fas fa-file-alt"></i> आवेदन करें</a>
+        <a href="https://www.apprenticeshipindia.gov.in" target="_blank" class="btn-outline"><i class="fas fa-external-link-alt"></i> NAPS Portal</a>
+      </div>
+    </div>
+
+    <!-- Right: Visual -->
+    <div class="hero-visual">
+      <div class="chakra-ring">
+        <div class="chakra-center">
+          <div class="emblem">⚙️</div>
+          <h4>Government<br>ITI Bhinga<br>Est. 2005</h4>
+        </div>
+      </div>
+      <div class="stat-badges">
+        <div class="stat-badge">
+          <span class="num" data-target="156">0</span>
+          <span class="lbl">Vacancies</span>
+        </div>
+        <div class="stat-badge">
+          <span class="num" data-target="850">0</span>
+          <span class="lbl">Students</span>
+        </div>
+        <div class="stat-badge">
+          <span class="num" data-target="22">0</span>
+          <span class="lbl">Companies</span>
+        </div>
+        <div class="stat-badge">
+          <span class="num" data-target="6">0</span>
+          <span class="lbl">Trades</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADDRESS SECTION -->
+<section id="contact" class="address-section">
+  <div class="container">
+    <div class="address-grid">
+      <!-- Address -->
+      <div class="addr-card reveal">
+        <h3><i class="fas fa-university"></i> संस्थान का पता</h3>
+        <div class="addr-line"><i class="fas fa-map-marker-alt"></i>
+          <span>Government Industrial Training Institute, Bhinga, Tehsil Bhinga, District Shravasti, Uttar Pradesh - <strong>271865</strong></span>
+        </div>
+        <div class="addr-line"><i class="fas fa-globe"></i><span>bhinga.itiup.in</span></div>
+        <div class="addr-line"><i class="fas fa-envelope"></i><span>iti.bhinga@up.gov.in</span></div>
+        <div class="addr-line"><i class="fas fa-phone"></i><span>05255 - 235XXX</span></div>
+        <div style="margin-top:1.2rem; border-radius:14px; overflow:hidden;">
+          <iframe
+            src="https://maps.google.com/maps?q=Bhinga+Shravasti+Uttar+Pradesh&output=embed"
+            width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contacts -->
+      <div class="addr-card reveal" style="transition-delay:0.1s">
+        <h3><i class="fas fa-address-book"></i> संपर्क करें</h3>
+        <a href="https://wa.me/919621182261" class="contact-chip green" target="_blank">
+          <i class="fab fa-whatsapp"></i> Mr. मनोज वर्मा — 9621182261
+        </a>
+        <a href="https://wa.me/919455230426" class="contact-chip green" target="_blank">
+          <i class="fab fa-whatsapp"></i> Mr. संतोष यादव — 9455230426
+        </a>
+        <a href="https://wa.me/916394735755" class="contact-chip green" target="_blank">
+          <i class="fab fa-whatsapp"></i> Mr. Pradeep Sir — 6394735755
+        </a>
+        <a href="https://wa.me/917318342633" class="contact-chip green" target="_blank">
+          <i class="fab fa-whatsapp"></i> Mr. Ashwani — 7318342633
+        </a>
+        <a href="mailto:iti.bhinga@up.gov.in" class="contact-chip mail">
+          <i class="fas fa-envelope"></i> iti.bhinga@up.gov.in
+        </a>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="addr-card reveal" style="transition-delay:0.2s">
+        <h3><i class="fas fa-link"></i> Quick Links</h3>
+        <a href="https://www.apprenticeshipindia.gov.in" target="_blank" class="contact-chip">
+          <i class="fas fa-external-link-alt"></i> NAPS Portal
+        </a>
+        <a href="https://nats.education.gov.in" target="_blank" class="contact-chip">
+          <i class="fas fa-external-link-alt"></i> NATS Portal
+        </a>
+        <a href="#apply" class="contact-chip">
+          <i class="fas fa-file-alt"></i> Online Apply
+        </a>
+        <a href="#jobs" class="contact-chip">
+          <i class="fas fa-briefcase"></i> नई वैकेंसी
+        </a>
+        <a href="#trades" class="contact-chip">
+          <i class="fas fa-tools"></i> Trades देखें
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRADES SECTION -->
+<section id="trades" class="trades-section section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">🔧 Our Trades</div>
+      <h2>ITI Bhinga Shravasti के Trades</h2>
+      <p>सरकारी आईटीआई भिंगा में 6 प्रमुख Trade में प्रशिक्षण दिया जाता है</p>
+      <div class="title-bar"></div>
+    </div>
+    <div class="trades-grid">
+      <div class="trade-card" data-trade="Electrician">
+        <div class="trade-icon">⚡</div>
+        <h3>Electrician</h3>
+        <div class="meta">2 Year Course | 60 Seats | NCVT</div>
+        <div class="stipend-badge">₹12,500/Month</div>
+      </div>
+      <div class="trade-card" data-trade="Fitter">
+        <div class="trade-icon">🔧</div>
+        <h3>Fitter</h3>
+        <div class="meta">1 Year Course | 52 Seats | NCVT</div>
+        <div class="stipend-badge">₹10,500/Month</div>
+      </div>
+      <div class="trade-card" data-trade="Welder">
+        <div class="trade-icon">🔥</div>
+        <h3>Welder (G&M)</h3>
+        <div class="meta">1 Year Course | 48 Seats | NCVT</div>
+        <div class="stipend-badge">₹9,500/Month</div>
+      </div>
+      <div class="trade-card" data-trade="Turner">
+        <div class="trade-icon">⚙️</div>
+        <h3>Turner</h3>
+        <div class="meta">1 Year Course | 39 Seats | NCVT</div>
+        <div class="stipend-badge">₹9,500/Month</div>
+      </div>
+      <div class="trade-card" data-trade="Machinist">
+        <div class="trade-icon">🏭</div>
+        <h3>Machinist</h3>
+        <div class="meta">1 Year Course | 39 Seats | NCVT</div>
+        <div class="stipend-badge">₹10,200/Month</div>
+      </div>
+      <div class="trade-card" data-trade="COPA">
+        <div class="trade-icon">💻</div>
+        <h3>COPA</h3>
+        <div class="meta">1 Year Course | 24 Seats | NCVT</div>
+        <div class="stipend-badge">₹10,000/Month</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOBS SECTION -->
+<section id="jobs" class="jobs-section section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">📋 Latest Openings</div>
+      <h2>ITI Bhinga के छात्रों के लिए Jobs</h2>
+      <p>NAPS/NATS के तहत नवीनतम Apprentice Vacancy — Shravasti और आसपास के जिलों में</p>
+      <div class="title-bar"></div>
+    </div>
+
+    <div class="filter-bar reveal">
+      <select id="tradeFilter" onchange="filterJobs()">
+        <option value="">🔍 All Trades</option>
+        <option value="Electrician">Electrician</option>
+        <option value="Fitter">Fitter</option>
+        <option value="Welder">Welder</option>
+        <option value="Turner">Turner</option>
+        <option value="Machinist">Machinist</option>
+        <option value="COPA">COPA</option>
+      </select>
+      <input type="text" id="companySearch" placeholder="🏢 Company या Job नाम खोजें...">
+      <button class="filter-btn" onclick="filterJobs()"><i class="fas fa-search"></i> Search</button>
+    </div>
+
+    <div class="jobs-grid" id="jobsGrid"></div>
+  </div>
+</section>
+
+<!-- APPLY SECTION -->
+<section id="apply" class="apply-section">
+  <div class="container">
+    <div class="section-header reveal" style="color:white;">
+      <div class="section-tag" style="background:rgba(255,255,255,0.15); border-color:rgba(255,255,255,0.3); color:white;">📝 Apply Now</div>
+      <h2 style="color:white;">NAPS Apprenticeship आवेदन</h2>
+      <p style="color:rgba(255,255,255,0.7);">नीचे Form भरें — 24 घंटे में WhatsApp पर Contact किया जाएगा</p>
+      <div class="title-bar"></div>
+    </div>
+
+    <div class="form-wrap reveal">
+      <div class="form-header">
+        <div class="form-header-icon">🏭</div>
+        <div>
+          <h3>Government ITI Bhinga, Shravasti</h3>
+          <p>NAPS / NATS Apprentice Registration Form 2026</p>
+        </div>
+      </div>
+      <div class="form-body">
+        <form id="apprenticeForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>पूरा नाम (Full Name) *</label>
+              <input type="text" name="name" placeholder="जैसे: Rahul Kumar" required>
+            </div>
+            <div class="form-group">
+              <label>मोबाइल नंबर *</label>
+              <input type="tel" name="mobile" placeholder="10 अंक का नंबर" maxlength="10" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Trade *</label>
+              <select name="trade" required>
+                <option value="">-- Trade चुनें --</option>
+                <option>Electrician</option>
+                <option>Fitter</option>
+                <option>Welder (G&M)</option>
+                <option>Turner</option>
+                <option>Machinist</option>
+                <option>COPA</option>
+                <option>BDVVM TTL Trade</option>
+                <option>MEV TTL Trade</option>
+                <option>MPCA TTL Trade</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>ITI Passout Year</label>
+              <select name="passout_year">
+                <option value="">-- Year चुनें --</option>
+                <option>2026</option>
+                <option>2025</option>
+                <option>2024</option>
+                <option>2023</option>
+                <option>2022</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>ITI Marks % *</label>
+              <input type="number" name="marks" placeholder="जैसे: 75.5" step="0.1" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+              <label>ITI Institute का नाम</label>
+              <input type="text" name="institute" placeholder="जैसे: Govt. ITI Bhinga">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label>पूरा पता (Shravasti / आसपास का जिला)</label>
+              <textarea name="address" placeholder="गांव, तहसील, जिला, राज्य..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> आवेदन Submit करें (NAPS Portal)
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <div class="brand-icon">🏭</div>
+          <div>
+            <div class="brand-name">Government ITI Bhinga</div>
+            <div class="brand-sub">Shravasti, Uttar Pradesh</div>
+          </div>
+        </div>
+        <p class="footer-desc">
+          गवर्नमेंट आईटीआई भिंगा, श्रावस्ती में NCVT के अंतर्गत ITI ट्रेनिंग दी जाती है। NAPS/NATS Portal के माध्यम से Apprenticeship के लिए Register करें।
+        </p>
+        <div class="footer-addr">
+          <span><i class="fas fa-map-marker-alt"></i> भिंगा, तहसील भिंगा, जिला श्रावस्ती, UP - 271865</span>
+          <span><i class="fas fa-phone"></i> 05255-235XXX</span>
+          <span><i class="fas fa-envelope"></i> iti.bhinga@up.gov.in</span>
+          <span><i class="fas fa-globe"></i> bhinga.itiup.in</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>📌 Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#trades">Trades</a></li>
+          <li><a href="#jobs">Vacancies</a></li>
+          <li><a href="#apply">Apply Now</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>🌐 Govt. Portals</h4>
+        <ul class="footer-links">
+          <li><a href="https://www.apprenticeshipindia.gov.in" target="_blank">NAPS Portal</a></li>
+          <li><a href="https://nats.education.gov.in" target="_blank">NATS Portal</a></li>
+          <li><a href="https://itiup.in" target="_blank">DGET UP Portal</a></li>
+          <li><a href="https://skill.gov.in" target="_blank">Skill India</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>📱 Social Media</h4>
+        <div class="social-btns">
+          <a href="#" class="soc-btn wa"><i class="fab fa-whatsapp"></i> WhatsApp Group</a>
+          <a href="#" class="soc-btn tg"><i class="fab fa-telegram"></i> Telegram</a>
+          <a href="#" class="soc-btn fb"><i class="fab fa-facebook"></i> Facebook Page</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 <strong>Government ITI Bhinga, Shravasti</strong> | All Rights Reserved</p>
+      <p style="margin-top:0.3rem;">Developed by <strong>Ashwani</strong> | For NAPS Apprentice Recruitment 2026 | UP-46 Shravasti</p>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-icon" id="modalIcon">📋</div>
+    <h3 id="modalTitle">Confirm Apply</h3>
+    <p id="modalMsg">WhatsApp पर message भेजें?</p>
+    <div class="modal-btns">
+      <button class="modal-cancel" onclick="closeModal()">Cancel</button>
+      <a href="#" id="modalBtn" class="modal-confirm" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp करें
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============ DATA ============
+const jobs = [
+  {
+    id:1, title:"इलेक्ट्रीशियन अप्रेंटिस", company:"UPPCB श्रावस्ती",
+    location:"भिंगा इंडस्ट्रियल एरिया", stipend:"₹12,500/माह",
+    duration:"12 माह", seats:25, trade:"Electrician", lastDate:"31 March 2026",
+    description:"ITI Electrician Pass (2022-2026)। वायरिंग, मेंटेनेंस, पैनल वर्क। NAPS Registration अनिवार्य।",
+    wa:"919621182261"
+  },
+  {
+    id:2, title:"फिटर अप्रेंटिस", company:"Bharat Heavy Electricals Ltd",
+    location:"नजदीकी यूनिट, Balrampur", stipend:"₹10,500/माह",
+    duration:"12 माह", seats:20, trade:"Fitter", lastDate:"31 March 2026",
+    description:"मैकेनिकल फिटिंग, असेंबली वर्क। ITI Fitter पास। BHEL प्रमाण पत्र मिलेगा।",
+    wa:"919621182261"
+  },
+  {
+    id:3, title:"वेल्डर (G&M) अप्रेंटिस", company:"Piping Project Balrampur",
+    location:"बलरामपुर (20km)", stipend:"₹9,500/माह",
+    duration:"6 माह", seats:15, trade:"Welder", lastDate:"31 March 2026",
+    description:"GTAW, SMAW वेल्डिंग टेक्निक। ITI Welder पास। ओवरटाइम अलग से।",
+    wa:"919621182261"
+  },
+  {
+    id:4, title:"टर्नर अप्रेंटिस", company:"Auto Components Ltd",
+    location:"श्रावस्ती औद्योगिक क्षेत्र", stipend:"₹9,500/माह",
+    duration:"12 माह", seats:12, trade:"Turner", lastDate:"31 March 2026",
+    description:"CNC लेथ मशीन ऑपरेशन। ITI Turner। अनुभव प्रमाण पत्र मिलेगा।",
+    wa:"919621182261"
+  },
+  {
+    id:5, title:"मशीनिस्ट अप्रेंटिस", company:"जिला अस्पताल श्रावस्ती",
+    location:"जिला अस्पताल परिसर", stipend:"₹10,200/माह",
+    duration:"12 माह", seats:10, trade:"Machinist", lastDate:"31 March 2026",
+    description:"मेडिकल इक्विपमेंट मेंटेनेंस। सरकारी संस्था में अनुभव। ITI Machinist पास।",
+    wa:"919621182261"
+  },
+  {
+    id:6, title:"COPA अप्रेंटिस", company:"जिला प्रशासन श्रावस्ती",
+    location:"कलेक्ट्रेट कार्यालय", stipend:"₹10,000/माह",
+    duration:"12 माह", seats:8, trade:"COPA", lastDate:"31 March 2026",
+    description:"कंप्यूटर ऑपरेटर, डेटा एंट्री, सरकारी दस्तावेज प्रबंधन। COPA पास।",
+    wa:"919621182261"
+  }
+];
+
+// ============ RENDER JOBS ============
+function renderJobs(data) {
+  const grid = document.getElementById('jobsGrid');
+  if(!data.length) {
+    grid.innerHTML = `<div style="text-align:center;padding:3rem;color:#999;grid-column:1/-1;">
+      <i class="fas fa-search" style="font-size:3rem;margin-bottom:1rem;display:block;"></i>
+      कोई Job नहीं मिली। Filter बदलकर देखें।
+    </div>`;
+    return;
+  }
+  grid.innerHTML = data.map((j,i) => `
+    <div class="job-card" style="transition-delay:${i*0.08}s">
+      <div class="job-top">
+        <div>
+          <div class="job-title">${j.title}</div>
+          <div class="job-company">🏢 ${j.company}</div>
+          <div class="job-loc"><i class="fas fa-map-marker-alt"></i> ${j.location} &nbsp;|&nbsp; <i class="fas fa-users"></i> ${j.seats} Seats</div>
+        </div>
+        <div class="job-stipend-tag">${j.stipend}</div>
+      </div>
+      <p class="job-desc">${j.description}</p>
+      <div class="job-tags">
+        <span class="job-tag">📅 ${j.lastDate}</span>
+        <span class="job-tag">⏱ ${j.duration}</span>
+        <span class="job-tag">🔧 ${j.trade}</span>
+      </div>
+      <div class="job-footer">
+        <button class="jbtn jbtn-apply" onclick="applyJob('${j.title}', '${j.wa}')">
+          <i class="fas fa-file-alt"></i> Apply
+        </button>
+        <button class="jbtn jbtn-wa" onclick="waJob('${j.title}', '${j.wa}')">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </button>
+      </div>
+    </div>
+  `).join('');
+  // Animate cards
+  setTimeout(() => {
+    document.querySelectorAll('.job-card').forEach(c => c.classList.add('visible'));
+  }, 100);
+}
+
+function filterJobs() {
+  const trade = document.getElementById('tradeFilter').value;
+  const search = document.getElementById('companySearch').value.toLowerCase();
+  const filtered = jobs.filter(j =>
+    (!trade || j.trade === trade) &&
+    (!search || j.title.toLowerCase().includes(search) || j.company.toLowerCase().includes(search))
+  );
+  renderJobs(filtered);
+}
+
+// ============ MODAL ============
+function openModal(icon, title, msg, url) {
+  document.getElementById('modalIcon').textContent = icon;
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalMsg').textContent = msg;
+  document.getElementById('modalBtn').href = url;
+  document.getElementById('modal').classList.add('active');
+}
+function closeModal() { document.getElementById('modal').classList.remove('active'); }
+document.getElementById('modal').addEventListener('click', function(e) {
+  if(e.target === this) closeModal();
+});
+
+function applyJob(title, wa) {
+  const msg = encodeURIComponent(`🔧 ITI Bhinga से ${title} के लिए Apply कर रहा हूं!\nITI Pass | Marksheet Ready\nKripya call karein.`);
+  openModal('📋', `Apply: ${title}`, 'WhatsApp पर Message भेजें?', `https://wa.me/${wa}?text=${msg}`);
+}
+function waJob(title, wa) {
+  const msg = encodeURIComponent(`नमस्ते! ITI Bhinga Shravasti से ${title} अप्रेंटिस के लिए जानकारी चाहिए।`);
+  window.open(`https://wa.me/${wa}?text=${msg}`, '_blank');
+}
+
+// ============ FORM ============
+document.getElementById('apprenticeForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const data = new FormData(this);
+  const name = data.get('name');
+  const mobile = data.get('mobile');
+  const trade = data.get('trade');
+  const year = data.get('passout_year');
+  const marks = data.get('marks');
+  const address = data.get('address');
+
+  const msg = encodeURIComponent(
+    `🔧 ITI Bhinga NAPS Application 2026\n\nनाम: ${name}\nमोबाइल: ${mobile}\nट्रेड: ${trade}\nपासआउट: ${year}\nमार्क्स: ${marks}%\nपता: ${address}\n\nNAPS Portal पर Register करवाएं।`
+  );
+
+  openModal('✅', 'आवेदन Submit!', '24 घंटे में WhatsApp Call आएगा। अभी WhatsApp पर भी भेज सकते हैं।', `https://wa.me/919621182261?text=${msg}`);
+  this.reset();
+});
+
+// ============ COUNTER ANIMATION ============
+function animateNum(el) {
+  const target = parseInt(el.dataset.target);
+  const dur = 1500;
+  const step = target / (dur / 16);
+  let cur = 0;
+  const timer = setInterval(() => {
+    cur += step;
+    if(cur >= target) { el.textContent = target; clearInterval(timer); }
+    else el.textContent = Math.floor(cur);
+  }, 16);
+}
+
+// ============ SCROLL REVEAL ============
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.classList.add('visible');
+      // Counter
+      e.target.querySelectorAll('.num[data-target]').forEach(n => animateNum(n));
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal, .trade-card, .job-card').forEach(el => observer.observe(el));
+
+// Also observe stat badges for counter
+const heroObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      document.querySelectorAll('.num[data-target]').forEach(n => animateNum(n));
+      heroObserver.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+const heroEl = document.querySelector('.hero');
+if(heroEl) heroObserver.observe(heroEl);
+
+// Trade card click → filter
+document.querySelectorAll('.trade-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const trade = card.dataset.trade;
+    document.getElementById('tradeFilter').value = trade;
+    filterJobs();
+    document.getElementById('jobs').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// ============ NAVBAR ============
+document.getElementById('hamburger').addEventListener('click', function() {
+  document.getElementById('navMenu').classList.toggle('active');
+  this.classList.toggle('active');
+});
+
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
+  nav.style.padding = window.scrollY > 50 ? '0.5rem 2rem' : '0.7rem 2rem';
+});
+
+// ============ INIT ============
+renderJobs(jobs);
+</script>
+</body>
+</html>

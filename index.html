@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="/style.css">
+<link rel="javascript" href="/script.js">
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="nav-logo">
+        <div class="nav-emblem">🏭</div>
+        <div>
+          <div class="nav-text-main">GOVT. ITI BHINGA</div>
+          <div class="nav-text-sub">Shravasti, Uttar Pradesh</div>
+        </div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">होम</a></li>
+        <li><a href="#trades">ट्रेड्स</a></li>
+        <li><a href="#jobs">वैकेंसी</a></li>
+        <li><a href="#notice">सूचनाएं</a></li>
+        <li><a href="#apply" class="nav-cta">📝 Apply Now</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- NOTICE SCROLLBAR -->
+  <div class="notice-bar" style="margin-top: 66px;">
+    <div class="container">
+      <div class="notice-inner">
+        <span class="notice-label">🔔 सूचना</span>
+        <div class="notice-scroll">
+          <span class="notice-text">
+            📢 अप्रेंटिस भर्ती 2026 शुरू — 156 पद उपलब्ध &nbsp;|&nbsp;
+            ✅ NAPS पोर्टल पर पंजीकरण अनिवार्य है &nbsp;|&nbsp;
+            📅 आवेदन की अंतिम तिथि: 30 April 2026 &nbsp;|&nbsp;
+            💰 स्टाइपेंड: ₹9500 से ₹12500 प्रतिमाह &nbsp;|&nbsp;
+            🔧 Electrician · Fitter · Welder · Turner · Machinist · COPA &nbsp;|&nbsp;
+            📞 जानकारी के लिए: 9621182261 (Manoj Verma Sir)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shravasti image -->
+  <div class="Shravasti-image">
+    <!-- <section>
+        <img src="/COPA.jpg" alt="COPA">
+        <img src="/Information & Communication Technology System Maintenance.jpg" alt="Information & Communication Technology System Maintenance">
+            <img src="/cosmetology.jpg" alt="cosmetology">
+            <img src="/Dress Making.jpg" alt="Dress Making">
+            <img src="/Fashion Design & Technology.jpg" alt="Fashion Design & Technology">
+            <img src="Mechanic (Refrigeration and Air-Conditioning).jpg" alt="">
+            <img src="/Mechanic Consumer Electronics Appliances.jpg" alt="">
+            <img src="/Painter.jpg" alt="">
+            <img src="/Plumber.jpg" alt="">
+            <img src="/Welder.jpg" alt=""> -->
+    <div class="Shravasti-image">
+      <section>
+        <div class="trade-card">
+          <img src="http://update.vppup.in/NewVersionApp/Content/PhotoGalary/228_50_1.jpg" alt="update.vppup.in">
+          <p>COPA</p>
+        </div>
+
+        <div class="trade-card">
+          <img src="/Information & Communication Technology System Maintenance.jpg" alt="ICTSM">
+          <p>ICTSM</p>
+        </div>
+
+        <div class="trade-card">
+          <img src="/cosmetology.jpg" alt="Cosmetology">
+          <p>Cosmetology</p>
+        </div>
+
+        <div class="trade-card">
+          <img src="/Dress Making.jpg" alt="Dress Making">
+          <p>Dress Making</p>
+        </div>
+
+        <div class="trade-card">
+          <img src="/Welder.jpg" alt="Welder">
+          <p>Welder</p>
+        </div>
+
+        <div class="trade-card">
+          <img src="/Plumber.jpg" alt="Plumber">
+          <p>Plumber</p>
+        </div>
+
+        <div class="trade-card">
+          <img src="/COPA.jpg" alt="COPA">
+          <p>COPA</p>
+        </div>
+      </section>
+    </div>
+    </section>
+  </div>
+  </div>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="hero-float-1"></div>
+    <div class="hero-float-2"></div>
+    <div class="hero-float-3"></div>
+
+    <div class="container hero-inner">
+      <!-- Institute Info Row -->
+      <div class="hero-top-row">
+        <div class="hero-emblem-large">🏭</div>
+        <div class="hero-institute-info">
+          <div class="hero-institute-name">Government Industrial Training Institute<br>Bhinga, Shravasti</div>
+          <div class="hero-institute-meta">
+            <span><i class="fas fa-map-marker-alt"></i> भिंगा, तहसील भिंगा, जिला श्रावस्ती, उत्तर प्रदेश -
+              271865</span>
+            <span><i class="fas fa-phone"></i> 05255-235XXX &nbsp;|&nbsp; <i class="fas fa-envelope"></i>
+              iti.bhinga@up.gov.in</span>
+            <span><i class="fas fa-globe"></i> bhinga.itiup.in &nbsp;|&nbsp; <i class="fas fa-certificate"></i> NCVT
+              Affiliated</span>
+          </div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="accredited-badge">
+          <div class="acc-icon">🏅</div>
+          <div class="acc-text">NCVT</div>
+          <div class="acc-sub">Affiliated</div>
+        </div>
+      </div>
+
+      <!-- Headline -->
+      <div class="hero-headline-wrap">
+        <div class="hero-tag">
+          <span></span>
+          APPRENTICE RECRUITMENT 2026 – OPEN NOW
+        </div>
+        <h1 class="hero-headline">
+          ITI Bhinga में हैं
+          <span>अप्रेंटिस के सुनहरे अवसर</span>
+        </h1>
+        <p class="hero-sub">NAPS / NATS Portal के माध्यम से आवेदन करें। 6 ट्रेड्स में 156+
+          वैकेंसी।<br>स्टाइपेंड: <strong style="color:var(--gold)">₹9500 – ₹12500/माह</strong></p>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num" data-target="156">0</span>
+          <span class="stat-label">कुल वैकेंसी</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-target="6">0</span>
+          <span class="stat-label">ट्रेड्स</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-target="22">0</span>
+          <span class="stat-label">कंपनियां</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num" data-target="850">0</span>
+          <span class="stat-label">पास-आउट</span>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero-cta">
+        <a href="#apply" class="btn-apply"><i class="fas fa-paper-plane"></i> अभी Apply करें</a>
+        <a href="https://www.apprenticeshipindia.gov.in" target="_blank" class="btn-outline"><i
+            class="fas fa-external-link-alt"></i> NAPS Portal</a>
+        <a href="https://nats.education.gov.in" target="_blank" class="btn-outline"><i
+            class="fas fa-external-link-alt"></i> NATS Portal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADDRESS SECTION -->
+  <section class="address-section" id="contact">
+    <div class="container">
+      <div class="address-grid">
+        <div class="address-left fade-in">
+          <div class="badge-pill"
+            style="background:rgba(232,101,26,0.15); color:var(--saffron); border-color:var(--saffron);">📍
+            संस्थान का पता</div>
+          <h2 class="section-title">संपर्क करें</h2>
+          <div class="section-line"></div>
+          <div class="address-card-inner">
+            <div class="address-line-item">
+              <i class="fas fa-university"></i>
+              <div>
+                <strong>Government Industrial Training Institute</strong>
+                भिंगा, तहसील भिंगा, जिला श्रावस्ती, उत्तर प्रदेश - 271865
+              </div>
+            </div>
+            <div class="address-line-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>फोन नंबर</strong>
+                05255-235XXX
+              </div>
+            </div>
+            <div class="address-line-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <strong>WhatsApp संपर्क</strong>
+                Mr. मनोज वर्मा — <a href="https://wa.me/919621182261">9621182261</a><br>
+                Mr. संतोष कुमार यादव — <a href="https://wa.me/919455230426">9455230426</a><br>
+                Mr. Pradeep Sir — <a href="https://wa.me/916394735755">6394735755</a><br>
+                Mr. Ashwani — <a href="https://wa.me/917318342633">7318342633</a>
+              </div>
+            </div>
+            <div class="address-line-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>ईमेल</strong>
+                <a href="mailto:iti.bhinga@up.gov.in">iti.bhinga@up.gov.in</a>
+              </div>
+            </div>
+            <div class="address-line-item">
+              <i class="fas fa-globe"></i>
+              <div>
+                <strong>वेबसाइट</strong>
+                <a href="http://bhinga.itiup.in" target="_blank">bhinga.itiup.in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="address-right fade-in">
+          <div class="map-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57080.9!2d81.9231!3d27.7015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399862020f050e85%3A0xb7f6e52e0ee23bc4!2sBhinga%2C%20Uttar%20Pradesh!5e0!3m2!1shi!2sin!4v1711500000000"
+              width="100%" height="240" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          <div class="quick-contact-cards">
+            <a class="qc-card" href="https://wa.me/919621182261" target="_blank">
+              <span class="qc-icon">💬</span>
+              <span class="qc-label">WhatsApp करें</span>
+              <span class="qc-value">9621182261</span>
+            </a>
+            <a class="qc-card" href="tel:9621182261">
+              <span class="qc-icon">📞</span>
+              <span class="qc-label">Call करें</span>
+              <span class="qc-value">Manoj Verma Sir</span>
+            </a>
+            <a class="qc-card" href="https://www.apprenticeshipindia.gov.in" target="_blank">
+              <span class="qc-icon">🌐</span>
+              <span class="qc-label">NAPS Portal</span>
+              <span class="qc-value">Apply करें</span>
+            </a>
+            <a class="qc-card" href="https://nats.education.gov.in" target="_blank">
+              <span class="qc-icon">📋</span>
+              <span class="qc-label">NATS Portal</span>
+              <span class="qc-value">Register करें</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRADES -->
+  <section id="trades" class="trades-section">
+    <div class="container">
+      <div class="badge-pill">🔧 उपलब्ध ट्रेड्स</div>
+      <h2 class="section-title">ITI Bhinga के ट्रेड्स</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">NCVT & SCVT से मान्यता प्राप्त — उद्योग-तैयार प्रशिक्षण</p>
+
+      <div class="Shravasti-image">
+        <!-- <section>
+        <img src="/COPA.jpg" alt="COPA">
+        <img src="/Information & Communication Technology System Maintenance.jpg" alt="Information & Communication Technology System Maintenance">
+            <img src="/cosmetology.jpg" alt="cosmetology">
+            <img src="/Dress Making.jpg" alt="Dress Making">
+            <img src="/Fashion Design & Technology.jpg" alt="Fashion Design & Technology">
+            <img src="Mechanic (Refrigeration and Air-Conditioning).jpg" alt="">
+            <img src="/Mechanic Consumer Electronics Appliances.jpg" alt="">
+            <img src="/Painter.jpg" alt="">
+            <img src="/Plumber.jpg" alt="">
+            <img src="/Welder.jpg" alt=""> -->
+        <div class="Shravasti-image">
+          <section>
+            <div class="trade-card">
+              <img src="/COPA.jpg" alt="COPA">
+              <p>COPA</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/Information & Communication Technology System Maintenance.jpg" alt="ICTSM">
+              <p>ICTSM</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/cosmetology.jpg" alt="Cosmetology">
+              <p>Cosmetology</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/Dress Making.jpg" alt="Dress Making">
+              <p>Dress Making</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/Welder.jpg" alt="Welder">
+              <p>Welder</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/Plumber.jpg" alt="Plumber">
+              <p>Plumber</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/COPA.jpg" alt="COPA">
+              <p>COPA</p>
+            </div>
+          </section>
+        </div>
+  </section>
+  </div>
+  </div>
+  <div class="trades-grid">
+    <div class="trade-card fade-in" data-trade="Electrician" onclick="filterByTrade('Electrician')">
+      <div class="trade-card-top">
+        <div class="trade-icon-wrap">⚡</div>
+        <div class="trade-seats">60 सीटें</div>
+      </div>
+      <div class="trade-name">Electrician</div>
+      <div class="trade-duration"><i class="fas fa-clock" style="color:var(--saffron)"></i> 2 वर्ष कोर्स
+      </div>
+      <div class="trade-stipend-row">
+        <div>
+          <div class="trade-stipend">₹12,500</div>
+          <div class="trade-stipend-label">प्रतिमाह स्टाइपेंड</div>
+        </div>
+        <div class="trade-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+    <div class="trade-card fade-in" data-trade="Fitter" onclick="filterByTrade('Fitter')">
+      <div class="trade-card-top">
+        <div class="trade-icon-wrap">🔧</div>
+        <div class="trade-seats">52 सीटें</div>
+      </div>
+      <div class="trade-name">Fitter</div>
+      <div class="trade-duration"><i class="fas fa-clock" style="color:var(--saffron)"></i> 1 वर्ष कोर्स
+      </div>
+      <div class="trade-stipend-row">
+        <div>
+          <div class="trade-stipend">₹10,500</div>
+          <div class="trade-stipend-label">प्रतिमाह स्टाइपेंड</div>
+        </div>
+        <div class="trade-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+    <div class="trade-card fade-in" data-trade="Welder" onclick="filterByTrade('Welder')">
+      <div class="trade-card-top">
+        <div class="trade-icon-wrap">🔥</div>
+        <div class="trade-seats">48 सीटें</div>
+      </div>
+      <div class="trade-name">Welder (G&M)</div>
+      <div class="trade-duration"><i class="fas fa-clock" style="color:var(--saffron)"></i> 1 वर्ष कोर्स
+      </div>
+      <div class="trade-stipend-row">
+        <div>
+          <div class="trade-stipend">₹9,500</div>
+          <div class="trade-stipend-label">प्रतिमाह स्टाइपेंड</div>
+        </div>
+        <div class="trade-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+    <div class="trade-card fade-in" data-trade="Turner" onclick="filterByTrade('Turner')">
+      <div class="trade-card-top">
+        <div class="trade-icon-wrap">⚙️</div>
+        <div class="trade-seats">39 सीटें</div>
+      </div>
+      <div class="trade-name">Turner</div>
+      <div class="trade-duration"><i class="fas fa-clock" style="color:var(--saffron)"></i> 1 वर्ष कोर्स
+      </div>
+      <div class="trade-stipend-row">
+        <div>
+          <div class="trade-stipend">₹9,500</div>
+          <div class="trade-stipend-label">प्रतिमाह स्टाइपेंड</div>
+        </div>
+        <div class="trade-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+    <div class="trade-card fade-in" data-trade="Machinist" onclick="filterByTrade('Machinist')">
+      <div class="trade-card-top">
+        <div class="trade-icon-wrap">🏭</div>
+        <div class="trade-seats">39 सीटें</div>
+      </div>
+      <div class="trade-name">Machinist</div>
+      <div class="trade-duration"><i class="fas fa-clock" style="color:var(--saffron)"></i> 1 वर्ष कोर्स
+      </div>
+      <div class="trade-stipend-row">
+        <div>
+          <div class="trade-stipend">₹10,200</div>
+          <div class="trade-stipend-label">प्रतिमाह स्टाइपेंड</div>
+        </div>
+        <div class="trade-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+    <div class="trade-card fade-in" data-trade="COPA" onclick="filterByTrade('COPA')">
+      <div class="trade-card-top">
+        <div class="trade-icon-wrap">💻</div>
+        <div class="trade-seats">24 सीटें</div>
+      </div>
+      <div class="trade-name">COPA</div>
+      <div class="trade-duration"><i class="fas fa-clock" style="color:var(--saffron)"></i> 1 वर्ष कोर्स
+      </div>
+      <div class="trade-stipend-row">
+        <div>
+          <div class="trade-stipend">₹10,000</div>
+          <div class="trade-stipend-label">प्रतिमाह स्टाइपेंड</div>
+        </div>
+        <div class="trade-arrow"><i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- JOBS -->
+  <section id="jobs" class="jobs-section">
+    <div class="container">
+      <div class="badge-pill">📋 नई वैकेंसी 2026</div>
+      <h2 class="section-title">अप्रेंटिस जॉब्स</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">ITI Bhinga के छात्रों के लिए विशेष अवसर</p>
+
+      <div class="Shravasti-image">
+        <!-- <section>
+        <img src="/COPA.jpg" alt="COPA">
+        <img src="/Information & Communication Technology System Maintenance.jpg" alt="Information & Communication Technology System Maintenance">
+            <img src="/cosmetology.jpg" alt="cosmetology">
+            <img src="/Dress Making.jpg" alt="Dress Making">
+            <img src="/Fashion Design & Technology.jpg" alt="Fashion Design & Technology">
+            <img src="Mechanic (Refrigeration and Air-Conditioning).jpg" alt="">
+            <img src="/Mechanic Consumer Electronics Appliances.jpg" alt="">
+            <img src="/Painter.jpg" alt="">
+            <img src="/Plumber.jpg" alt="">
+            <img src="/Welder.jpg" alt=""> -->
+        <div class="Shravasti-image">
+          <section>
+            <div class="trade-card">
+              <img src="/COPA.jpg" alt="COPA">
+              <p>COPA</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/Information & Communication Technology System Maintenance.jpg" alt="ICTSM">
+              <p>ICTSM</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/cosmetology.jpg" alt="Cosmetology">
+              <p>Cosmetology</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/Dress Making.jpg" alt="Dress Making">
+              <p>Dress Making</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/Welder.jpg" alt="Welder">
+              <p>Welder</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/Plumber.jpg" alt="Plumber">
+              <p>Plumber</p>
+            </div>
+
+            <div class="trade-card">
+              <img src="/COPA.jpg" alt="COPA">
+              <p>COPA</p>
+            </div>
+          </section>
+        </div>
+  </section>
+  </div>
+  </div>
+  <div class="jobs-filter-bar">
+    <div class="filter-group">
+      <i class="fas fa-filter"></i>
+      <select id="tradeFilter" onchange="filterJobs()">
+        <option value="">सभी ट्रेड्स</option>
+        <option value="Electrician">Electrician</option>
+        <option value="Fitter">Fitter</option>
+        <option value="Welder">Welder</option>
+        <option value="Turner">Turner</option>
+        <option value="Machinist">Machinist</option>
+        <option value="COPA">COPA</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Company या Job खोजें..." oninput="filterJobs()">
+    </div>
+    <button class="btn-filter" onclick="filterJobs()"><i class="fas fa-search"></i> खोजें</button>
+  </div>
+
+  <div class="jobs-grid" id="jobsGrid">
+    <!-- injected by JS -->
+  </div>
+  </div>
+  </section>
+
+  <!-- APPLY SECTION -->
+  <section id="apply" class="apply-section">
+    <div class="container">
+      <div class="badge-pill">📝 ऑनलाइन आवेदन</div>
+      <h2 class="section-title">अप्रेंटिस आवेदन फॉर्म</h2>
+      <div class="section-line"></div>
+      <p class="section-subtitle">NAPS Portal पर पंजीकरण के साथ यहाँ आवेदन करें</p>
+
+      <div class="apply-wrapper">
+        <div class="apply-form-card fade-in">
+          <div class="form-header">
+            <div class="form-header-emblem">🏭</div>
+            <div class="form-header-text">
+              <h3>Government ITI Bhinga, Shravasti</h3>
+              <p>NAPS Apprentice Application 2026 | भरें और Submit करें</p>
+            </div>
+          </div>
+          <div class="form-body">
+            <form id="apprenticeForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>पूरा नाम *</label>
+                  <input type="text" name="name" placeholder="अपना पूरा नाम लिखें" required>
+                </div>
+                <div class="form-group">
+                  <label>मोबाइल नंबर *</label>
+                  <input type="tel" name="mobile" placeholder="10 अंकों का मोबाइल नंबर" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>ट्रेड *</label>
+                  <select name="trade" required>
+                    <option value="">-- ट्रेड चुनें --</option>
+                    <option>Electrician</option>
+                    <option>Fitter</option>
+                    <option>Welder (G&M)</option>
+                    <option>Turner</option>
+                    <option>Machinist</option>
+                    <option>COPA</option>
+                    <option>BDVVM TTL Trade</option>
+                    <option>MEV TTL Trade</option>
+                    <option>MPCA TTL Trade</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>ITI पास-आउट वर्ष</label>
+                  <select name="passout_year">
+                    <option value="">-- वर्ष चुनें --</option>
+                    <option>2026</option>
+                    <option>2025</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                    <option>2021</option>
+                    <option>2020</option>
+                    <option>2019</option>
+                    <option>2018</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>ITI मार्कशीट % *</label>
+                  <input type="number" name="marks" placeholder="जैसे: 75.5" step="0.1" min="0" max="100" required>
+                </div>
+                <div class="form-group">
+                  <label>ITI संस्थान का नाम</label>
+                  <input type="text" name="institute" placeholder="ITI का नाम">
+                </div>
+              </div>
+              <div class="form-row single">
+                <div class="form-group">
+                  <label>पूरा पता</label>
+                  <textarea name="address" placeholder="गांव / मोहल्ला, तहसील, जिला, पिन कोड"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i> आवेदन भेजें (NAPS Portal खुलेगा)
+              </button>
+              <div class="naps-note">
+                <i class="fas fa-info-circle"></i>
+                <span>आवेदन के बाद <a href="https://www.apprenticeshipindia.gov.in" target="_blank">NAPS
+                    Portal</a> पर रजिस्ट्रेशन जरूरी है। बिना NAPS रजिस्ट्रेशन के अप्रेंटिस मान्य
+                  नहीं होगा।</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTICE BOARD -->
+  <section id="notice" class="notice-section">
+    <div class="container">
+      <div class="badge-pill"
+        style="background:rgba(232,101,26,0.15); color:var(--saffron); border-color:rgba(232,101,26,0.4);">📋
+        सूचना पट्ट</div>
+      <h2 class="section-title" style="color:var(--white);">नोटिस बोर्ड</h2>
+      <div class="section-line"></div>
+      <div class="notice-board-grid">
+        <div class="notice-list">
+          <div class="notice-item">
+            <div class="notice-dot"></div>
+            <div class="notice-content">
+              <strong>अप्रेंटिस भर्ती 2026 — 156 पद <span class="notice-new">NEW</span></strong>
+              <span>जारी: 1 March 2026 | अंतिम तिथि: 30 April 2026</span>
+            </div>
+          </div>
+          <div class="notice-item">
+            <div class="notice-dot"></div>
+            <div class="notice-content">
+              <strong>NAPS पोर्टल पर रजिस्ट्रेशन शुरू <span class="notice-new">NEW</span></strong>
+              <span>सभी ITI पास छात्र NAPS पर खुद को रजिस्टर करें</span>
+            </div>
+          </div>
+          <div class="notice-item">
+            <div class="notice-dot"></div>
+            <div class="notice-content">
+              <strong>UPPCB — Electrician 25 पद</strong>
+              <span>श्रावस्ती इंडस्ट्रियल एरिया | स्टाइपेंड: ₹12500/माह</span>
+            </div>
+          </div>
+          <div class="notice-item">
+            <div class="notice-dot"></div>
+            <div class="notice-content">
+              <strong>Bharat Heavy Electricals — Fitter 20 पद</strong>
+              <span>निकटतम यूनिट | अवधि: 12 महीने</span>
+            </div>
+          </div>
+          <div class="notice-item">
+            <div class="notice-dot"></div>
+            <div class="notice-content">
+              <strong>जिला प्रशासन — COPA 8 पद</strong>
+              <span>कलेक्ट्रेट कार्यालय, श्रावस्ती</span>
+            </div>
+          </div>
+          <div class="notice-item">
+            <div class="notice-dot"></div>
+            <div class="notice-content">
+              <strong>Piping Project Balrampur — Welder 15 पद</strong>
+              <span>बलरामपुर (20km) | अवधि: 6 महीने</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portal-links">
+          <a href="https://www.apprenticeshipindia.gov.in" target="_blank" class="portal-link-card">
+            <div class="portal-icon">🌐</div>
+            <div class="portal-text">
+              <strong>NAPS Portal</strong>
+              <span>National Apprenticeship Promotion Scheme</span>
+            </div>
+          </a>
+          <a href="https://nats.education.gov.in" target="_blank" class="portal-link-card">
+            <div class="portal-icon">📚</div>
+            <div class="portal-text">
+              <strong>NATS Portal</strong>
+              <span>National Apprenticeship Training Scheme</span>
+            </div>
+          </a>
+          <a href="https://www.itiup.in" target="_blank" class="portal-link-card">
+            <div class="portal-icon">🏭</div>
+            <div class="portal-text">
+              <strong>ITI UP Portal</strong>
+              <span>उत्तर प्रदेश ITI आधिकारिक वेबसाइट</span>
+            </div>
+          </a>
+          <a href="#apply" class="portal-link-card">
+            <div class="portal-icon">📝</div>
+            <div class="portal-text">
+              <strong>ऑनलाइन आवेदन</strong>
+              <span>यहाँ Click कर Apply करें</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+</body>
+
+</html>

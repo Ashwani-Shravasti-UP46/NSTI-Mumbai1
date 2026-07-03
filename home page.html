@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shravasti ITI Portal</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins,Arial;background:#f4f7fb;color:#333}
+header{background:linear-gradient(135deg,#1f3c88,#39a2db);color:#fff;padding:30px 20px;text-align:center}
+nav{display:flex;justify-content:center;gap:20px;background:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+nav a{padding:12px 10px;text-decoration:none;color:#333;font-weight:500}
+nav a:hover{color:#1f3c88}
+.container-custom{max-width:1100px;margin:auto;padding:15px}
+.section{background:#fff;margin:15px 0;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.08)}
+h2{color:#1f3c88;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card-custom{padding:15px;border-radius:10px;background:#f9fbff;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+img{width:100%;border-radius:10px}
+.btn-custom{background:#1f3c88;color:#fff;padding:10px 15px;border-radius:6px;text-decoration:none;border:none}
+footer{background:#1f3c88;color:#fff;text-align:center;padding:15px;margin-top:20px}
+input,textarea{width:100%;padding:10px;margin:6px 0;border-radius:6px;border:1px solid #ccc}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Shravasti ITI Portal</h1>
+<p>Empowering Skill Development | UP-46</p>
+</header>
+
+<!-- Navbar -->
+<nav>
+<a href="#about">About</a>
+<a href="#iti">ITI</a>
+<a href="#history">History</a>
+<a href="#career">Career</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- Carousel -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Jetavana_Monastery.jpg" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Buddha_statue.jpg" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Buddha_Shravasti.jpg/640px-Buddha_Shravasti.jpg" class="d-block w-100">
+    </div>
+  </div>
+</div>
+
+<div class="container-custom">
+
+<div class="section" id="about">
+<h2>About Shravasti</h2>
+<p>Shravasti district provides technical education through ITI Bhinga and ITI Jamunaha.</p>
+</div>
+
+<div class="section" id="iti">
+<h2>Our ITIs</h2>
+<div class="grid">
+<div class="card-custom"><h3>ITI Bhinga</h3></div>
+<div class="card-custom"><h3>ITI Jamunaha</h3></div>
+</div>
+</div>
+
+<div class="section" id="history">
+<h2>Historical Importance</h2>
+<p>Shravasti was the capital of Kosala Kingdom and a major Buddhist center.</p>
+</div>
+
+<div class="section">
+<h2>Connection with Lord Buddha</h2>
+<p>Lord Buddha spent 24 rainy seasons at Jetavana Monastery.</p>
+<p><i>“Peace comes from within. Do not seek it without.”</i></p>
+</div>
+
+<div class="section" id="career">
+<h2>Career Opportunities</h2>
+<div class="grid">
+<div class="card-custom">Engineering Jobs</div>
+<div class="card-custom">IT Services</div>
+<div class="card-custom">Tourism</div>
+</div>
+</div>
+
+<div class="section" id="contact">
+<h2>Contact Us</h2>
+<form onsubmit="submitForm(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message"></textarea>
+<button class="btn-custom">Send</button>
+</form>
+<p id="msg"></p>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Shravasti ITI Portal</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function submitForm(e){
+e.preventDefault();
+document.getElementById('msg').innerText="Message Sent Successfully!";
+}
+</script>
+
+</body>
+</html>
