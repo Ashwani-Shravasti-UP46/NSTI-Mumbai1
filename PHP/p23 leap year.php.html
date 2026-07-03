@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <form method="POST">
+    Enter year:
+      <input type="number" name="year" required><br><br>
+    
+      <input type="submit" name="submit" value="chech the year"> 
+  </form>
+  <?php
+    if(isset($_POST['submit'])){
+      $year = $_POST['year'];
+      echo "<h1>Check the year is leap or aleap</h1>";
+
+      if($year<=0){
+        echo "<h3>Please enter a valid year</h3>";
+      }
+      else{
+        if(($year%400==0)||($year%4==0 &&  $year%100!=0)){
+          echo $year." Year is leap year";
+        }
+        else{
+          echo $year." Year is n't leap year";
+        }
+      }
+    }
+  ?>  
+</body>
+</html>

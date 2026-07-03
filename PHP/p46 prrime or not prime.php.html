@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h2>Number is prime or not</h2>
+
+<form method="POST">
+    Enter Number:
+    <input type="number" name="number" required>
+    <input type="submit" name="submit" value="check number">
+</form>
+
+<?php
+if(isset($_POST['submit'])){
+    $n = $_POST['number'];
+    $flag = 0;
+    if($n<=0){
+        echo $n." is Not Prime number";
+    }
+    else{
+        for($i=2; $i<=$n/2; $i++){
+            if($n % $i == 0){
+                $flag = 1;
+                break;
+            }
+        }
+        if($flag==1)
+            echo $n." It's not prime number";
+        else
+            echo $n." It's prime number";
+    }
+
+}
+
+?>
+
+</body>
+</html>

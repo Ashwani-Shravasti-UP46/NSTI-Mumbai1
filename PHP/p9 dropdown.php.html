@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <form method="post">
+    select trade: <select name="trade">
+                      <option> CSA </option>
+                      <option> EM </option>
+                      <option> IT </option>
+                  </select>
+    <input type="submit" name="submit"> 
+</form>
+<?php
+  if(isset($_POST['submit'])){
+    echo "Selected trade: ".$_POST['trade'];
+  }
+?>
+</body>
+</html>

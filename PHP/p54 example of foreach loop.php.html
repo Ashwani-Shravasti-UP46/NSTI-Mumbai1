@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <h2>Foreach loop example</h2>
+<form method="POST">
+  Enter names(Comma seprated):
+    <input type="text" name="names" required>
+
+  <input type="submit" value="display"> 
+  
+</form>
+<?php
+  if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $names = $_POST['names'];
+    $names_array = explode(",",$names);
+
+    echo "<h3>Names List: </h3>";
+
+    foreach($names_array as $name){
+      echo trim($name)."<br>";
+    }
+    
+  }
+?>
+</body>
+</html>

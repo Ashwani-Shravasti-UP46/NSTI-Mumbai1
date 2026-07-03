@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Multiple cases for same code:- VOWEL</h2>
+  <form method="POST">
+    Enter alphabet:
+    <input type="text" name="vowel" required>
+
+    <input type="submit" name="submit" value="check">
+  </form>
+  <?php
+  if (isset($_POST['submit'])) {
+    $v = $_POST['vowel'];  
+    
+    switch($v){
+      case 'A':
+      case 'E':
+      case 'I':
+      case 'O':
+      case 'U':
+      case 'a':
+      case 'e':
+      case 'i':
+      case 'o':
+      case 'u':
+        echo "<b>$v</b> it's vowel!";
+        break;
+      default:
+        echo "<b>$v</b> Its Consonent !";
+    }
+  }
+  ?>
+</body>
+
+</html>

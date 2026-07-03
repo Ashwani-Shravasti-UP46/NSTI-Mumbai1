@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <center>
+  <h2>Result Sheet Of Trainee</h2>
+  <form method="POST">
+    Roll NO:
+      <input type="number" name="rn" required><br><br>
+    Network:
+      <input type="number" name="nwtk" required><br><br>
+    java Script: 
+      <input type="number" name="js" required><br><br>
+    MY SQL:
+      <input type="number" name="mysql" required><br><br>
+    PHP:
+      <input type="number" name="php" required><br><br>
+    Python:
+      <input type="number" name="python" required><br><br>
+      <input type="submit" name="submit">
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $rn = $_POST['rn'];
+    $ntwk = $_POST['nwtk'];
+    $js = $_POST['js'];
+    $mysql = $_POST['mysql'];
+    $php = $_POST['php'];
+    $python = $_POST['python'];
+
+    $sum = $ntwk + $js + $mysql + $php + $python;
+    $per = $sum/500*100;
+
+    if($per>90)
+      $grade ="A+";
+    else if($per<=90 && $per>80)
+      $grade ="A";
+    else if($per<=80 && $per>70)
+      $grade ="B+";
+    else if($per<=70 && $per>60)
+      $grade ="B";
+    else if($per<=60 && $per>50)
+      $grade ="C+";
+    else if($per<=50 && $per>40)
+      $grade ="C";
+    else if($per<=40 && $per>30)
+      $grade ="D+";
+    else{
+      $grade ="D";
+    }
+
+    if($ntwk<30 || $js<30 || $mysql<30 || $php<30 || $python<30 )
+      $res ="FAIL";
+    else
+      $res ="PASS";
+
+    echo "<table border='2' cellpadding='10' cellspacing='0'>";
+    echo "<h3>Result Sheet Of Traine</h3>";
+    echo "<tr><th> ROLL_NO </th><td>".$rn."</td></tr>";
+    echo "<tr><th> NETWORK </th><td>".$ntwk."</td></tr>";
+    echo "<tr><th> JAVASCRIPT </th><td>".$js."</td></tr>";
+    echo "<tr><th> MYSQL </th><td>".$mysql."</td></tr>";
+    echo "<tr><th> PHP </th><td>".$php."</td></tr>";
+    echo "<tr><th> PYTHON </th><td>".$python."</td></tr>";
+    echo "<tr><th> SUM </th><td>".$sum."</td></tr>";
+    echo "<tr><th> PERCENTAGE </th><td>".$per."</td></tr>";
+    echo "<tr><th> GRADE </th><td>".$grade."</td></tr>";
+    echo "<tr><th> RESULT </th><td>".$res."</td></tr>";
+    echo "</table>";
+  }
+?>
+</center>
+</body>
+</html>

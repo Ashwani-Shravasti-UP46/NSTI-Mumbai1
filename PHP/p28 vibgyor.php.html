@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+   <h2>VIBGYOR to convert color name</h2>
+  <form method="POST">
+    Enter alphabet code:
+      <input type="number" name="code" required>
+
+    <input type="submit" name="submit" value="convert color name">
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $code = $_POST['code'];
+
+    switch($code){
+      case 1:
+        $color = " Violet";
+        break;
+
+      case 2:
+       $color = " Indigo";
+        break;
+
+      case 3:
+        $color = " Blue";
+        break;
+
+      case 4:
+        $color = " Green";
+        break;
+
+      case 5:
+        $color = " Yellow";
+        break;
+
+      case 6:
+        $color = " Orange";
+        break;
+
+      case 7:
+        $color = " Red";
+        break;
+
+      default:
+        $color = " Invalid alpha for convert color name!!";
+    }
+       echo "VIBGYOR CODE :- $code = $color";
+  }
+?>
+  
+</body>
+</html>

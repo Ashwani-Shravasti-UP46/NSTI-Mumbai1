@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <form method="POST">
+      <input type="checkbox" name="course" value="php"> PHP
+      <input type="submit" name="submit">
+  </form>
+<?php
+    if(isset($_POST['submit'])){
+      if(isset($_POST['course']))
+        echo "Checkbox selected";
+      else
+        echo "Checkbox not selected";
+    }
+?>
+</body>
+</html>

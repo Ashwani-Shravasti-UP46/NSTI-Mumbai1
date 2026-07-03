@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h2>Factors of a Number</h2>
+
+<form method="POST">
+    Enter Number:
+    <input type="number" name="limit" required>
+    <input type="submit" name="submit" value="Find Factors">
+</form>
+
+<?php
+if(isset($_POST['submit'])){
+    $n = $_POST['limit'];
+
+    echo "<b>Factors of $n are:</b> ";
+
+    $i = 1;
+    while($i <= $n){
+        if($n % $i == 0){
+            echo $i." ";
+        }
+        $i++;
+    }
+}
+?>
+
+</body>
+</html>

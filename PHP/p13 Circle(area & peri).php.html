@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+   <form method="POST">
+    Enter redius:<input type="number" name="r" required><br><br>
+    <input type="submit" name="submit"> 
+</form>
+<?php
+  if(isset($_POST['submit'])){
+    $r = $_POST['r'];
+
+    echo "Redius: ".$r."<br>";
+    echo "<h4>Perimiter of circle </h4>";
+    echo 2*3.14*$r;
+    echo "<h4>Area of circle </h4>";
+    echo 3.14*$r**2;
+  }
+?>
+</body>
+</html>

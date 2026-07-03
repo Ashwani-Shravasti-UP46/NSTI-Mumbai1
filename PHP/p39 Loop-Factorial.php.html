@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h2>Factorial of a Number</h2>
+
+<form method="POST">
+    Enter Number:
+    <input type="number" name="limit" required>
+    <input type="submit" name="submit" value="Find Factorial">
+</form>
+
+<?php
+if(isset($_POST['submit'])){
+    $n = $_POST['limit'];
+
+    $i = 1;
+    $result = 1;
+    $output = $n . "!=";
+
+    while($i <= $n){
+        $result = $result * $i;
+        $output = $output . $i . ($i < $n ? " * " : "");
+        $i++;
+    }
+
+    $output = $output . " = " . $result;
+
+    echo $output;
+}
+?>
+
+</body>
+</html>

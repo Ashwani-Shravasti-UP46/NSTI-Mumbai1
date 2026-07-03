@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h2>Example of indexed array</h2>
+
+<form method="POST">
+    Enter numbers (comma separated):
+    <input type="number" name="numbers" required>
+    <input type="submit" value="Submit">
+</form>
+
+<?php
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    
+    $input = $_POST['numbers'];
+
+    $numbers = explode(",", $input);
+
+    echo "<h3>Index array element:</h3>";
+
+    for($i = 0; $i < count($numbers); $i++){
+        echo "Element at index $i: " . trim($numbers[$i]) . "<br>";
+    }
+}
+?>
+
+</body>
+</html>

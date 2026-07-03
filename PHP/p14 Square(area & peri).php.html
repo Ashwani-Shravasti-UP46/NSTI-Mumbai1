@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+   <form method="POST">
+    Enter aside:<input type="number" name="a" required><br><br>
+    <input type="submit" name="submit"> 
+</form>
+<?php
+  if(isset($_POST['submit'])){
+    $a = $_POST['a'];
+
+    echo "aside: ".$a."<br>";
+    echo "<h4>Perimiter of square </h4>";
+    echo 4*$a;
+    echo "<h4>Area of square </h4>";
+    echo $a*$a;
+  }
+?>
+</body>
+</html>

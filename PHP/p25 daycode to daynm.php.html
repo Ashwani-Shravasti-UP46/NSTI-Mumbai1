@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Daycode to convert day name</h2>
+  <form method="POST">
+    Enter Day Code:
+      <input type="number" name="day" required>
+
+    <input type="submit" name="submit" value="convert day name">
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $day = $_POST['day'];
+
+    switch($day){
+      case 1:
+         $dynm = " The day is monday";
+        break;
+
+      case 2:
+         $dynm = " The day is Tuesday";
+        break;
+
+      case 3:
+        $dynm = " The day is Wednesday";
+        break;
+
+      case 4:
+         $dynm =" The day is Thursday";
+        break;
+
+      case 5:
+         $dynm =" The day is Friday";
+        break;
+
+      case 6:
+         $dynm =" The day is Saturday";
+        break;
+
+      case 7:
+        $dynm =" The day is Sunday";
+        break;
+
+      default:
+         $dynm =" Invalid Day Code!!";
+    }
+        echo "Daycode: $day = $dynm";
+
+  }
+?>
+  
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <h2>Multiple cases for same code:- GRADE</h2>
+  <form method="POST">
+    Enter grade:
+      <input type="text" name="grade" required>
+
+  <input type="submit" name="submit" value="check" >
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $g = strtoupper($_POST['grade']);
+
+    switch($g){
+      case 'A':
+      case 'B':
+      case 'C':
+          echo "$g You passed!";
+          break;
+      case 'D':
+      case 'E':
+      case 'F':
+        echo " $g You failed";
+        break;
+      default:
+        echo "$g Invalid grade!!";  
+    }
+  }
+?>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <form method="post">
+    Enter name: 
+    <input type="name" name="name">
+    <input type="submit" name="submit"> 
+</form>
+<?php
+  if(isset($_POST['submit'])){
+    echo "Enter name: ".$_POST['name'];
+  }
+?>
+</body>
+</html>

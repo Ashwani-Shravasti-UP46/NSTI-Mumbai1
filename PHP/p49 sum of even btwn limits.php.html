@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h2>Sum of even number b/w two limits</h2>
+
+<form method="POST">
+    Enter Number:
+    <input type="number" name="num1" required><br><br>
+
+    Enter Number:
+    <input type="number" name="num2" required>
+
+    <input type="submit" name="submit" value="Go To">
+</form>
+
+<?php
+if(isset($_POST['submit'])){
+    $n1 = $_POST['num1'];
+    $n2 = $_POST['num2'];
+    $sum = 0;
+    echo "-------------------------------------------------------";
+    echo "<br>Digits here: ";
+
+    for($i=$n1; $i<=$n2; $i++){
+        if($i % 2 == 0){
+            echo $i." ";
+            $sum+=$i;
+        }
+    }
+    echo "<br>1st Limits is: ".$n1;
+    echo "<br>2nd Limits is: ".$n2;
+    echo "<br> Sum of numbers b/w limits: ".$sum;
+   
+}
+
+?>
+
+</body>
+</html>

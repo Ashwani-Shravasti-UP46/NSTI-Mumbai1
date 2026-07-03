@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h2>Sum of even numbers</h2>
+
+<form method="POST">
+    Enter Number:
+    <input type="number" name="limit" required>
+    <input type="submit" name="submit" value="Find Sum">
+</form>
+
+<?php
+if(isset($_POST['submit'])){
+    $n = $_POST['limit'];
+
+    $sum = 0;
+
+    echo "Even numbers are: ";
+
+    for($i=1; $i<$n; $i++){
+        if($i % 2 == 0){
+            echo $i." ";
+            $sum += $i;
+        }
+    }
+
+    echo "<br>Sum is: ".$sum;
+}
+?>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Grade with ternary operator</h2>
+  <form method="POST">
+    Enter marks:
+      <input type="number" name="mk" required>
+    
+    <input type="submit" name="submit" value="check grade">
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $grd = $_POST['mk'];
+
+    $grade = ($grd>=90) ? "A+" : (($grd>=80) ? "A" :(($grd>=70) ? "B" :(($grd>=60) ? "C" :(($grd>=50) ? "D" :(($grd>=35) ? "E" : "F")))));
+
+    echo "Marks:- $grd <br> Grade:- $grade";
+
+  }
+?>
+</body>
+</html>

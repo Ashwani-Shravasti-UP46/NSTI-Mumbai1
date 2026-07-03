@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <form method="POST">
+      Employee id:
+        <input type="number" name="id" required><br><br>
+
+      Employee Name:
+        <input type="text" name="empnm" required><br><br>
+
+      Destination:
+        <input type="text" name="des" required><br><br>
+
+      Basic Pay:
+        <input type="number" name="bp" step="any" required><br><br>
+
+      Deduction:
+        <input type="number" name="ded" step="any" required><br><br>
+      
+      <input type="submit" name="submit" value="Genere salary slip">
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $empid = $_POST['id'];
+    $empnm = $_POST['empnm'];
+    $des = $_POST['ded'];
+    $bp = $_POST['bp'];
+    $ded = $_POST['ded'];
+
+    $hra = $bp * 0.35;
+    $ta = $bp * 0.53;
+    $da = $bp * 0.10;
+    $ts = $hra + $da + $ta + $da;
+    $ns = $ts - $ded;
+
+    echo "<h3>Salary Slip Of An Employee</h3>";
+    echo "<table border='2' cellpadding='10' cellspacing='0'>";
+    echo "<tr><th>EMPLOYEE ID</th><td>".$empid."</td></tr>";
+    echo "<tr><th>EMPLOYEE NAME</th><td>".$empnm."</td></tr>";
+    echo "<tr><th>DESIGNATION</th><td>".$des."</td></tr>";
+    echo "<tr><th>BASIC PAY</th><td>".$bp."</td></tr>";
+    echo "<tr><th>DEDUCATION</th><td>".$ded."</td></tr>";
+    echo "<tr><th>HRA(35%)</th><td>".$hra."</td></tr>";
+    echo "<tr><th>TA(53%)</th><td>".$da."</td></tr>";
+    echo "<tr><th>DA(10%)</th><td>".$ta."</td></tr>";
+    echo "<tr><th>TOTAL SALARY</th><td>".$ts."</td></tr>";
+    echo "<tr><th>NET SALARY</th><td>".$ns."</td></tr>";
+    echo "</table>";
+
+  }
+  
+  
+?>
+</body>
+</html>

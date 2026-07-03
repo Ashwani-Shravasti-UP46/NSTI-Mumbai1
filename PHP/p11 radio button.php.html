@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <form method="POST"> 
+      Gender:
+      <input type="radio" name="gender" value="male">  male
+      <input type="radio" name="gender" value="female"> Female
+      <input type="submit" name="submit">
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    echo "Gender: ".$_POST['gender'];
+  }
+?>
+</body>
+</html>

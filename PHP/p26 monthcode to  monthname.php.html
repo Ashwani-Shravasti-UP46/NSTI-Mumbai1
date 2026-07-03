@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <h2>Monthcode to convert month name</h2>
+  <form method="POST">
+    Enter Month Code:
+      <input type="number" name="month" required>
+
+    <input type="submit" name="submit" value="convert month name">
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $month = $_POST['month'];
+
+    switch($month){
+      case 1:
+        $mn =  " january";
+        break;
+
+      case 2:
+       $mn = " february";
+        break;
+
+      case 3:
+       $mn = " march";
+        break;
+
+      case 4:
+        $mn = " april";
+        break;
+
+      case 5:
+        $mn = " may";
+        break;
+
+      case 6:
+        $mn = " june";
+        break;
+
+      case 7:
+        $mn = " july";
+        break;
+
+      case 8:
+        $mn = " august";
+        break;
+
+      case 9:
+        $mn = " september";
+        break;
+
+      case 10:
+        $mn = " october";
+        break;
+
+      case 11:
+        $mn = " november";
+        break;
+
+      case 12:
+        $mn = " december";
+        break;
+
+      default:
+        $mn = " Invalid Month Code!!";
+    }
+     echo "Monthcode: $month = $mn";
+  }
+?>
+  
+</body>
+</html>

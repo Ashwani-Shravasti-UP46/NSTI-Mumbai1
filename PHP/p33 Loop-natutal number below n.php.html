@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Natural number below 'N' </h2>
+    <form method="POST">
+        Enter limit 
+            <input type="number" name="limit" required>
+        
+        <input type="submit" name="submit" value="start Loop"> 
+    </form>
+<?php
+    if(isset($_POST['submit'])){
+        $n = $_POST['limit'];
+        echo "<i>Output:</i> ";
+
+        for($i=1; $i<$n; $i++){
+            echo $i." ";
+        }
+    }
+?>
+</body>
+</html>

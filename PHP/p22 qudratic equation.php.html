@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <form method="POST">
+    Enter value of a:
+      <input type="number" name="a" required><br><br>
+
+    Enter value of b:
+      <input type="number" name="b" required><br><br>
+
+    Enter value of c:
+      <input type="number" name="c" required><br><br>
+
+    <input type="submit" name="submit" value="calculate roots"> 
+  </form>
+  <?php
+    if(isset($_POST['submit'])){
+      $a = $_POST['a'];
+      $b = $_POST['b'];
+      $c = $_POST['c'];
+
+      if($a==0){
+          echo "<h4>Value of a can't ZERO in quadratic equation</h4>";
+      }
+      else{
+        $d = ($b *$b) - (4 * $a * $c);
+        if($d>0){
+          $root1 = (-$b + sqrt($d))/(2*$a);
+          $root1 = (-$b - sqrt($d))/(2*$a);
+          echo "<h4>Roots are real & different</h4>";
+          echo "Root 1: ".round($root1, 2)."<br>";
+          echo "Root 2: ".round($root2, 2)."<br>";
+        }
+        elseif($d==0){
+          $root = -$b/(2*$a);
+          echo "<h4>Roots are real & zero</h4>";
+          echo "Root : ".round($root, 2)."<br>";
+        }
+        else{
+          $realPart = -$b/(2*$a);
+          $imaginaryPart = sqrt(-$d)/(2*$a);
+          echo "<h4>Roots are complex</h4>";
+          echo "Root 1: ".round($realPart, 2)."+".round($imaginaryPart, 2)."i<br>";
+          echo "Root 1: ".round($realPart, 2)."-".round($imaginaryPart, 2)."i<br>";
+        }
+
+      }
+    }
+  ?>
+</body>
+</html>

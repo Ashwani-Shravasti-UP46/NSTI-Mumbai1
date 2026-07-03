@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+   <h2>Digithcode to convert digitname</h2>
+  <form method="POST">
+    Enter digit:
+      <input type="number" name="num" required>
+
+    <input type="submit" name="submit" value="convert number name">
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $num = $_POST['num'];
+
+    switch($num){
+      case 1:
+        $w = " ONE";
+        break;
+
+      case 2:
+       $w = " TWO";
+        break;
+
+      case 3:
+        $w = " THREE";
+        break;
+
+      case 4:
+        $w = " FOUR";
+        break;
+
+      case 5:
+        $w = " FIVE";
+        break;
+
+      case 6:
+        $w = " SIX";
+        break;
+
+      case 7:
+        $w = " SEVEN";
+        break;
+
+      case 8:
+        $w = " EIGHT";
+        break;
+
+      case 9:
+        $w = " NINE";
+        break;
+
+      default:
+        $w = " Invalid DIGIT!!";
+    }
+       echo "Digitcode: $num = $w";
+  }
+?>
+  
+</body>
+</html>

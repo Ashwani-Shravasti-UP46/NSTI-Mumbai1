@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h2>HCF and LCM of Two Numbers</h2>
+
+<form method="POST">
+    Enter First Number:
+    <input type="number" name="num1" required><br><br>
+
+    Enter Second Number:
+    <input type="number" name="num2" required><br><br>
+
+    <input type="submit" name="submit" value="Find HCF & LCM">
+</form>
+
+<?php
+if(isset($_POST['submit'])){
+    $n1 = (int)$_POST['num1'];
+    $n2 = (int)$_POST['num2'];
+
+    echo "--------------------------------------------";
+    echo "<br>First Number is ".$n1;
+    echo "<br>Second Number is ".$n2;
+
+    // Store original values for LCM
+    $a = $n1;
+    $b = $n2;
+
+    // HCF using loop (Euclidean method)
+    while($n2 != 0){
+        $rem = $n1 % $n2;
+        $n1 = $n2;
+        $n2 = $rem;
+    }
+    $hcf = $n1;
+
+    // LCM formula
+    $lcm = ($a * $b) / $hcf;
+
+    echo "<br>HCF = ".$hcf;
+    echo "<br>LCM = ".$lcm;
+}
+?>
+
+</body>
+</html>

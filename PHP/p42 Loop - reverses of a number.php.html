@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h2>Reverse of a number</h2>
+
+<form method="POST">
+    Enter Number:
+    <input type="number" name="number" required>
+    <input type="submit" name="submit" value="Reverse">
+</form>
+
+<?php
+if(isset($_POST['submit'])){
+    $n = $_POST['number'];
+    $rev = 0;
+    $dup = $n;
+    do{
+        $digit = $n % 10;
+        $rev = $rev * 10 + $digit;
+        $n = floor($n/10);
+    }
+        while($n>0);
+    
+    echo "The real number is: ".$dup;
+    echo "<br>Reverse number is: ".$rev;
+}
+
+?>
+
+</body>
+</html>

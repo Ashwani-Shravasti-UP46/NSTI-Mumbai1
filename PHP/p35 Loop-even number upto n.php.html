@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Even number below 'N' </h2>
+    <form method="POST">
+        Enter limit 
+            <input type="number" name="limit" required>
+        
+        <input type="submit" name="submit" value="start Loop"> 
+    </form>
+<?php
+    if(isset($_POST['submit'])){
+        $n = $_POST['limit'];
+        echo "<i>Output:</i> ";
+
+        for($i=1; $i<=$n; $i++){
+            if($i%2==0){
+                echo $i." ";
+            }
+        }
+    }
+?>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <form method="post"> 
+    Enter 1st number:
+      <input type="number" name="n1" required><br><br>
+    Enter 2nd number:
+      <input type="number" name="n2" required><br><br>
+
+    <input type="submit" name="submit" value="calculate">
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $a = $_POST['n1'];
+    $b = $_POST['n2'];
+
+    echo "<h3>RESULT: </h3>";
+    echo $a. " + ".$b. " = ". $a+$b."<br>";
+    echo $a. " - ".$b. " = ". $a-$b."<br>";
+    echo $a. " * ".$b. " = ". $a*$b."<br>";
+    if($b!=0){
+      echo $a. " / ".$b. " = ". $a/$b."<br>";
+      echo $a. " % ".$b. " = ". $a%$b."<br>";
+    }else{
+      echo "Division & modulus not possible(division by zero!!!!)";
+    }
+  }
+?>
+</body>
+</html>

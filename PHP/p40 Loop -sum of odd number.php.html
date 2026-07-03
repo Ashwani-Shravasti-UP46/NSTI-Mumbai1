@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h2>Sum of odd number</h2>
+
+<form method="POST">
+    Enter Number:
+    <input type="number" name="limit" required>
+    <input type="submit" name="submit" value="Find sum">
+</form>
+
+<?php
+if(isset($_POST['submit'])){
+    $n = $_POST['limit'];
+
+    $sum = 0;
+    echo "Odd number is: ";
+    for($i=1; $i<$n; $i+=2){
+        echo $i." ";
+        $sum+=$i;
+    }
+        echo "<br> Sum is: ".$sum;
+}
+?>
+
+</body>
+</html>

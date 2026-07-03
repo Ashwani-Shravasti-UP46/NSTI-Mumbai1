@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+   <form method="POST">
+    Enter 1st side:<input type="number" name="a" required><br><br>
+    Enter 2nd side:<input type="number" name="b" required><br><br>
+    Enter 3rd side:<input type="number" name="c" required><br><br>
+    <input type="submit" name="submit"> 
+</form>
+<?php
+  if(isset($_POST['submit'])){
+    $a = $_POST['a'];
+    $b = $_POST['b'];
+    $c = $_POST['c'];
+
+    echo "1st side: ".$a."<br>";
+    echo "2nd side: ".$b."<br>";
+    echo "3rd side: ".$c."<br>";
+   
+    if($a+$b>$c && $a+$c>$b && $b+$c>$a){
+      $s = ($a+$b+$c)/2;
+      $area = sqrt($s*($s-$a)*($s-$b)*($s-$c));
+      echo "<h4>Perimiter of triangle </h4>";
+      echo $s;
+
+       echo "<h4>Area of triangle </h4>";
+       echo $area;
+    }
+    else{
+      echo "Invalid triangle!!!";
+    }
+  }
+?>
+</body>
+</html>

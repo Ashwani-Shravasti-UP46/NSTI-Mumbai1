@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<!DOCTYPE html>
+<html>
+<body>
+<form method="post">
+  <h3>Enter 3x3 Matrix (row wise):</h3>
+
+  Row 1: <input type="text" name="row1" placeholder="1,2,3"><br><br>
+  Row 2: <input type="text" name="row2" placeholder="4,5,6"><br><br>
+  Row 3: <input type="text" name="row3" placeholder="7,8,9"><br><br>
+
+  <input type="submit" name="submit" value="Show Matrix">
+</form>
+<?php
+if(isset($_POST['submit'])){
+    $matrix = [];
+
+    $matrix[0] = explode(",", $_POST['row1']);
+    $matrix[1] = explode(",", $_POST['row2']);
+    $matrix[2] = explode(",", $_POST['row3']);
+
+    echo "<h3>Matrix:</h3>";
+
+    for($i=0; $i<count($matrix); $i++){
+        for($j=0; $j<count($matrix[$i]); $j++){
+            echo $matrix[$i][$j] . " ";
+        }
+        echo "<br>";
+    }
+}
+?>
+</body>
+</html>

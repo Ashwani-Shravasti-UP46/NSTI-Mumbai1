@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+   <h2>Airthmatic opeartion using switch</h2>
+  <form method="POST">
+    Enter 1st operands:
+      <input type="number" name="n1" required><br><br>
+
+    Enter 2nd operands:
+      <input type="number" name="n2" required ><br><br>
+
+    Enter operator:
+      <select name="oprt">
+          <option value="+"> + </option>
+          <option value="-"> - </option>
+          <option value="*"> * </option>
+          <option value="/"> / </option>
+          <option value="%"> % </option>
+          <option value="**"> ** </option> 
+      </select><br><br>
+
+    <input type="submit" name="submit" value="Calculation">
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $n1 = $_POST['n1'];
+    $n2 = $_POST['n2'];
+    $oprt = $_POST['oprt'];
+
+    switch($oprt){
+      case '+':
+        $res = $n1 + $n2;
+        break;
+
+      case '-':
+       $res = $n1 - $n2;
+        break;
+
+      case '*':
+        $res = $n1 * $n2;
+        break;
+
+      case '/':
+        $res = $n1 / $n2;
+        break;
+
+      case '%':
+        $res = $n1 % $n2;
+        break;
+
+      case '**':
+        $res = $n1 ** $n2;
+        break;
+
+      default:
+        $res = " Invalid operator !!";
+    }
+       echo "Expression:- $n1 $oprt $n2 =  $res";
+  }
+?>
+  
+</body>
+</html>

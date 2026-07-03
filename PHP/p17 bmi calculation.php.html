@@ -1,0 +1,33 @@
+<html>
+<body>
+  <form method="POST">
+    Enter weight: 
+      <input type="number" name="wei" step="any" required><br><br>
+    Enter height: 
+      <input type="number" name="hei" step="any" required><br><br>
+      <input type="submit" name="submit"> 
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $w = $_POST['wei'];
+    $h = $_POST['hei'];
+
+    if($h >0){
+    $bmi = $w/($h*$h);
+      
+    if($bmi<18.5)
+           echo "your bmi is " .$bmi ."<br> It's underweight";
+    else if($bmi>=18.5 && $bmi<25)
+           echo "your bmi is ".$bmi . "<br> It's normalweight";
+    else if($bmi>=25 && $bmi<30)
+            echo "your bmi is ".$bmi."<br> It's overweight";
+    else
+            echo "your bmi is ".$bmi."<br> It's obesity";
+   }
+   else{
+    echo "height must be greather than 0";
+   }
+  }  
+?>
+</body>
+</html>

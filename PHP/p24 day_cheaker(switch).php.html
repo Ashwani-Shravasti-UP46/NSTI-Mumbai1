@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <form method="POST">
+    Enter day:
+      <input type="text" name="day" required>
+    
+    <input type="submit" name="submit" value="Check day">
+</form>
+<?php
+  if(isset($_POST['submit'])){
+    $day = $_POST['day'];
+
+    switch($day){
+      case "monday":
+        echo "Today is monday!!";
+        break;
+
+        case "Tuesday":
+        echo "Today is tuesday!!";
+        break;
+
+        case "wednesday":
+        echo "Today is wednesday!!";
+        break;
+
+        // case "Thursday":
+        // echo "Today is thursday!!";
+        // break;
+
+        // case "Friday":
+        // echo "Today is Friday!!";
+        // break;
+
+        // case "Saturday":
+        // echo "Today is Saturday!!";
+        // break;
+
+        // case "sunday":
+        // echo "Today is sunday!!";
+        // break;
+
+        default:
+          echo "Otherday";
+
+    }
+  }
+?>
+</body>
+</html>

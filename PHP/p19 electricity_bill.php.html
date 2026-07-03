@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+  <form method="POST">
+    Customer ID:
+      <input type="number" name="cid" required><br><br>
+
+    Customer Name:
+      <input type="text" name="cname" required><br><br>
+
+    Unit:
+      <input type="number" name="un" step="any" required><br><br>
+
+      <input type="submit" name="submit" value="Calculate bill"> 
+  </form>
+<?php
+  if(isset($_POST['submit'])){
+    $cid = $_POST['cid'];
+    $cname = $_POST['cname'];
+    $unit = $_POST['un'];
+
+    $bill = 0;
+    $surcharge = 0;
+
+    if($unit <=100){
+      $bill = $unit * 5;
+    }
+    elseif($unit>101 && $unit<=200){
+      $bill = (100*5) + (($unit - 100)*7);
+    }
+    else{
+      $bill = (100*5) + (100*7) + (($unit-200)*10);
+    }
+
+    if($bill>2000){
+      $surcharge = $bill * 0.20;
+    }
+    else{
+      $surcharge = $bill;
+    }
+    $total = $bill + $surcharge;
+
+    echo "<h4>ELECTRICITY BILL </h4>";
+    echo "<b>CUSTOMER INFORMATION</b><br>";
+    echo "CUSTOMER ID: ".$cid."<br>";
+    echo "CUSTOMER NAME: ".$cname."<br>";
+    echo "Cunsumer units: ".$unit."<br>";
+    echo "------------------------------------<br>";
+    echo "<b>RATE</b><br>";
+    echo "<pre> 0-100   : ₹5 pre unit</pre>";
+    echo "<pre> 101-200 : ₹7 pre unit</pre>";
+    echo "<pre> 200+    : ₹10 pre unit</pre>";
+    echo "------------------------------------<br>";
+    echo "<b>BILL AMOUNT</b><br>";
+    echo "Amount: ₹".$bill."<br>";
+    echo "Surcharges: ₹".$surcharge."<br>";
+    echo "Total Payable amount: ₹".$total."<br>";
+    echo "------------------------------------<br>";
+    echo "Thank you!!!!";
+  }
+?>  
+</body>
+</html>

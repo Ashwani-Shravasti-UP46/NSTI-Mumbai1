@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<h2>Prime numbers b/w two limits</h2>
+
+<form method="POST">
+    Enter First Limit:
+    <input type="number" name="num1" required><br><br>
+
+    Enter Second Limit:
+    <input type="number" name="num2" required>
+
+    <input type="submit" name="submit" value="Check">
+</form>
+
+<?php
+if(isset($_POST['submit'])){
+    $n1 = (int)$_POST['num1'];
+    $n2 = (int)$_POST['num2'];
+
+    echo "--------------------------------------------";
+    echo "<br>1st limit is ".$n1;
+    echo "<br>2nd limit is ".$n2;
+    echo "<br>Prime Numbers: ";
+
+    for($j = $n1; $j <= $n2; $j++){
+        if($j < 2) continue; 
+
+        $prime = 1;
+
+        for($i = 2; $i <= $j/2; $i++){
+            if($j % $i == 0){
+                $prime = 0;
+                break;
+            }
+        }
+
+        if($prime == 1){
+            echo $j." ";
+        }
+    }
+}
+?>
+
+</body>
+</html>
