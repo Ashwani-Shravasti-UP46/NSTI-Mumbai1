@@ -1,0 +1,51 @@
+<html>
+	<head><center><h1>Marksheet Generation</h1></head></center><br><hr>
+	<body>
+		<script>
+		
+			//Initializing Variable
+			
+			var js=parseInt(prompt("Enter the Marks of Javascript-"));
+			var php=parseInt(prompt("Enter the Marks of PHP-"));
+			var py=parseInt(prompt("Enter the Marsk of Python-"));
+			var sql=parseInt(prompt("Enter the Marsk of SQL-"));
+			var c=parseInt(prompt("Enter the Marks of C-"));
+			
+			//Calculating the Total Marks and Percentage
+
+			let Tatal=(js+php+py+sql+c);
+			let per=(Total/500)*100;
+
+			document.write("<br>");
+
+			//Evaluating the Grade
+		
+			let grade;
+			if(per>90 && per<100){
+				grade = "A+";
+				}
+			else if(per>80 && per<90){
+				grade = "A";
+				}
+			else if(per>70 && per<80){
+				grade = "B+";
+				}
+			else if(per>60 && per<70){
+				grade = "B";
+				}
+			else if(per>=50 && per<60){
+				grade = "C+";
+				}
+			else if(per>=40 && per<50){
+				grade = "C";
+				}
+			else{
+				grade = "D+";
+				}
+
+			document.write("Student Grade is-"+ grade+"<br>");
+
+
+		</script>
+	</body>
+</html>

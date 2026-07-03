@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+     <head>
+           <title>elecricity bill</title>
+     </head>
+     <body>
+        <h1>elecricity Bill</h1>
+        <script>
+            let code=prompt("enter your code");
+            let Name=prompt("enter consmer Name");
+            let unit=prompt("enter consmer unit");
+
+           if(unit<=100){bill=unit*5;}
+            else if(unit=200) {bill=(100*5) + (unit-100)*7;}
+            else{bill=(100*5) + (100*7) + (unit-200)*10;} 
+            
+        
+            document.write("customer code="+code+"<br>");
+            document.write("customer Name="+Name+"<br>");
+            document.write("unit="+unit+"<br>");
+            document.write("amount="+bill+"<br>");
+            document.write(".................");
+            document.write("<h3> Thank You</h3>");
+            </script>
+            </body>
+            </html>            

@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<h1><center><hr><br>DOM Program to display hobby</h1></center><hr>
+	</head>
+	<body>
+		<center><h2>Get Checked Checkbox</h2></center>
+		<center><h3>Select Your Hobby</h3></center>
+
+		<input type = "checkbox" name = "hobby" value = "Traveling"> Traveling
+		<input type = "checkbox" name = "hobby" value = "Reading"> Reading
+		<input type = "checkbox" name = "hobby" value = "Music"> Music
+		<br><br>
+
+		<button onclick="getcheckedHobbies()"> Show Selected Hobbies </button>
+		<p id = "hobbyresult"></p>
+
+		<center><script>
+
+			function getcheckedHobbies(){
+
+			let checkboxes = document.getElementsByName("hobby");
+			let checkedHobbies = [];
+
+			for(let i=0; i<checkboxes.length; i++){
+				if(checkboxes[i].checked){
+					checkedHobbies.push(checkboxes[i].value);}}
+		document.getElementById("hobbyresult").innerHTML = "selected Hobbies: "+ checkedHobbies.join(" , ");}
+		
+		</script></center>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+	<head>
+	<title>Array Example using forEach loop</title>
+	</head>
+	<body>
+		<center><script>
+			//Declare an Array of colour
+			var str, i, n;
+			n=parseInt(prompt("Enter the limit-"));
+			str= new Array(n);
+			
+			for(i=0; i<n; i++){
+			str[i]=prompt("Enter the colour-");}
+			document.write("<h1>The Array Elements are: <br></h1><hr>")
+
+			//Using forEach loop to display each colour
+
+			str.forEach(function(str,i){document.write((i+1)+" "+str+"<br>");});
+			
+		</script></center>
+	</body>
+</html>

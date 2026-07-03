@@ -1,0 +1,47 @@
+<html>
+	<head> <center><h1> Electricity Bill </h1> </head><br><hr></center>
+	<body>
+	<center><script>
+		let custID=prompt("Enter the customer ID-");
+		let custName=prompt("Enter the customer name-");
+		let units=parseInt(prompt("Enter the consumed units-"));
+		let bill=0;
+		let netpay = 0;
+
+		if(units<=100){
+		bill=(units*5);}
+		else if(units<=200){
+		bill=(100*5)+((units-100)*7);}
+		else{
+		bill=(100*5)+(100*7)+((units-200)*10);}
+		document.write("---------------------------------<br>");
+
+		document.write("<b>Customer ID-"+ custID +"<br></b>");
+		document.write("<b>Customer Name-"+ custName + "<br></b>");
+
+		document.write("---------------------------------<br>");
+
+		document.write("<b>Units Consumed-"+units.toFixed(2)+" "+"unit"+"<br></b>");
+		document.write("<b>Total Bill Amount-"+ bill.toFixed(2)+" "+"₹"+"<br></b>");
+
+		document.write("---------------------------------<br>");
+
+		document.write("<h3><b>Unit Rates:--</b></h3>");
+		document.write("0-100 units @ ₹5/unit"+"<br>");
+		document.write("101-200 units @ ₹7/unit"+"<br>");
+		document.write("Above 200 units @ ₹10/unit"+"<br>");
+		document.write("If applicalble, 10% surcharge will be applied"+"<br>");
+
+		document.write("---------------------------------<br>");
+		
+		if(bill>1000){
+	 	netpay = ((bill*0.10)+bill);}
+		document.write("<b>Surchage Applied-"+(netpay-bill)+" "+"₹"+"<br></b>");
+		document.write("<b>Net Payable Amt.-"+ netpay.toFixed(2)+"₹"+"<br></b>");
+		document.write("---------------------------------<br>");
+		
+	</script></center>
+	<center><h3>Thank You!</h3></center>
+	</body>
+	
+</html>

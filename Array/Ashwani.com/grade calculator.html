@@ -1,0 +1,95 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for Grade Calculator
+=====================================================
+
+AIM:
+- To write a JavaScript program that calculates grade 
+  based on student marks.
+
+OBJECTIVE:
+- Accept marks (0–100) from user.
+- Apply grading rules:
+  - 90–100 → Grade A
+  - 75–89  → Grade B
+  - 50–74  → Grade C
+  - 35–49  → Grade D
+  - Below 35 → Fail
+- Display grade on webpage.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Accept marks from user using prompt().
+2) If marks ≥ 90 → A.
+3) Else if marks ≥ 75 → B.
+4) Else if marks ≥ 50 → C.
+5) Else if marks ≥ 35 → D.
+6) Else → Fail.
+7) Display grade.
+
+STEPS TO RUN:
+- Save file as grade.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (grade.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade Calculator</title>
+</head>
+<body>
+  <h2>JavaScript Grade Calculator</h2>
+
+  <script>
+    let marks = parseInt(prompt("Enter marks (0-100):"));
+    let grade = "";
+
+    if (marks >= 90) {
+      grade = "A";
+    } else if (marks >= 75) {
+      grade = "B";
+    } else if (marks >= 50) {
+      grade = "C";
+    } else if (marks >= 35) {
+      grade = "D";
+    } else {
+      grade = "Fail";
+    }
+
+    document.write("Marks = " + marks + "<br>");
+    document.write("Grade = " + grade);
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Input: 92
+Output:
+Marks = 92
+Grade = A
+
+Input: 68
+Output:
+Marks = 68
+Grade = C
+
+Input: 30
+Output:
+Marks = 30
+Grade = Fail
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to calculate grade based on marks.
+=================================================
+-->

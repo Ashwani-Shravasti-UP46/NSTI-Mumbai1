@@ -1,0 +1,75 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program to Find Factorial using Recursion
+=====================================================
+
+AIM:
+- To write a JavaScript program that calculates 
+  factorial of a number using recursion.
+
+OBJECTIVE:
+- Define a recursive function factorial(n).
+- Base case: if n == 0 or 1 → return 1.
+- Recursive case: return n × factorial(n-1).
+- Accept number from user and display result.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Accept number from user using prompt().
+2) Define function factorial(n):
+      if n <= 1 return 1
+      else return n × factorial(n-1)
+3) Call function with given number.
+4) Display result.
+
+STEPS TO RUN:
+- Save file as factorial_recursion.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (factorial_recursion.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial using Recursion</title>
+</head>
+<body>
+  <h2>JavaScript Factorial (Recursion)</h2>
+
+  <script>
+    // Recursive function
+    function factorial(n) {
+      if (n <= 1) return 1;
+      else return n * factorial(n - 1);
+    }
+
+    // Input
+    let num = parseInt(prompt("Enter a number:"));
+
+    // Output
+    document.write("Factorial of " + num + " = " + factorial(num));
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Input: 5
+Output: Factorial of 5 = 120
+
+Input: 0
+Output: Factorial of 0 = 1
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to calculate factorial using recursion.
+=================================================
+-->

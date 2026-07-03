@@ -1,0 +1,32 @@
+<html>
+<body>
+<script>
+	let a,n,sk,flag=0;
+	n=parseInt(prompt("Enter the limit of array: "));
+	a= new Array( );
+
+	for(i=0; i<n; i++){
+		a[i]=parseInt(prompt("Enter the array element: "+n));
+	}
+	document.write("<h1>Linear search in array</h1>");
+	document.write("The array elemnt are: ");
+	
+	sk=parseInt(prompt("Enter the elemnet who find you: "));
+	for(i=0; i<n; i++){
+		document.write(a[i]+" ");
+	}
+
+	for(i=0; i<n; i++){
+		if(a[i] == sk){
+		flag=1;
+		document.write("<br>Element found at position:"+sk);
+		break;
+		}		
+	}
+	if(flag===0){
+	document.write("<br> element not found");
+	}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<h1><center>Frequency Count</center></h1><hr><br>
+	</head>
+	<body>
+		<center><script>
+			
+			var n, i, a, fc=0, key; 
+			n=parseInt(prompt("Enter the Limit-"));
+			a= new Array(n);
+			for(i=0; i<n; i++){
+			a[i]=parseInt(prompt("Enter the array element"));}
+			document.write("The array element are-:");
+			for(i=0; i<n; i++){
+			document.write(a[i]+"  ");}
+
+			//frequency counting
+			
+			
+			key=parseInt(prompt("Enter the Key Element-"));
+
+			for(i=0; i<n; i++){
+				if(a[i]===key){
+					fc++;}}
+					document.write("<br>"+"Frequency Count of Element "+ key +" is ");
+					document.write(fc);
+				
+
+
+		</script></center>
+	</body>
+</html>

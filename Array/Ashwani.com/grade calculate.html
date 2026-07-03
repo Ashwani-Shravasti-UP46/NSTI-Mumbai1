@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mark&Grade Calculator</title>
+</head>
+<body>
+<h2>Subject mark&Grade Calculator</h2>
+<Script>
+//Taking Input mark for 5 subjects
+let NW = perseInt(promp("Enter mark of Networking"));
+let JS = perseInt(promp("Enter mark of Javascript"));
+let PHP = perseInt(promp("Enter mark of Php"));
+let PY = perseInt(promp("Enter mark of Python"));
+let MYSQL = perseInt(promp("Enter mark of MySQL"));
+let totalm= NW+JS+PHP+PY+MYSQL;
+let percentage =(total/500)*100;
+//Grade calculate
+let grade;
+ if (percentage>=90){
+ 	grade ="A";
+}
+else if(percentage>=80){
+	grade ="B";
+}
+else if(percentage>=70){
+	grade ="C";
+}
+else if(percentage>=60){
+	grade ="D";
+}
+else if(percentage> 50){
+	grade ="E";
+}
+else{
+	grade ="F"+ "(Fail)";  
+// output
+document.write("<h3>Total marks:"+total+"/500</h3>");
+document.write("<h3>Percentage:"+percentage+"%</h3>");
+document.write("<h3>Grade:"+grade+"</h3>");
+</Script>
+</body>
+</html>
+

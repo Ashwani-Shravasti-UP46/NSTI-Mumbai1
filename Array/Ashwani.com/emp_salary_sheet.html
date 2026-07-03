@@ -1,0 +1,33 @@
+<html>
+<body>
+<script>
+	let empid, empnm, des, bp, ded;
+	empid=parseInt(prompt("Enter the employee id: "));
+	empnm=prompt("Enter the employee name: "+empid);
+	des=prompt("Enter the employee designation: "+empid);
+	bp=parseInt(prompt("Enter the basic pay "+empid));
+	ded=parseInt(prompt("Enter the dedcution: "+empid));
+
+	let hra, ta, da, ts, ns;
+	hra=(bp*30)/100;
+	ta=(bp*53)/100;
+	da=(bp*22)/100;
+	ts=hra+ta+da+bp;
+	ns=bp+ts;
+
+	document.write("<table border='1' cellpadding='5' cellspacing='0'>");
+	document.write("<tr><th> Employee Id </th><td>" + empid + "</td></tr>");
+	document.write("<tr><th>Employee Name </th><td>" + empnm + "</td></tr>");
+	document.write("<tr><th>Designation </th><td>" + des +" </td></tr>");
+	document.write("<tr><th>Basic pay </th><td>"+ bp + "</td></tr>");
+	document.write("<tr><th>Deducation </th><td>"+ded+"</td></tr>");
+	document.write("<tr ><th >HRA </th><td>"+hra+"</td></tr>");
+	document.write("<tr ><th >TA</th><td>"+ts+"</td><tr>");
+	document.write("<tr ><th >DA</th><td>"+da+"</td></tr>");
+	document.write("<tr><th>Total Salary </th><td>"+ts+"</td></tr>");
+	document.write("<tr><th>NetSalary</th><td>"+ns+"</td></tr>");
+	document.write("</table>");
+	
+</script>
+</body>
+</html>

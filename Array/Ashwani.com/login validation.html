@@ -1,0 +1,82 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for User ID & Password Validation
+=====================================================
+
+AIM:
+- To write a JavaScript program that validates user ID and password.
+
+OBJECTIVE:
+- Accept user ID and password through prompt().
+- Check against predefined valid values.
+- If both match → "Login Successful".
+- Else → "Invalid User ID or Password".
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Define valid userId and password.
+2) Accept input from user using prompt().
+3) If entered values match stored ones:
+      Display "Login Successful".
+4) Else:
+      Display "Invalid User ID or Password".
+5) End.
+
+STEPS TO RUN:
+- Save file as login_validation.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (login_validation.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Login Validation</title>
+</head>
+<body>
+  <h2>JavaScript User ID & Password Validation</h2>
+
+  <script>
+    // Predefined valid credentials
+    const validUser = "admin";
+    const validPass = "12345";
+
+    // Input from user
+    let user = prompt("Enter User ID:");
+    let pass = prompt("Enter Password:");
+
+    // Validation
+    if (user === validUser && pass === validPass) {
+      document.write("<b>Login Successful ✅</b>");
+    } else {
+      document.write("<b>Invalid User ID or Password ❌</b>");
+    }
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Case 1:
+Input: User ID = admin
+       Password = 12345
+Output: Login Successful ✅
+
+Case 2:
+Input: User ID = test
+       Password = 1111
+Output: Invalid User ID or Password ❌
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  for User ID & Password validation.
+=================================================
+-->

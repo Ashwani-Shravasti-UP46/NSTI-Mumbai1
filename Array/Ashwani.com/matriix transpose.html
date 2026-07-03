@@ -1,0 +1,82 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for Transpose of a Matrix
+=====================================================
+
+AIM:
+- To write a JavaScript program that finds 
+  the transpose of a matrix.
+
+OBJECTIVE:
+- Accept a 2D matrix.
+- Swap rows with columns.
+- Display transpose matrix.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Define a matrix A (m×n).
+2) Create empty matrix T (n×m).
+3) For each i (row) and j (column):
+      T[j][i] = A[i][j]
+4) Print transpose matrix T.
+
+STEPS TO RUN:
+- Save file as transpose.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (transpose.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matrix Transpose</title>
+</head>
+<body>
+  <h2>JavaScript Matrix Transpose</h2>
+
+  <script>
+    // Matrix A (3x2)
+    let A = [
+      [1, 2],
+      [3, 4],
+      [5, 6]
+    ];
+
+    // Transpose Matrix (2x3)
+    let T = [];
+
+    for (let i = 0; i < A[0].length; i++) {
+      T[i] = [];
+      for (let j = 0; j < A.length; j++) {
+        T[i][j] = A[j][i];
+      }
+    }
+
+    // Display result
+    document.write("<b>Original Matrix A:</b><br>" + JSON.stringify(A) + "<br><br>");
+    document.write("<b>Transpose Matrix T:</b><br>" + JSON.stringify(T));
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Original Matrix A:
+[[1,2],[3,4],[5,6]]
+
+Transpose Matrix T:
+[[1,3,5],[2,4,6]]
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to find transpose of a matrix.
+=================================================
+-->

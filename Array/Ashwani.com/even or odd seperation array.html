@@ -1,0 +1,32 @@
+ <html>
+<head>
+<title>Even or Odd Nnumber</title>
+</head>
+<body>
+<script>
+	var a,i,n,oc,ec,odd,even;
+	n=parseInt(prompt("Enter the limt"));
+	a=new Array(n);
+	for(i=0; i<n; i++){
+	a[i]=parseInt(prompt("Enter the Array elements"));
+	}
+	document.write("The Array Element Are<br>");
+	for(i=0; i<n; i++){
+	document.write(a[i]+ " ");
+	}
+	document.write("<br>Even number is array element<br>");
+	for(i=0; i<n; i++){
+	if(a[i]%2==0){
+	document.write(a[i]+" ");
+	}
+	}
+	document.write("<br>Odd number is array element<br>");
+	for(i=0; i<n; i++){
+	if(a[i]%2!==0){
+	document.write(a[i]+" ");
+	}
+	}
+	
+</script>
+</body>
+</html>

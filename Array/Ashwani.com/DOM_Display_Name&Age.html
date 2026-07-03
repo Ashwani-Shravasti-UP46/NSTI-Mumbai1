@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Name & Age</title>
+    <center><h1><hr>Display Name & Age <br><hr></h1></center>
+
+</head>
+<body><center>
+    <label>Enter Name: </label>
+    <input type = "text" name = "userInput" value="John"><br><br>
+
+    <lable>Enter Age: </lable>
+    <input type = "number" name = "userInput" value = "25"><br><br>
+
+    <button onclick = "getvalues()"> Get Values</button>
+    <br><p id = "result"></p>
+    </center>
+
+    <script>
+    function getvalues(){
+        let inputs = document.getElementsByName("userInput");
+        let values=[];
+        
+        //loop through Nodelist and get values 
+        for(let i=0; i<inputs.length; i++){
+            values.push (inputs[i].value);
+        }
+        document.getElementById("result").innerHTML = "values:"+values.join(",");
+    }
+    </script>
+</body>
+</html>

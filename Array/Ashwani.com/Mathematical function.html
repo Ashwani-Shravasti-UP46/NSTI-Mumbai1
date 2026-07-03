@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mathmaticarl Function in Javascript</title>
+</head>
+<body>
+<h2>Javascript Mathmatical Demo</h2>
+<script>
+	document.write("<h3>Math Constants<h3>");
+	document.write("PI:"+Math.PI+"<br>");
+	document.write("E:"+Math.E+"<br>");
+	document.write("SQRT2:"+Math.SQRT2+"<br>");
+	document.write("LN10:"+Math.LN10+"<br><hr>");
+	
+	document.write("<h3>Basic Arithematic Function</h3>");
+	document.write("abs(-7):"+Math.abs(-7)+"<br>");
+	document.write("round(4.6):"+Math.round(4.6)+"<br>");
+	document.write("ceil(4.2):"+Math.ceil(4.2)+"<br>");
+	document.write("floor(4.8):"+Math.floor(4.8)+"<br>");
+	document.write("trunc(7.9):"+Math.trunc(7.9)+"<br>");
+	document.write("sign(-25):"+Math.round(-25)+"<br><hr>");
+
+	document.write("<h3>Exponents and Roots</h3>");
+	document.write("pow(2,5):"+Math.pow(2,5)+"<br>");
+	document.write("sqrt(49):"+Math.sqrt(49)+"<br>");
+	document.write("cbrt(27):"+Math.cbrt(27)+"<br>");
+	
+	document.write("<h3>Logarithmic Function</h3>");
+	document.write("log(10):"+Math.log(10)+"<br>");
+	document.write("log10(100):"+Math.log10(100)+"<br>");
+	document.write("log2(8):"+Math.log2(8)+"<br>");
+
+	document.write("<h3>Trigonometic Function</h3>");
+	document.write("sin(p1/2):"+Math.sin(Math.p1/2)+"<br>");
+	document.write("cos(p1):"+Math.cos(Math.p1)+"<br>");
+	document.write("tan(p1/4):"+Math.tan(Math.p1/4)+"<br>");
+	document.write("asin(1):"+Math.asin(1)+"<br>");
+	document.write("acos(0):"+Math.acos(0)+"<br>");
+	document.write("atan(1):"+Math.atan(1)+"<br>");
+
+	document.write("<h3>Random and Utility Functions</h3>");
+	document.write("Random(0-1):"+Math.random()+"<br>");
+	document.write("min(3,1,7,5):"+Math.min(3,1,7,5)+"<br>");
+	document.write("max(3,1,7,5):"+Math.max(3,1,7,5)+"<br>");
+
+	function getRandomInt(min,max){
+	return Math.floor(Math.random()*(max-min+1))+min;
+	}
+	document.write("<h3>Random Integer Example</h3>");
+	document.write("Random number between 1 and 10:"+getRandomInt(1,10)+"<br>");	
+	
+</script>
+</body>
+</head>
+
+
+

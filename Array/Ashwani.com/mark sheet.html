@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+            <head>   
+                      <title> Result </title>
+         </head>
+      <body>
+                  <h1> Result Sheet of Mark</h1>
+                   <table border=1>
+                                   <th>Subject</th>
+		   <th>Marks</th>
+	          	   <tr>
+			<td>JavaScript</td>
+			<td id="jsm"></td>
+		   </tr>
+		   <tr>
+ 			<td>Networking</td>
+			<td id="nwm"></td>
+		     </tr>
+		   <tr>
+ 			<td>PHP</td>
+			<td id="phpm"></td>
+		      </tr>
+		   <tr>
+ 			<td>Python</td>
+			<td id="pym"></td>
+		    </tr>
+		   <tr>
+ 			<td>MYSQL</td>
+			<td id="mysql"></td>
+		    
+		</tr>
+		   <tr>
+ 			<td>Total Marks</td>
+			<td id="tm"></td>
+		</tr>
+		   <tr>
+ 			<td>Percentage</td>
+			<td id="perm"></td>
+		</tr>
+		   <tr>
+ 			<td>Grade</td>
+			<td id="grm"></td>
+		 </tr>
+		   <tr>
+ 			<td>Result</td>
+			<td id="rem"></td>
+ 		</tr>
+	</table>
+	<script>
+		 let JS = parseInt(prompt("Enter JavaScript Marks"));
+		 let NW = parseInt(prompt("Enter Networking Marks"));
+		 let PHP = parseInt(prompt("Enter PHP Marks"))
+		 let PY = parseInt(prompt("Enter Python Marks"));
+		 let MYSQL= parseInt(prompt("Enter MYSQL Marks"));
+		 
+                                  document.getElementById("jsm").innerHTML=JS;
+		  document.getElementById("nwm").innerHTML=NW;									  document.getElementById("phpm").innerHTML=PHP;
+                                  document.getElementById("pym").innerHTML=PY;
+		  document.getElementById("mysqlm").innerHTML=MYSQL;
+
+		  let total = JavaScript+Networking+PHP+Python+Mysql;
+		 let perm = total/5;
+		 document.getElementById("tm").innerHTML=totalm+"/500";
+                                 document.getElementById("perm").innerHTML=perm;
+		 
+                                 let pass="Pass";
+		 let fail="fail";
+		 if (perm>30){
+			document.getElementById("rem").innerHTML=pass;
+		}
+		else {
+			document.getElementById("rem").innerHTML=fail;
+		}
+		
+		if (perm>=90 && perm<=100){
+			
+			document.getElementById("grm").innerHTML="A+";
+		 }
+		
+		else if (perm>=80 && perm<=90){
+			
+			document.getElementById("grm").innerHTML="A";
+		 }
+		
+		else if (perm>=70 && perm<=80){
+			document.getElementById("grm").innerHTML="B+";
+		 }
+		else if (perm>=60 && perm<=70){
+			
+		              document.getElementById("grm").innerHTML="B";
+		 }
+		
+		else if (perm>=50 && perm<=60){
+			
+			document.getElementById("grm").innerHTML="C+";
+		 }
+		
+		else if (perm>=40 && perm<=50){
+			
+			document.getElementById("grm").innerHTML="C";
+		 }
+		
+		else if (perm>=30 && perm<=40){
+			
+			document.getElementById("grm").innerHTML="D";
+	
+		}
+		else {
+			document.getElementById("grm").innerHTML="E";
+		}
+	</script>
+        </body>
+</html>
+		 

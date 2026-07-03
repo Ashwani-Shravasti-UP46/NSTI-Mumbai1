@@ -1,0 +1,85 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program to Display Employee Details using Class
+=====================================================
+
+AIM:
+- To write a JavaScript program that defines a class 
+  to store and display employee details.
+
+OBJECTIVE:
+- Create a class Employee.
+- Store employee details (id, name, salary).
+- Create objects of Employee class.
+- Display details using method.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Define class Employee with constructor (id, name, salary).
+2) Assign parameters to properties.
+3) Create method show() to display details.
+4) Create multiple employee objects using new keyword.
+5) Call show() for each employee.
+
+STEPS TO RUN:
+- Save file as employee_class.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (employee_class.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Details using Class</title>
+</head>
+<body>
+  <h2>JavaScript Employee Details (Class)</h2>
+
+  <script>
+    // Employee class
+    class Employee {
+      constructor(id, name, salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+      }
+
+      show() {
+        document.write("ID: " + this.id + 
+                       ", Name: " + this.name + 
+                       ", Salary: ₹" + this.salary + "<br>");
+      }
+    }
+
+    // Create employee objects
+    let e1 = new Employee(1, "Amit", 35000);
+    let e2 = new Employee(2, "Priya", 42000);
+    let e3 = new Employee(3, "Rahul", 28000);
+
+    // Display employee details
+    e1.show();
+    e2.show();
+    e3.show();
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+ID: 1, Name: Amit, Salary: ₹35000
+ID: 2, Name: Priya, Salary: ₹42000
+ID: 3, Name: Rahul, Salary: ₹28000
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to display employee details using Class.
+=================================================
+-->

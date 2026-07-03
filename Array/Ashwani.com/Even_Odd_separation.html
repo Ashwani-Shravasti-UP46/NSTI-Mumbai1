@@ -1,0 +1,39 @@
+<html>
+
+	<head>
+		<h1><center>Even and Odd separation in Array</center></h1><br><hr>
+	</head>
+
+	<body>
+		<center><script>
+			var a, i, n, even, odd, ec = 0, oc=0 ;
+			n = parseInt(prompt("Enter the Array Limit-"));
+
+			a = new Array(n);
+			even = new Array(n);
+			odd = new Array(n);
+
+			for (i = 0; i < n; i++)
+			 	{a[i] = parseInt(prompt("Enter the Array Element-"));}
+				document.write("<br><br>" + "The Array Elements are-");
+			for (i = 0; i < n; i++)
+				{document.write(a[i] + " ");}
+
+
+			//Even and Odd number separation in the Array
+
+
+			for (i = 0; i < n; i++)
+				{if (a[i] % 2 == 0) {even[ec] = a[i];
+								ec++;} 
+				else {odd[oc] = a[i];
+						oc++;}}
+
+			document.write("<br><br>The Even Array Element is-");
+				for (i = 0; i < ec; i++) {document.write(even[i] + " ");}
+			document.write("<br><br>The Odd Array Element is-");
+				for (i = 0; i < oc; i++) {document.write(odd[i] + " ");}
+		</script></center>
+	</body>
+
+</html>

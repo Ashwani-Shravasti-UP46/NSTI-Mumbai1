@@ -1,0 +1,19 @@
+<html>
+	<center><head><center><h1>Fibonacci Series by simple Loop</center></h1></head>
+	<body>
+		<script>
+			let n=parseInt(prompt("Enter the limit of the series-"));
+			let f1=0;
+			let f2=1;
+			let sum=0;
+			while(sum<=n){
+				sum++;
+				document.write(f1+ "  "  );
+				sum=f1+f2;
+				f1=f2;
+				f2=sum;
+				}
+			
+		</script>
+	</body></center>
+</html>

@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<h1><center>Linear Seraching</center></h1><br><hr>
+	</head>
+	<body>
+		<center><script>
+			 
+			var n=parseInt(prompt("Enter the Limit-"));
+			var a= [];
+			for(let i=0; i<n; i++){
+			a[i]=parseInt(prompt("Enter the array element"+ (i+1)+ ":"));}
+			document.write("The array element are-:");
+			for(i=0; i<n; i++){
+			document.write(a[i]+"  ");}
+
+			//Linear Searching
+			
+
+			document.write("<br>"+"The key Element is ");
+
+			let flag=0;
+			
+			var key=parseInt(prompt("Enter the Key Element-"));
+			for(i=0; i<n; i++){
+				if(a[i]===key){
+					document.write(key+" found at index "+i);
+					flag=1;
+					break;}}
+					
+				if(!flag){
+					document.write(key +" not found in the Array");}
+
+
+
+		</script></center>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<h1><center> DOM program to display the Name & Age </center></h1><hr><br>
+	</head>
+	<body>
+		<center <lable> Enter Name : </label>
+		<input type = "text" name = "userInput" value = " John"><br><br>
+		
+		<lable> Enter Age : </label>
+		<input type = "text" name = "userInput" value = " 25"><br><br>
+		
+		<button onclick ="getvalue()"> Get values </button>
+		<p id = "result"></p></center>
+
+		<script>
+			function getvalue(){
+			
+			let input = document.getElementsByName ("userInput");
+			let values= [];
+
+		//Loop through NodeList and get values
+
+			for(let i=0; i<input.length; i++){
+				values.push(input[i].value);}
+
+		document.getElementById("result").innerHTML = " values: "+ values.join(" , ");}
+		</script>
+	</body>
+</html>

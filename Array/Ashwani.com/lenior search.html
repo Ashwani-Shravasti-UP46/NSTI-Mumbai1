@@ -1,0 +1,84 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for Linear Search
+=====================================================
+
+AIM:
+- To write a JavaScript program that searches an element 
+  in an array using Linear Search.
+
+OBJECTIVE:
+- Accept/search element in an array.
+- Traverse array sequentially.
+- If element found → display position.
+- Else → display not found.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Define an array of numbers.
+2) Accept key element from user using prompt().
+3) Loop through array elements one by one.
+4) If element == key → found at index.
+5) If loop ends → not found.
+6) End.
+
+STEPS TO RUN:
+- Save file as linear_search.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (linear_search.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linear Search</title>
+</head>
+<body>
+  <h2>JavaScript Linear Search</h2>
+
+  <script>
+    // Array
+    let arr = [15, 8, 22, 5, 19, 30];
+    let key = parseInt(prompt("Enter number to search:"));
+    let found = false;
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === key) {
+        document.write(key + " found at position " + (i + 1));
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) {
+      document.write(key + " not found in array.");
+    }
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Array = [15, 8, 22, 5, 19, 30]
+
+Case 1:
+Input: 22
+Output: 22 found at position 3
+
+Case 2:
+Input: 7
+Output: 7 not found in array.
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to search an element using Linear Search.
+=================================================
+-->

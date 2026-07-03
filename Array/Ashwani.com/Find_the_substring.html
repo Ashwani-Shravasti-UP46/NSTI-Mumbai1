@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<h1><center>Find the substring from the Main string</h1></center><br><hr>
+	</head>
+	<body>
+		<center><script>
+			var str1, str2, i, j, k, l, ch, c, flag, p;
+
+			str1=prompt("Enter the Main String");
+			str2=prompt("Enter the substring");
+			document.write("Main String:- "+ str1);
+			document.write("<br>Substring:- "+str2);
+			
+			l=str1.length;
+			k=str2.length;
+
+			j=0;
+			flag=true;
+
+			for(i=0; i<l; i++){
+				ch=str1.charAt(i);
+				c= str2.charAt(j);
+					if((ch==c)&&(j<k)){
+						j++;
+						flag=true;}
+					else{
+						flag=false;
+						j=0;}
+					
+					if((flag==true)&&(j==k)){
+						p=i-k+2;
+						document.write("<br>The string "+ str2 +" is found in "+ str1 + " at the position :"+ p);
+						break;}
+
+				}
+					if(i==l){
+						document.write("<br>The string"+ str2 + " not found in "+ str1);}
+					
+				
+		
+		</script></center>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPe>
+<html>
+<head>
+<title> grade caculate</title>
+</head>
+<body>
+<script>
+let networking = parseINT(prompt("Enter mark of networking(out of 100);"));
+let javascript = parseINT(prompt("Enter mark of javascript(out of 100);"));
+let php = parseINT(prompt("Enter mark of php(out of 100);"));
+let python = parseINT(prompt("Enter mark of python(out of 100);"));
+let mysql = parseINT(prompt("Enter mark of mysql(out of 100);"));
+let total = networking+javascript+php+python+mysql;
+let percentage = (total/500)*100;
+let grade;
+if (percentage >=90){
+grade ="A+";
+}else if (percentage>=80){
+grade = "A";
+}else if (percentage>=70){
+grade = "B+";
+}else if (percentage>=60){
+grade = "B";
+}else if (percentage>=50){
+grade = "C+";
+}else if (percentage>=40){
+grade = "C";
+}else if (percentage>=30){
+grade = "D+";
+} else{
+grade="E";
+}
+else{
+result ="pass";
+result ="fail";
+}
+
+document.write("<h3>result sheet of a student</h3>");
+document.write("<table border='1' cellpadding = '6' cellpadding = '0'>");
+document.write("<tr><th>subject</th><th>marks </th></tr>");
+document.write("<tr><td>networking</td><td>"+networking+"</td></tr>");
+document.write("<tr><td>javascript</td><td>"+javascript+"</td></tr>");
+document.write("<tr><td>php</td><td>"+php+"</td></tr>");
+document.write("<tr><td>python</td><td>"+python+"</td></tr>");
+document.write("<tr><td>Mysql</td><td>"+Mysql+"</td></tr>");
+document.write("<tr><th>total</th><td>"+total+"</td></tr>");
+document.write("<tr><th>percentage</th><td>"+percentage+"</td></tr>");
+document.write("<tr><th>Grade</th><td>"+Grade+"</td></tr>");
+document.write("<tr><th>Result</th><td>"+Result+"</td></tr>");
+document.write("</table>");
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

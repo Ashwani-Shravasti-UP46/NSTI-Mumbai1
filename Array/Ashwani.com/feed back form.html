@@ -1,0 +1,103 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Feedback Form with Validation
+=====================================================
+
+AIM:
+- To design a feedback form with validation and 
+  show an alert on successful submit.
+
+OBJECTIVE:
+- Create HTML feedback form with fields: Name, Email, Message.
+- Use JavaScript validation:
+  - Name must not be empty.
+  - Email must contain "@".
+  - Message must not be empty.
+- Show alert message if all valid → "Feedback Submitted Successfully".
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Create form with Name, Email, Message fields.
+2) Add onsubmit event calling validateForm().
+3) In validateForm():
+   - If Name empty → alert and return false.
+   - If Email does not contain "@" → alert and return false.
+   - If Message empty → alert and return false.
+4) If all valid → alert "Feedback Submitted Successfully".
+5) End.
+
+STEPS TO RUN:
+- Save file as feedback_form.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (feedback_form.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Form</title>
+  <script>
+    function validateForm() {
+      let name = document.forms["feedback"]["name"].value;
+      let email = document.forms["feedback"]["email"].value;
+      let msg = document.forms["feedback"]["message"].value;
+
+      if (name === "") {
+        alert("Name is required");
+        return false;
+      }
+      if (email.indexOf("@") === -1) {
+        alert("Enter a valid email address");
+        return false;
+      }
+      if (msg === "") {
+        alert("Message cannot be empty");
+        return false;
+      }
+
+      alert("Feedback Submitted Successfully ✅");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <h2>Feedback Form</h2>
+
+  <form name="feedback" onsubmit="return validateForm()">
+    Name: <input type="text" name="name"><br><br>
+    Email: <input type="text" name="email"><br><br>
+    Message:<br>
+    <textarea name="message" rows="4" cols="30"></textarea><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Case 1:
+Name = "" → Alert: Name is required
+
+Case 2:
+Email = "test.com" → Alert: Enter a valid email address
+
+Case 3:
+Message = "" → Alert: Message cannot be empty
+
+Case 4:
+Name = "Sunil", Email = "sunil@gmail.com", Message = "Good website!"
+→ Alert: Feedback Submitted Successfully ✅
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript Feedback Form 
+  with validation and alert on successful submit.
+=================================================
+-->

@@ -1,0 +1,295 @@
+<html>
+
+<head>
+	<title> Student Registration Form </title>
+</head>
+
+<body>
+	<script>
+		function getage() {
+
+			var dob = document.getElementById("n2");
+			var age = document.getElementById("n3");
+
+			if (dob.value) {
+				var dt1 = new Date();
+				var dt2 = new Date(dob.value);
+				var d1 = dt1.getFullYear();
+				var d2 = dt2.getFullYear();
+				var monthDiff = dt1.getMonth() - dt2.getMonth();
+
+				age.value = monthDiff < 0 || (monthDiff === 0 && dt1.getDate() < dt2.getDate()) ? d1 - d2 - 1 : d1 - d2;
+			}
+			else {
+				age.value = "";
+			}
+		}
+
+		function validate() {
+			var name = document.getElementById("n1");
+			var dob = document.getElementById("n2");
+			var age = document.getElementById("n3");
+			var fname = document.getElementById("n8");
+			var address = document.getElementById("n9");
+			var contact = document.getElementById("n10");
+			var qual1 = document.getElementById("qual1");
+			var qual2 = document.getElementById("qual2");
+			var qual3 = document.getElementById("qual3");
+			var qual4 = document.getElementById("qual4");
+			var qual5 = document.getElementById("qual5");
+			var qual6 = document.getElementById("qual6");
+
+			if (name.value.trim() === "") {
+				alert("Please Enter Your Name");
+				name.focus();
+				return;
+			}
+
+			if (dob.value.trim() === "") {
+				alert("Please Enter Your Date of Birth");
+				dob.focus();
+				return;
+			}
+
+			if (fname.value.trim() === "") {
+				alert("Please Enter your Father/Guardian Name");
+				fname.focus();
+				return;
+			}
+
+			if (address.value.trim() === "") {
+				alert("Please Enter Your Address");
+				address.focus();
+				return;
+			}
+
+			if (contact.value.trim() === "") {
+				alert("Please Enter Your contact number");
+				contact.focus();
+				return;
+			}
+
+			var l1 = contact.value.length;
+			if (l1 !== 10 || isNaN(contact.value)) {
+				alert("Please Enter Your valid 10 digit Mobile No.");
+				contact.focus();
+				return;
+			}
+
+			if (
+
+				!qual1.checked &&
+				!qual2.checked &&
+				!qual3.checked &&
+				!qual4.checked &&
+				!qual5.checked &&
+				!qual6.checked) {
+
+				alert("Please Select Your Qualification");
+				return;
+			}
+
+			alert("Registration successfully");
+			document.getElementById("app").submit();
+
+		}
+	</script>
+
+	<table cellspacing="20" align="center">
+		<form method="post" id="app">
+			<tr>
+				<td colspan="2" align="center"><h3> STUDENT REGISTRATION FORM</h3></td>
+			</tr>
+			<tr>
+				<td> Name </td>
+				<td><input type="text" name="name1" size="40" id="n1" placeholder="Enter Your Name "></td>
+			</tr>
+			<tr>
+				<td> Date of Birth & Age </td>
+				<td><input type="date" name="date1" id="n2" onblur="getage()">
+					<input type="text" name="age" id="n3" size="5" disabled >
+				</td>
+			</tr>
+			<tr>
+				<td> Gender </td>
+				<td><input type="radio" name="r1" id="n4" value="male">Male
+				    <input type="radio" name="r2" id="n5" value="female">Female
+				</td>
+			</tr>
+			<tr>
+				<td>Religion & Caste </td>
+				<td>
+					<select name="religion" id="n6">
+						<option> select </option>
+						<option> Hindu </option>
+						<option> Muslim </option>
+						<option> Sikh </option>
+						<option> Christian </option>
+					</select>
+					<select name="caste" id="n7">
+						<option> select </option>
+						<option> General </option>
+						<option> OBC </option>
+						<option> SC/ST </option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td> Father/Guardian Name </td>
+				<td> <input type="text" name="gname1" size="40" id="n8" placeholder="Enter Your Father's Name"></td>
+			</tr>
+			<tr>
+				<td> Address </td>
+				<td> <textarea rows="5" cols="42" id="n9" name="add" placeholder="Enter Your Address"></textarea></td>
+			<tr>
+				<td> Contact </td>
+				<td> <input type="text" name="contno" size="40" id="n10" placeholder="Enter Your Mobile No."></td>
+			</tr>
+			<tr>
+				<td> Qualification </td>
+				<td align="left">
+
+					SSLC <input type="checkbox" id="qual1" value="sslc">
+					HSLC <input type="checkbox" id="qual2" value="hslc">
+					Graduate <input type="checkbox" id="qual3" value="grad">
+					P. G. <input type="checkbox" id="qual4" value="pg">
+					Diploma <input type="checkbox" id="qual5" value="dip">
+					Others <input type="checkbox" id="qual6" value="oth"></td>
+			</tr>
+			<tr>
+				<td align="center" colspan="2">
+					<input type="button" value="SUBMIT" onclick="validate()">
+					<input type="reset" name="clear" value="CLEAR">
+				</td>
+			</tr>
+		</form>
+	</table>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

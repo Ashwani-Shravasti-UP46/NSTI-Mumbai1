@@ -1,0 +1,30 @@
+<html>
+<body>
+<script>
+	var a,n,sk,fc=0;
+	n=parseInt(prompt("Enter the limit: "));
+	a= new Array();
+	
+	for(i=0; i<n; i++){
+		a[i]=parseInt(prompt("Enter the array element: "));
+	}
+	document.write("The array element are: ");
+
+	for(i=0; i<n; i++){
+		document.write(a[i]+" ");
+	}
+
+	sk=parseInt(prompt("enter the number who repeated in array"));
+	for(i=0; i<n; i++){
+	     if(a[i] === sk){
+		fc++;
+	     }
+	}
+	if(fc>0){
+		document.write("<br>The repeated number is "+sk+"its time"+fc);
+	} else{
+		document.write("There is no number repeated in array");
+	}
+</script>
+</body>
+</html>

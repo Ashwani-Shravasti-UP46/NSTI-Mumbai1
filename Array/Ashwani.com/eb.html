@@ -1,0 +1,54 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>Electricity Bill </title>
+</head> 
+<body>
+<h1>Electricity Bill </h1>
+
+<script>
+	let cuctID = prompt("Enter the customer ID:");
+	let cuctNm = prompt("Enter the customer Name: ");
+	let un = parseInt(prompt("Enter the unit: "));
+	
+	if(un <= 100)
+	{
+
+                     bill = un * 5;
+                 }
+	   else if(un >=101 &&un <=200)
+	{
+		bill = (100*5) +((un -100) *7);
+	}
+                  else
+	{
+		bill = (100*5)+(100*7)+((un -200) *10);
+	}
+
+                let srcg=0, tb;
+	if (bill > 1000){
+		srcg =(bill*10)/100;
+	}
+		tb =srcg +bill;
+	
+	document.write("customer ID: " + cuctID + "<br>");	
+	document.write("customer Name: "+ cuctNm + "<br>");	
+	document.write("unit: " +  un + "<br>");	
+	document.write(".................................................... <br>");	
+	document.write("units cunsumed rate per unit <br>");	
+	document.write(".....................................................<br>");	
+	document.write("<p>0 - 100  ₹5 per unit </p>");	
+	document.write("<p> 100 - 200 Unit ₹7 per unit </p>");
+	
+	document.write("<p> above 200 Unit ₹10 per unit </p>");
+	document.write("..............................................<br>");
+	document.write("Surchage: " + srcg +"<br>");
+	document.write("Total Bill: " + tb +"<br>");
+	document.write("..............................................<br>");
+	document.write("Thank you !!! ");
+</script>
+</body>
+</html>
+	
+	
+	

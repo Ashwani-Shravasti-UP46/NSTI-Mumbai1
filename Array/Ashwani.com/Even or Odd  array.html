@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Find the Even or Odd Number</title>
+</head>
+<body>
+<script>
+	var a,n,oc,ec,odd,even;
+	n=parseInt(prompt("Enter the limit"));
+	a=new Array(n);
+	for(i=0; i<n; i++)
+	{
+	a[i]=parseInt(prompt("Enter the Array element"));
+	}
+	document.write("The Array Element Are <br>");
+	for(i=0; i<n; i++){
+		document.write(a[i]+" ");
+	}
+	
+	for(i=0; i<n; i++)
+	{
+	document.write("<br>Even number is array element<br>");
+	for(i=0; i<n; i++){
+	if(i % 2==0);
+	document.write(a[i]+" ");
+	}
+	}
+</script>
+</body>
+</html>	

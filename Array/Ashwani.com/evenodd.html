@@ -1,0 +1,69 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program to Check Even or Odd
+=====================================================
+
+AIM:
+- To write a JavaScript program that checks whether 
+  a given number is even or odd.
+
+OBJECTIVE:
+- Accept a number from user.
+- Use modulus (%) operator.
+- If number % 2 == 0 → Even, else Odd.
+- Display result.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Accept number from user using prompt().
+2) If (num % 2 == 0) → print "Even".
+3) Else → print "Odd".
+4) End.
+
+STEPS TO RUN:
+- Save file as even_odd.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (even_odd.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even or Odd</title>
+</head>
+<body>
+  <h2>JavaScript Even or Odd Program</h2>
+
+  <script>
+    let num = parseInt(prompt("Enter a number:"));
+
+    if (num % 2 === 0) {
+      document.write(num + " is Even");
+    } else {
+      document.write(num + " is Odd");
+    }
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Input: 8
+Output: 8 is Even
+
+Input: 15
+Output: 15 is Odd
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to check whether a number is even or odd.
+=================================================
+-->

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Factorial Using Recursion</title>
+</head>
+<body>
+<script>
+                function factorial(n){
+	if(n === 0 || n ===1){
+	return 1;//Base case
+	}else{
+	return n*factorial(n-1);//Recursive case
+	}
+	}
+	let num = parseInt(prompt("Enter a number to calculate factorial:"));
+	if(isNaN(num) || num<0){
+	document.write("please enter a valid non-negative number.");
+	}else{
+	let result = factorial(num);
+	document.write("Factorial of"+num+"is:"+result);
+	}
+</script>
+</body>
+</html>

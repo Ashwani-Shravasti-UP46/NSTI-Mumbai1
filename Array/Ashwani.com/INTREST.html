@@ -1,0 +1,80 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for Simple Interest Calculator
+=====================================================
+
+AIM:
+- To write a JavaScript program that calculates 
+  Simple Interest (SI).
+
+OBJECTIVE:
+- Accept Principal, Rate of Interest, and Time from user.
+- Apply formula: SI = (P × R × T) / 100.
+- Display result.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Accept Principal (P) using prompt().
+2) Accept Rate of Interest (R) using prompt().
+3) Accept Time in years (T) using prompt().
+4) Calculate SI = (P × R × T) / 100.
+5) Display result.
+
+STEPS TO RUN:
+- Save file as simple_interest.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (simple_interest.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Interest Calculator</title>
+</head>
+<body>
+  <h2>JavaScript Simple Interest Calculator</h2>
+
+  <script>
+    // Input
+    let P = parseFloat(prompt("Enter Principal amount:"));
+    let R = parseFloat(prompt("Enter Rate of Interest (%):"));
+    let T = parseFloat(prompt("Enter Time (in years):"));
+
+    // Simple Interest formula
+    let SI = (P * R * T) / 100;
+
+    // Output
+    document.write("Principal = " + P + "<br>");
+    document.write("Rate = " + R + "%<br>");
+    document.write("Time = " + T + " years<br>");
+    document.write("Simple Interest = " + SI);
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Input:
+Principal = 5000
+Rate = 10
+Time = 2
+
+Output:
+Principal = 5000
+Rate = 10%
+Time = 2 years
+Simple Interest = 1000
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to calculate Simple Interest.
+=================================================
+-->

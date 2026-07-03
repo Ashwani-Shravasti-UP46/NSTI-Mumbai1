@@ -1,0 +1,97 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for Matrix Multiplication
+=====================================================
+
+AIM:
+- To write a JavaScript program that multiplies two matrices.
+
+OBJECTIVE:
+- Accept two matrices (2D arrays).
+- Multiply them using nested loops.
+- Display the resultant matrix.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Define two matrices A (m×n) and B (n×p).
+2) Initialize result matrix C (m×p) with 0.
+3) For each i (row of A):
+      For each j (col of B):
+          For each k (iterate common dimension):
+              C[i][j] += A[i][k] * B[k][j]
+4) Print result matrix C.
+
+STEPS TO RUN:
+- Save file as matrix_multiplication.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (matrix_multiplication.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matrix Multiplication</title>
+</head>
+<body>
+  <h2>JavaScript Matrix Multiplication</h2>
+
+  <script>
+    // Matrix A (2x3)
+    let A = [
+      [1, 2, 3],
+      [4, 5, 6]
+    ];
+
+    // Matrix B (3x2)
+    let B = [
+      [7, 8],
+      [9, 10],
+      [11, 12]
+    ];
+
+    // Resultant matrix (2x2)
+    let result = [];
+
+    for (let i = 0; i < A.length; i++) {
+      result[i] = [];
+      for (let j = 0; j < B[0].length; j++) {
+        let sum = 0;
+        for (let k = 0; k < A[0].length; k++) {
+          sum += A[i][k] * B[k][j];
+        }
+        result[i][j] = sum;
+      }
+    }
+
+    // Display result
+    document.write("<b>Matrix A:</b><br>" + JSON.stringify(A) + "<br><br>");
+    document.write("<b>Matrix B:</b><br>" + JSON.stringify(B) + "<br><br>");
+    document.write("<b>Result (A × B):</b><br>" + JSON.stringify(result));
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Matrix A:
+[[1,2,3],[4,5,6]]
+
+Matrix B:
+[[7,8],[9,10],[11,12]]
+
+Result (A × B):
+[[58,64],[139,154]]
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to perform matrix multiplication.
+=================================================
+-->

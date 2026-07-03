@@ -1,0 +1,17 @@
+<html>
+<body>
+<script>
+let num1=parseInt(prompt("Enter the first number:"));
+let num2=parseInt(prompt("Enter the second number:"));
+let hcf,lcm;  
+for(let i=1; i<=num1 && i<=num2; i++){
+if(num1%i==0 && num2%i==0){
+hcf = i;
+}
+}
+lcm=(num1*num2)/hcf;
+document.write("The HCF of " +num1+"and"+num2+"is:"+hcf+"<br>");
+document.write("The LCM of " +num1+"and"+num2+"is:"+lcm);
+</script> 
+</body>
+</html>

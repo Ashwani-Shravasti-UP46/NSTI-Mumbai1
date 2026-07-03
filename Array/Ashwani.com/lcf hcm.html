@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> hcf and lcm of two number </title>
+</head>
+<body>
+<script>
+let lower=parseInt(prompt("Enter a first number:"));
+let upper=parseInt(prompt("Enter a second number:"));
+let a=num1;
+let b=num2;
+while(b !==0){
+let temp=b;
+b= a % b;
+a=temp;
+}
+let hcf= a;
+let lcm=(num*num)/ hcf;
+
+document.write("<h3>for the number" + num1 + " and " + num2 + "are:</h3>");
+document.write("hcf="+hcf+"<br>");
+document.write("lcm="+lcm+"<br>");
+
+
+</script>
+</body>
+</html>
