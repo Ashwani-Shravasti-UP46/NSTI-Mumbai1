@@ -1,0 +1,77 @@
+<html>
+<head>
+<body>
+<center>ADD TWO MATRICES</title>
+<script> 
+          function readmatrix(a,m,n)
+        {
+`	var i , j ;
+	for(i=0; i<m; i++)
+	{
+	for(j=0; j<n; j++)
+	{
+	a[i][j]=parseInt(prompt("Enter the array elements:"));
+	 }
+	}
+	}
+	function displaymatrix(a,m,n)
+	{
+	var i, j;
+	for(i=0; i<m; i++)
+	{
+	for(j=0; j<n; j++)
+	{
+	document.write(a[i][j]+"   ");
+	}
+               document.write("<br>");
+	}
+	}
+	   function addmatrix(a,b,c,m,n)
+                 {
+`	var i , j ;
+	for(i=0; i<m; i++)
+	{
+	for(j=0; j<n; j++)
+	{
+	c[i][j]=a[i][j]+b[i][j];
+	}
+	}
+	}
+	</script>
+	<script>
+	var a,b,c,m,n,p,q,i,j;
+	m=parseInt(prompt("Enter the rows limit of 1st matrix:"));
+	n=parseInt(prompt("Enter the coloum limit of 1st matrix:"));
+	p=parseInt(prompt("Enter the row limit of 2nd matrix:"));
+	q=parseInt(prompt("Enter the coloum limit of 2nd matrix:"));
+                if(m==p && n==q){
+	a=new Array(m,n);
+	b=new Array(p,q);
+	c=new Array(m,n);
+	for(i=0; i<m; i++);
+                 a[i]=new Array(n); 
+	for(i=0; i<n; i++);
+	
+                 b[i]=new Array(q); 
+	for(i=0; i<m; i++);
+	
+                 c[i]=new Array(n); 
+	readmatrix(a,m,n);
+	readmatrix(b,p,q);
+	document.write("First Matrix is :<br>");
+	displaymatrix(a,m,n);
+	document.write("Second Matrix is :<br>");
+	displaymatrix(b,p,n);
+	addmatrix(a,b,c,m,n);
+	document.write("Resultant Matrix is :<br>");
+	displaymatrix(b,p,n);
+	addmatrix(c,m,n);
+                 }
+	else
+	{
+	document.write("Matrix addition is not possible<br>");
+	}
+	</script>
+	</center>
+               </body>
+              </html>

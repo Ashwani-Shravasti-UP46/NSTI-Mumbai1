@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+	var a,n;
+	n=parseInt(prompt("Enter thr limit of array:"));
+	a=new Array(n);
+	
+	for(i=0; i<n; i++){
+		a[i]=parseInt(prompt("Enter the array element:"));
+	}
+	document.write("The element are:");
+	for(i=0; i<n; i++){
+		document.write(a[i]+ " ");
+	}
+	document.write("<br>The sorted element:");
+	var lemp;
+	for(i=0; i<n-1; i++){
+	   for(j=0; j<n-i-1; j++){
+		if(a[j]<a[j+1]){
+			temp=a[j];
+			a[j]=a[j+1];
+			a[j+1]=temp;
+		}
+	      }
+	}
+	       for(i=0; i<n; i++){
+		document.write(a[i]+" ");
+	}
+</script>
+</body>
+</html>	

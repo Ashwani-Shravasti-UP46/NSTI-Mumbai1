@@ -1,0 +1,36 @@
+<html>
+<body>
+	<h3> Simple Cookie CRUD in javascript</h3>
+	<button onclick="createCookie()">Create cookie</button>
+	<button onclick="readCookie()">Read cookie</button>
+	<button onclick="updateCookie()">Update cookie</button>
+	<button onclick="deleteCookie()">Delete cookie</button>
+
+	<p id="output"></p>
+<script>
+	function createCookie(){
+	    document.cookie="username=Arun; path=/;";
+	    document.getElementById("output").innerHTML="cookie created!";
+	}
+
+	function readCookie(){
+	      let cookie=document.cookies;
+	      if(cookie){
+		document.getElementById("output").innerHTML="Cookie: "+cookies;
+	      }else{
+		document.getElementById("output").innerHTML="No cookies found";
+	      }
+	}
+
+	function updateCookie(){
+		document.cookie="username=Arun kumar; path=/;";
+		document.getElementById("output").innerHTML="Update Cookie";
+	}
+
+	function deleteCookie(){
+		document.cookie="username=; expires=Thu 01 Jan 1970 00:00:00 UTC; path=/;";
+		document.getElementById("output")="Delete cookie";
+	}
+</script>
+</body>
+</html>

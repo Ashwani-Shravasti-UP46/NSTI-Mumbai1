@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>array object constumar object</title>
+</head>
+<body>
+<script>
+function product(pid,pname,price,qty){
+this.pid=pid;
+this.pname=pname;
+this.price=price;
+this.qty=qty;
+this.totalprice=this.qty*this.price;
+}
+
+var product=[
+new product(101,"dell i5",50000,3),
+new product(102,"lenvo i3",40000,5),
+new product(103,"hp i7",60000,4)];
+document.write("<table border='2', cellspacing='0', cellpadding='10',align='center' ,style='text-align:center>");
+document.write("<tr><th>product</th><th> product name</th><th>price</th><th>quantity</th><th>total price</th></tr>");
+for(var i=0;i<product.length;i++){
+document.write("<tr><td>"+product[i].pid+"</td><td>"+product[i].pname+"</td><td>"+product[i].price+"</td><td>"+product[i].qty+"</td><td>"
++product[i].totalprice+"</td><tr>");
+}
+document.write("</table>");
+</script>
+</body>
+</html>

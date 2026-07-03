@@ -1,0 +1,22 @@
+<html>
+	<head><h1><center>B.M.I. Calulator</h1></center></head><br><hr>
+	<body>
+		<center><script>
+			var w=parseInt(prompt("Enter the wight-"));
+			var h=parseInt(prompt("Enter the height-"));
+			var c=w/(h*h);
+			
+			document.write("Person's B.M.I. is-  "+c+"<br><br>");
+	
+			if(c<18.5){
+				document.write("person is underweight");}
+			else if(c>=18.5 && c<25){
+				document.write("person is normal");}
+			else if(c>=25 && c<30){
+				document.write("person is overweight");}
+			else{
+				document.write("person is obese");}
+		</script></center>
+	</body>
+
+</html>

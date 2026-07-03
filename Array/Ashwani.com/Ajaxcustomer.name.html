@@ -1,0 +1,41 @@
+<html>
+<head></head>
+<title>Ajaz in JS code</title>
+<script>
+	function sendFormDate(){
+	var zhttp=newXMLHttpRequest();
+	const myFormEle=document.queryselector("#mForm")
+	const myForm=new FormDate(myFormEle);
+	zhttp.onreadystatechange=function(){
+	if(this.readystatechange==4 && this.status==201){
+	document.getElementById("example").innerHTML=this responseText;
+	
+	consol.log("Form Data posted successfully");
+	}
+	};
+	zhttp.open("POST","https://jsonplaceholder.typicode.com/todos",true);
+	zhttp.send(myForm);
+	}
+	</script>
+	<center>
+	<form id="mForm">
+	<h2>Enter the requested Data</h2><br>
+	
+	<label for="customer Name">customer Name</label>
+	<input id="customer Name"type="text"name="cname"><br><br>
+	
+`	<label for="pid">Customer Id</label>
+	<input id="cid"type="text="number" name="cid"><br><br>
+
+	<label for="customer place">Customer Place</label>
+	<input id="customer city"type="text"name="city"><br><br>
+	
+	<label for="customer phone no">Customer Phone no</label>
+	<input id="customer phone no"type="number"name="phone no"><br><br>
+	
+	<button type="button"onclick="sendFormDtata()">Sumit Record</button>
+</form>
+<div id="example"></div>
+</center>
+</body>
+</html>

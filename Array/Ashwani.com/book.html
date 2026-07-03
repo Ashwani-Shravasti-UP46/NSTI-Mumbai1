@@ -1,0 +1,27 @@
+<html>
+<body>
+<h2>Block details by using array [object]</h2>
+<script>
+	function book (bookid ,bookname,price,qty){
+	this.bookid=bookid;
+	this.bookname=bookname;
+	this.price=price;
+	this.qty=qty;
+	this.totalant=this.price*this.qty;
+	}
+	var books=[
+	new book(1,"Wings of fire",250,5),
+	new book(2,"Networking",300,4),
+	new book(3,"Java",400,5),
+	new book(4,"JS",450,15),
+	new book(5,"Python",380,13),
+	];	
+	document.write("<table border='2' cellspacing='0' cellpadding='10' align='center' style='text-align:center;'>");
+	document.write("<tr><th>BookID</th><th>BookName</th><th>BookPrice</th><th>BookQuantity</th><th>Total Amount</th><th>");
+	for(var i=0; i<book.length; i++){
+	document.write("<tr><td>"+books[i].bookid+"</td><td>"+books[i].bookname+"</td><td>"+books[i].price+"</td><td>"+books[i].qty+"</td><td>"+books               	 [i].totalant+"</td><tr>");
+	}
+	document.write("<table>");
+</script>
+</body>
+</html>

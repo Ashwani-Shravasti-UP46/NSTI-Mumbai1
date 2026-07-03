@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<h1><center>Armstrong Number</center></h1><hr><br>
+	</head>
+	<body>
+		<center><script>
+			//get input form user
+			let lim1=parseInt(prompt("Enter the lim1-"));
+			let lim2=parseInt(prompt("Enter the lim2-"));
+			
+			for(let num=lim1; num<=lim2; num++){
+
+			let temp=num;
+			let digit=num.toString().length;
+			let sum=0;
+
+			//calculate sum of cubes of each digit
+			while(temp>0){
+			let remainder=temp%10;
+			sum=sum+remainder**digit;
+			temp=Math.floor(temp/10);
+			}
+			
+			if(sum===num){
+			document.write(num+"<br>");
+			}}
+		</script></center>
+	</body>
+</html>

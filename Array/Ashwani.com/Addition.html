@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addition of Matrix Using Function</title>
+</head>
+<body>
+<h2>Addition of Matrix Using Function :</h2>
+
+<script>
+
+// Read Matrix
+function readMatrix(a, m, n) {
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            a[i][j] = parseInt(prompt("Enter Element:"));
+        }
+    }
+}
+
+// Addition of Matrix
+function addMatrix(a, b, c, m, n) {
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            c[i][j] = a[i][j] + b[i][j];
+        }
+    }
+}
+
+// Display Matrix
+function displayMatrix(a, m, n) {
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            document.write(a[i][j] + " ");
+        }
+        document.write("<br>");
+    }
+}
+
+let a, b, c, m, n, p, q;
+
+m = parseInt(prompt("Enter Rows of 1st Matrix:"));
+n = parseInt(prompt("Enter Columns of 1st Matrix:"));
+
+p = parseInt(prompt("Enter Rows of 2nd Matrix:"));
+q = parseInt(prompt("Enter Columns of 2nd Matrix:"));
+
+if (m == p && n == q) {
+
+    a = new Array(m);
+    b = new Array(p);
+    c = new Array(m);
+
+    for (let i = 0; i < m; i++) {
+        a[i] = new Array(n);
+        b[i] = new Array(n);
+        c[i] = new Array(n);
+    }
+
+    alert("Enter Matrix 1 Elements:");
+    readMatrix(a, m, n);
+
+    alert("Enter Matrix 2 Elements:");
+    readMatrix(b, m, n);
+
+    addMatrix(a, b, c, m, n);
+
+    document.write("<br>Matrix A:<br>");
+    displayMatrix(a, m, n);
+
+    document.write("<br>Matrix B:<br>");
+    displayMatrix(b, m, n);
+
+    document.write("<br>Matrix C = A + B:<br>");
+    displayMatrix(c, m, n);
+
+} else {
+    document.write("Addition is not possible");
+}
+
+</script>
+
+</body>
+</html>

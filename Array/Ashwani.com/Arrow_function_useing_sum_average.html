@@ -1,0 +1,17 @@
+<html>
+<body>
+<script>
+	const numbers=[12,45,66,44];
+
+	const total=arr=>arr.reduce((sum,n)=> sum+n, 0);
+
+	const average=arr=>total(arr)/arr.length;
+
+	//const max=arr=>max(arr)=>numbers>max,0);
+
+	document.write("<h3>Numbers : </h3>"+numbers.join(",")+"<br>");
+	document.write("Sum="+total(numbers)+"<br>");
+	document.write("Average="+average(numbers).toFixed(2));
+</script>
+</body>
+</html>

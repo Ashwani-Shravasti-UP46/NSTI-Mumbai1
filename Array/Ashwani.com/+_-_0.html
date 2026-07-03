@@ -1,0 +1,37 @@
+<html>
+<body>
+<script>
+	var a, n, pc=0, nc=0, zc=0;
+	n=parseInt(prompt("Enter the limit:"));
+	a = new Array(n);
+	pc=new Array();
+	nc=new Array();
+	zc=new Array();
+
+	for(i=0; i<n; i++){
+		a[i]=prompt("Enter the array element: "+n);
+	}
+	document.write("The elements are: ");
+	
+	for(i=0; i<n; i++){
+		document.write(a[i]+" ");
+	}
+
+	document.write("<br> Count the element are +ve, -ve, zero");
+	for(i=0; i<n; i++){
+	    if(a[i]>0){
+	    	 pc.push(a[i]);
+	     }
+	      else if(a[i]<0){
+	      	 nc.push(a[i]);
+	     }
+	      else{
+	  	 zc.push(a[i]);
+	      }
+	}
+	document.write("<br>positive : "+pc);
+	document.write("<br>negative : "+ nc);
+	document.write("<br>zero: "+ zc);
+</script>
+</body>
+</html>

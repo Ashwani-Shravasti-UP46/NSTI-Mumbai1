@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<center><h1> Display Upper Tringular element of a matrix</h1></center><hr><br>
+	</head>
+	<body>
+		<center><script>
+			
+			var a,i,j,m,n;
+			m=parseInt(prompt("Enter the row limit"));
+			n=parseInt(prompt("Enter the column limit"));
+			a=new Array(m,n);
+				for(i=0; i<m; i++){
+				a[i]=new Array(n);}
+					
+				//read the matrix
+				for(i=0; i<m; i++){
+				   for(j=0; j<n; j++){
+				      a[i][j]=parseInt(prompt("Enter the element of matrix"));}
+				}
+				
+				//display matrix
+				for(i=0; i<m; i++){
+				  for(j=0; j<n; j++){
+				     document.write(a[i][j]+" ");}
+				  document.write("<br>");
+				}
+
+				//Diagonal element of a matrix
+  				document.write("<b>Diagonal element of a matrix<br></b>");
+				document.write("<br>")
+
+				for(let i=0; i<n; i=i+1){
+  	 				for(let j=0; j<n; j=j+1){
+				
+				if(i===j)
+					document.write(a[i][j]+"  ");
+				else{
+					document.write("&nbsp; &nbsp; &nbsp;");}}
+					document.write("<br>");}
+		</script></center>
+	</body>
+		
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Get Checked Checkboxes</title>
+</head>
+<body>
+<p>select your hobbies:</p>
+<input type="checkbox" name="hobby" value="Reading">Reading
+<input type="checkbox" name="hobby" value="Traveling">Traveling
+<input type="checkbox" name="hobby" value="Music">Music
+<br><br>
+<button onclick="getCheckedHobbies()">show selectedHobbies</button>
+<p id="hobbyResult"></p>
+<script>
+	function getCheckedHobbies() {
+	let checkboxes=document.getElementsByName("hobby");
+	let selectedHobbies=[];
+	for(let i=0; i<checkboxes.length; i++){
+	if(checkboxes[i].checked) {
+	selectedHobbies.push(checkboxes[i].value);
+	}
+	}
+	document.getElementById("hobbyResult").innerHTML="selectedHobbies:"+selectedHobbies.join(" , ");
+	}
+</script>
+</body>
+</html>
+

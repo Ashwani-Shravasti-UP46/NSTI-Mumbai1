@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    <center><hr><br><h1>Customer Details</h1><br><hr><br><br></center>
+</head>
+<body>
+    <script>
+        function sendFormData(){
+        // creating XMLHttpRequest object
+        var zhttp = new XMLHttpRequest();
+        const mFormEle = document.querySelector("#mForm")
+        
+        // creating FormData object
+        const MyForm = new FormData(mFormEle);
+
+        //creating call back function to handle the response 
+        zhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 201){
+                document.getElementById("example").innerHTML= this.responseText;
+                console.log("Form Data Posted Successfully !");
+            }};
+        //Post/Add Form data on server.
+        zhttp.open("POST","https://jsonplaceholder.typicode.com/todos", true);
+    
+        //sending the request to the server
+        zhttp.send(new FormData(mFormEle));
+        }
+        
+    
+    </script>
+    <!-----Creating simple Form---->
+
+
+    <center>
+        <Form id = "mForm">
+            <h2> Enter the Request Data </h2>
+            <label for = "CustomerName">Customer Name </label>
+            <input id = "CustomerName" type = "text" name = "cname"><br><br>
+
+            <label for = "Cid"> Product ID</label>
+            <input id = "Cid" type = "number" name = "cid"><br><br>
+
+            <label for = "Place">Place</label>
+            <input id = "Place" type = "text" name="place"><br><br>
+
+            <label for ="City">City</label>
+            <input id = "City" type="text" name = "city"><br><br>
+
+            <label for ="Pin">Pin</label>
+            <input id = "Pin" type="number" name = "pin"><br><br>
+
+            <label for ="PhoneNO">Phone Number</label>
+            <input id = "PhoneNO" type="number" name = "PhoneNO"><br><br>
+
+            <button type = "button" onclick = "sendFormData()">Submit Record</button>
+        </Form>
+        <div id = "example"></div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Display the Daigonal Element Matrix</title>
+</head>
+<body>
+<script>
+function readmatrix(a,m,n) {
+var i, j;
+for (i=0; i<m; i++) {
+ for (j=0; j<n; j++) {
+a[i][j]=parseInt(prompt("Enter the array element:   "));
+}
+}
+}
+function displaymatrix(a,m,n){
+var i, j;
+for (i=0; i<m; i++) {
+for (j=0; j<n; j++) {
+document.write(a[i][j]+"   ");
+}
+document.write("<br>");
+}
+}
+function diamatrix(a,m,n) {
+var i, j;
+for (i=0; i<m; i++) {
+for (j=0; j<n; j++) {
+if(i==j)
+document.write(a[i][j]+"   ");
+else
+document.write("&nbsp;&nbsp;&nbsp");
+}
+document.write("<br>");
+}
+}
+var a,m,n,i,j;
+m=parseInt(prompt("Enter the row matrix:"));
+n=parseInt(prompt("Enter the column matrix:"));
+a=new Array(m,n);
+for(i=0; i<m; i++)
+a[i]=new Array(n);
+readmatrix(a,m,n);
+document.write("Normal matrix is here:<br>");
+displaymatrix(a,m,n);
+document.write("Diagonal matrix is here:<br>");
+diamatrix(a,m,n);
+</script>
+</body>
+</html>
+
+

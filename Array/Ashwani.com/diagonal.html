@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<title> Diagonal of Matrix </title>
+</head>
+
+<body>
+<h2> Diagonal of Matrix </h2>
+
+<script>
+
+function readMatrix(a,m,n){
+for(let i=0;i<m;i++){
+for(let j=0;j<n;j++){
+a[i][j]=parseInt(prompt("Enter Element of Matrix:"));}}}
+
+function displayMatrix(a,m,n){
+for(let i=0;i<m;i++){
+for(let j=0;j<n;j++){
+document.write(a[i][j]+"");
+document.write("<br>");}}}
+
+function diagonalFirst(a,m,n){
+for(let i=0;i<m;i++){
+for(let j=0;j<n;j++){
+if(i==j){
+document.write(a[i][j]+"");}}}}
+
+function diagonalSecond(a,m,n){
+for(let i=0;i<m;i++){
+for(let j=0;j<n;j++){
+if(i+j==(m-1)){
+document.write(a[i][j]+"");}}}}
+
+let m=parseInt(prompt("Enter row limit of matrix:"));
+let n=parseInt(prompt("Enter column limit of matrix:"));
+
+let a=new Array(m);
+for(let i=0;i<m;i++){
+a[i]=new Array (n);}
+readMatrix(a,m,n);
+
+document.write("Original Matrix is:<br>");
+displayMatrix(a,m,n);
+
+if(m==n){
+document.write("<br>First Diagonal of Matrix is:");
+diagonalFirst(a,m,n);
+document.write("<br>Second Diagonal of Matrix is:");
+diagonalSecond(a,m,n);}
+else{
+document.write("Diagonal not Possible!");}
+
+</script>
+</body>
+</html>

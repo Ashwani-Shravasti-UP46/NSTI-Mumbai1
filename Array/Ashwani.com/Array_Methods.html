@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head><h1>
+    java script array method example
+    </h1></head>
+    <body>
+        <script>
+            var employee=["john","alice","Bob","sara"];
+            document.write("<br>original Array:</b>"+employee + "<br><br>");
+            //push()-adds an element at the end
+
+            employee.push("David");
+            document.write("<b>After push('David'):</b>"+employee + "<br>");
+
+            //pop()-Remove the last element
+            employee.pop();
+            document.write("<b>After pop():</b>"+employee + "<br>");
+
+            //unshift()-adds an element at the begging
+            employee.unshift("Emma");
+            document.write("<b>After unshift('Emma') : </b>" + employee + "<br>");
+
+            //shiftt()-Remove the first element
+            employee.shift();
+            document.write("<b>After shift():</b>"+employee + "<br>");
+
+
+        </script>
+    </body>
+</html>

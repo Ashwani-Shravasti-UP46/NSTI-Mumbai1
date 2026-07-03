@@ -1,0 +1,36 @@
+<html>
+<body>
+<script>
+	let a,n;
+	n=parseInt(prompt("Enter the limit: "));
+	a=new Array(n);
+	
+	for(i=0; i<n; i++){
+		a[i]=parseInt(prompt("Enter the array element : "));
+	}
+
+	document.write("<h3>Bubble Sort</h3>");
+	document.write("<br> The element are: ");
+	
+	for(i=0; i<n; i++){
+		document.write(a[i]+" ");
+	}
+	document.write("<br> The array is sort by Bubble sort method: ");	
+
+	let temp;
+	for(i=0; i<n-1; i++){
+	      for(j=0; j<n-i-1; j++){
+		if(a[j] <a[j+1]){
+		temp   = a[j];
+		a[j] = a[j+1];
+		a[j+1] = temp;
+		}
+	      }
+	}
+
+	for(i=0; i<n; i++){
+		document.write(a[i]+ " " );
+	}
+</script>
+</body>
+</html>

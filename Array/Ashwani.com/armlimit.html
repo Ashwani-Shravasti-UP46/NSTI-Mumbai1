@@ -1,0 +1,25 @@
+ <html>
+<head>
+<title>armstrong number between two limits</title>
+</head>
+<body>
+<script>
+let first=parseInt(prompt("Enter a first limit:"));
+let second=parseInt(prompt("Enter a second limit:"));
+for(let num = first; num<=second; num++){
+var temp = num;
+var sum = 0;
+var digit=num.toString().lenght;
+var temp=num;
+while(temp>0){  
+var digit=temp%10;
+sum= sum+digit**digit;
+temp=Math.floor(temp/10);
+}
+ if(dup==num){
+document.write("number"+dup+"armstrong number");
+}
+}
+</script>
+</body>
+</html>

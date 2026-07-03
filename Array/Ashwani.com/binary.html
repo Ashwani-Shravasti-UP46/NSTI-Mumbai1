@@ -1,0 +1,59 @@
+<html>
+<body>
+<script>
+	var a, n
+	n=parseInt(prompt("Enter the limit:"));
+	a=new Array();
+	
+	for(i=0; i<n; i++){
+		a[i]=parseInt(prompt("Enter the array:"));
+	}
+	document.write("<br>The array element are:");
+
+	for(i=0; i<n; i++){
+		document.write(a[i]+" ");
+	}
+	document.write("<br>The sorted array is: ");
+
+	let temp;
+	for(i=0; i<n-1; i++){
+		for(j=0; j<n-i-1; j++){
+		if(a[j]>a[j+1]){
+		temp=a[j];
+		a[j]=a[j+1];
+		a[j+1]=temp;
+		}
+	}
+	}
+
+	for(i=0;  i<n; i++){
+		document.write(a[i]+" ");
+	}
+
+	let sk=parseInt(prompt("Enter the search key:"));
+	let mid;
+	let flag=0;
+	let initial=0, final=n-1;
+	while(initial<=final){
+		mid=parseInt((initial+final)/2);
+		if(a[mid]==sk){
+		flag=1;
+		break;
+	}
+	else if(a[mid]>sk){
+		final=mid-1;
+	}
+	else{
+		initial=mid+1;
+	}
+	}
+
+	if(flag===1){
+		document.write("<br>"+sk+" the position "+(mid+1)+"found array");
+	}
+	else{
+		document.write("<br>"+sk+" not found this array");
+	}
+</script>
+</body>
+</html>

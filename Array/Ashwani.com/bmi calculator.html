@@ -1,0 +1,92 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for BMI Calculator
+=====================================================
+
+AIM:
+- To write a JavaScript program that calculates 
+  Body Mass Index (BMI) of a person.
+
+OBJECTIVE:
+- Accept weight (kg) and height (meters) from user.
+- Calculate BMI using formula: BMI = weight / (height * height).
+- Display BMI value and category (Underweight, Normal, Overweight, Obese).
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Accept weight from user using prompt().
+2) Accept height from user using prompt().
+3) Calculate BMI = weight / (height * height).
+4) If BMI < 18.5 → Underweight.
+   If 18.5 ≤ BMI < 24.9 → Normal.
+   If 25 ≤ BMI < 29.9 → Overweight.
+   Else → Obese.
+5) Display BMI and category.
+
+STEPS TO RUN:
+- Save file as bmi.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (bmi.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BMI Calculator</title>
+</head>
+<body>
+  <h2>JavaScript BMI Calculator</h2>
+
+  <script>
+    // Input
+    let weight = parseFloat(prompt("Enter your weight in kg:"));
+    let height = parseFloat(prompt("Enter your height in meters:"));
+
+    // BMI calculation
+    let bmi = weight / (height * height);
+    let category = "";
+
+    if (bmi < 18.5) {
+      category = "Underweight";
+    } else if (bmi < 24.9) {
+      category = "Normal weight";
+    } else if (bmi < 29.9) {
+      category = "Overweight";
+    } else {
+      category = "Obese";
+    }
+
+    // Output
+    document.write("Weight: " + weight + " kg<br>");
+    document.write("Height: " + height + " m<br>");
+    document.write("BMI = " + bmi.toFixed(2) + "<br>");
+    document.write("Category: " + category);
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Input:
+Weight = 70
+Height = 1.75
+
+Output:
+Weight: 70 kg
+Height: 1.75 m
+BMI = 22.86
+Category: Normal weight
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  for BMI Calculator with category classification.
+=================================================
+-->

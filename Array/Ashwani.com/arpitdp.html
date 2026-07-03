@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Count of +ve, -ve and Zero</title>
+</head>
+<body>
+<h2>Count of Positive, Negative and Zero Elements</h2>
+
+<script>
+var n = parseInt(prompt("Enter number of elements:"));
+
+var pos = 0, neg = 0, zero = 0;
+var arr = [i];
+
+for (var i = 0; i < n; i++) {
+    arr[i] = parseInt(prompt("Enter element " + (i + 1) + ":"));
+
+    if (arr[i] > 0) {
+        pos++;
+    } else if (arr[i] < 0) {
+        neg++;
+    } else {
+        zero++;
+    }
+}
+
+document.write("Positive count = " + pos + "<br>");
+document.write("Negative count = " + neg + "<br>");
+document.write("Zero count = " + zero);
+</script>
+
+</body>
+</html>

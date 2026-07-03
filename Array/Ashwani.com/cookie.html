@@ -1,0 +1,16 @@
+<html>
+<body>
+	<h3>simple cookie CRUD in js </h3>
+	<button onclick="createcookie()">crete cookie</button>
+	<button onclick="readcookie()">Read cookie</button>
+	<button onclick="updatecookie()">Update cookie</button>
+	<button onclick="deletecookie()">Delete cookie</button>
+	<p id="output"></p>
+<script>
+	function createcookie(){
+	document.cookie="user=Arun;path=1;";
+	document.grtElementById("output").innerHTML="No cookies found";
+	}
+</script>
+</body>
+</html>

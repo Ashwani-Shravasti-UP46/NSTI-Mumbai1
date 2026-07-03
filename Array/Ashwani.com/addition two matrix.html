@@ -1,0 +1,93 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for Addition of Two Matrices
+=====================================================
+
+AIM:
+- To write a JavaScript program that performs 
+  addition of two matrices.
+
+OBJECTIVE:
+- Accept two matrices A and B (same size).
+- Add corresponding elements → C[i][j] = A[i][j] + B[i][j].
+- Display resultant matrix.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Define two matrices A and B of same dimensions.
+2) Initialize empty matrix C.
+3) For each row i and column j:
+      C[i][j] = A[i][j] + B[i][j]
+4) Print C.
+
+STEPS TO RUN:
+- Save file as matrix_addition.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (matrix_addition.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matrix Addition</title>
+</head>
+<body>
+  <h2>JavaScript Matrix Addition</h2>
+
+  <script>
+    // Matrix A
+    let A = [
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9]
+    ];
+
+    // Matrix B
+    let B = [
+      [9, 8, 7],
+      [6, 5, 4],
+      [3, 2, 1]
+    ];
+
+    // Resultant Matrix C
+    let C = [];
+
+    for (let i = 0; i < A.length; i++) {
+      C[i] = [];
+      for (let j = 0; j < A[i].length; j++) {
+        C[i][j] = A[i][j] + B[i][j];
+      }
+    }
+
+    // Display result
+    document.write("<b>Matrix A:</b><br>" + JSON.stringify(A) + "<br><br>");
+    document.write("<b>Matrix B:</b><br>" + JSON.stringify(B) + "<br><br>");
+    document.write("<b>Result (A + B):</b><br>" + JSON.stringify(C));
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Matrix A:
+[[1,2,3],[4,5,6],[7,8,9]]
+
+Matrix B:
+[[9,8,7],[6,5,4],[3,2,1]]
+
+Result (A + B):
+[[10,10,10],[10,10,10],[10,10,10]]
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to add two matrices.
+=================================================
+-->

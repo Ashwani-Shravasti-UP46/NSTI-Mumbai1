@@ -1,0 +1,19 @@
+<html>
+<body>
+	<h3>Javascript contructor emp detail demo</h3>
+<script>
+	function emp(id, name, salary){
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+	}
+
+	var e, e1;
+	e = new emp(103, "Vimal jaiswal", 45000);
+	e1 = new emp(104, "shreenath", 60000);
+
+	document.write(e.id + " " + e.name + " " + e.salary + " " + "<br>" );
+	document.write(e1.id + " " + e1.name + " " + e1.salary + " " );
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+<head>
+<center>ADD Two Matrix</title>
+</head>
+<body>
+<script>
+	let a,b,i,j,n,m,p,q;
+	a=new Array(n,m);
+	b=new Array(p,q);
+	c=new Array(n,m);
+	m=parseInt(prompt("Enter the  first Row limit:"));
+	n=parseInt(prompt("Enter the   first Columns limit:"));
+	p=parseInt(prompt("Enter the second Row imit:"));
+	q=parseInt(prompt("Enter the second Columns limit:"));
+
+                function readmatrix(a,m,n){
+	for(i=0; i<n; i++){
+	a[i]=[n,m]
+	for(j=0; j<m; j++){
+	a[i][j]=parseInt(prompt("Enter first matrix of Element"));
+	}
+	}
+	}
+	function displayMatrix(a,m,n){
+	for(i=0; i<n; i++){
+	for(j=0; j<m; j++){
+	document.write (a[i][j]+" ");
+	document.write("<br>");
+	}
+	}
+	}
+	function addmatrix(){
+	for(i=0; i<p; i++){
+	c[i]=[p,q]
+	for(j=0; j<q; j++){
+	c[i][j]=a[i][j]+b[i][j];
+	}
+	}
+	}
+	readmatrix(a,m,n);
+	readmatrix(b,p,q);
+	addmatrix(a,b,p,q);
+	document.write("First Matrix<br>");
+	displayMatrix(a,m,n);
+	document.write("<br>");
+	document.write("Second Matrix<br>");
+	displayMatrix(b,p,q);
+	document.write("<br>");
+	document.write("Addition Matrix<br>");
+	displayMatrix(c,p,q);
+	
+</script>
+</center>
+</body>
+</html>

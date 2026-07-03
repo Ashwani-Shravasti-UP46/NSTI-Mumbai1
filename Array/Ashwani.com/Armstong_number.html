@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<h1><center>Armstrong Number</center></h1><hr><br>
+	</head>
+	<body>
+		<center><script>
+			//get input form user
+			let num=parseInt(prompt("Enter the num-"));
+			let temp=num;
+			let sum=0;
+			let digit = num.toString().length;
+
+			//calculate sum of cubes of each digit
+			while(temp>0){
+			let rem =temp%10;
+			sum= sum + rem **digit;
+			temp=Math.floor(temp/10);
+			}
+			
+			if(sum===num){
+			document.write(num+" is a Armstrong number");
+			}
+			else{
+			document.write(num+" is not a Armstrong number");
+			}
+		</script></center>
+	</body>
+</html>

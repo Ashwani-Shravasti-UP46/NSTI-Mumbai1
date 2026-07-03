@@ -1,0 +1,39 @@
+<html>
+<body>
+<script>
+	function sendFromDate(){
+	      var zhttp = new XMLHttpRequest();
+	      const myFormEle = document.querySelector("#mForm");
+	      const myForm = new FormData(myFormEle);
+
+	      zhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 201){
+		     document.getElementById("example").innerHTML=this.responseText;
+		      console.log("Form data posted successfully");
+		}
+	      };
+	       zhttp.open("POST","https://jsonplaceholder.typicode.com/todos",true);
+	       zhttp.send(myForm);
+	}
+</script>
+<center>
+<form id="mForm">
+	<h2>Enter the requested data </h2>
+	<label for="product name" >Product Name</label>
+	<input id="product name" type="text" name="pname"><br><br>
+
+	<label for="pid" >Product Id</label>
+	<input id="pid" type="number" name="pid"><br><br>
+
+	<label for="brand" >Brand</label>
+	<input id="brand" type="text" name="brand"><br><br>
+
+	<label for="price" >Price</label>
+	<input id="price" type="number" name="price"><br><br>
+
+	<button type="button" onclick="sendFromDate()">Submit Rquest</button>
+</form>
+<div id="example"></div>
+</center>
+</body>
+</html>

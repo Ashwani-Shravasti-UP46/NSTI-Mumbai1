@@ -1,0 +1,83 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for Digital Clock
+=====================================================
+
+AIM:
+- To design a digital clock using JavaScript 
+  that updates in real time.
+
+OBJECTIVE:
+- Use JavaScript Date object.
+- Fetch current hours, minutes, seconds.
+- Update every second using setInterval().
+- Display time in HH:MM:SS format.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Create a <div> in HTML to display time.
+2) Define function showTime().
+3) In showTime():
+   - Get current time using new Date().
+   - Extract hours, minutes, seconds.
+   - Format as HH:MM:SS.
+   - Display inside <div>.
+4) Call showTime() every 1000 ms using setInterval().
+5) End.
+
+STEPS TO RUN:
+- Save file as digital_clock.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (digital_clock.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Clock</title>
+  <script>
+    function showTime() {
+      let now = new Date();
+      let h = now.getHours();
+      let m = now.getMinutes();
+      let s = now.getSeconds();
+
+      // Add leading zeros
+      h = (h < 10) ? "0" + h : h;
+      m = (m < 10) ? "0" + m : m;
+      s = (s < 10) ? "0" + s : s;
+
+      let time = h + ":" + m + ":" + s;
+      document.getElementById("clock").innerText = time;
+    }
+
+    // Update every second
+    setInterval(showTime, 1000);
+  </script>
+</head>
+<body onload="showTime()">
+  <h2>JavaScript Digital Clock</h2>
+  <div id="clock" style="font-size:30px; font-weight:bold;"></div>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+14:25:10
+14:25:11
+14:25:12
+...
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  for a real-time digital clock.
+=================================================
+-->

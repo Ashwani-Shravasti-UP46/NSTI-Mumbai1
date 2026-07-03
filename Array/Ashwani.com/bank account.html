@@ -1,0 +1,115 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for Bank Account (Deposit & Withdraw using Class)
+=====================================================
+
+AIM:
+- To write a JavaScript program that simulates a bank account 
+  with deposit and withdraw functionalities using class.
+
+OBJECTIVE:
+- Create a class BankAccount.
+- Store account details (accNo, name, balance).
+- Define methods: deposit(amount), withdraw(amount), show().
+- Perform operations and display updated balance.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Define class BankAccount with constructor (accNo, name, balance).
+2) Define method deposit(amount): add amount to balance.
+3) Define method withdraw(amount):
+      - If amount <= balance → deduct from balance.
+      - Else → show "Insufficient Balance".
+4) Define method show() to display account details.
+5) Create object and test deposit & withdraw.
+
+STEPS TO RUN:
+- Save file as bank_account.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (bank_account.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bank Account (Class)</title>
+</head>
+<body>
+  <h2>JavaScript Bank Account (Deposit & Withdraw)</h2>
+
+  <script>
+    class BankAccount {
+      constructor(accNo, name, balance) {
+        this.accNo = accNo;
+        this.name = name;
+        this.balance = balance;
+      }
+
+      deposit(amount) {
+        this.balance += amount;
+        document.write("Deposited ₹" + amount + " successfully.<br>");
+      }
+
+      withdraw(amount) {
+        if (amount <= this.balance) {
+          this.balance -= amount;
+          document.write("Withdrew ₹" + amount + " successfully.<br>");
+        } else {
+          document.write("Insufficient Balance!<br>");
+        }
+      }
+
+      show() {
+        document.write("Account No: " + this.accNo + 
+                       ", Name: " + this.name + 
+                       ", Balance: ₹" + this.balance + "<br><br>");
+      }
+    }
+
+    // Create object
+    let acc1 = new BankAccount(101, "Sunil", 5000);
+
+    // Show details
+    acc1.show();
+
+    // Deposit
+    acc1.deposit(2000);
+    acc1.show();
+
+    // Withdraw
+    acc1.withdraw(3000);
+    acc1.show();
+
+    // Invalid Withdraw
+    acc1.withdraw(6000);
+    acc1.show();
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Account No: 101, Name: Sunil, Balance: ₹5000
+
+Deposited ₹2000 successfully.
+Account No: 101, Name: Sunil, Balance: ₹7000
+
+Withdrew ₹3000 successfully.
+Account No: 101, Name: Sunil, Balance: ₹4000
+
+Insufficient Balance!
+Account No: 101, Name: Sunil, Balance: ₹4000
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  for Bank Account with deposit & withdraw using Class.
+=================================================
+-->

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>How toUse the CSS Style in the Javascript</title>
+<style>
+p{
+	display: none;
+         }
+</style>
+</head>
+<body>
+	<h3 id ="content_data"> Use the CSS style in the Javascript</h3>
+	<p id ="para">The Javascript changes the color and background color of the input field</p>
+<form>
+	Student Name:<input type ="text" name ="fname" id="sname"/><br/><br>
+	Student Email:<input type ="email" name ="smail" id="smail"/><br/><br>
+</form>
+	<button type="button" id="btn"
+	onclick="clickme();">
+	Click here to see the changes.</button>
+<script>
+	document.getElementById("content_data").style.color="red";
+	document.getElementById("smail").style="border.1px solid black;";
+	document.getElementById("sname").style="border:2px dotted grey;";
+	function clickme(){
+	document.getElementById("para").style.display="block";
+	document.getElementById("sname").style="border:2px dotted grey;";
+	document.getElementById("sname").style=backgroundColor="grey";
+	document.getElementById("sname").readOnly=true;
+	document.getElementById("smail").style.backgroundColor="grey";
+	document.getElementById("smail").readOnly=true;
+	document.getElementById("btn").style.display="none";
+}
+</script>
+</body>
+</html>
+	
+	
+	
+`
+
+
+
+
+
+
+
+

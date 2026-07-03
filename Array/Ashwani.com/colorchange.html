@@ -1,0 +1,72 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program to Change Background Color on Button Click
+=====================================================
+
+AIM:
+- To write a JavaScript program that changes the 
+  background color of the page on button click.
+
+OBJECTIVE:
+- Create a button in HTML.
+- On button click → JavaScript changes background color.
+- Use random colors for better effect.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Create a button in HTML body.
+2) Define function changeColor() in JavaScript.
+3) Inside function:
+   - Generate random RGB color.
+   - Apply to document.body.style.backgroundColor.
+4) On button click → call changeColor().
+
+STEPS TO RUN:
+- Save file as bg_color.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (bg_color.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Background Color</title>
+  <script>
+    function changeColor() {
+      // Generate random RGB color
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      let color = "rgb(" + r + "," + g + "," + b + ")";
+      
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</head>
+<body>
+  <h2>JavaScript Change Background Color</h2>
+  <button onclick="changeColor()">Change Color</button>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Initial: White background
+Click → Background changes to Blue
+Click again → Background changes to Green
+Click again → Background changes to Yellow
+...
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to change background color on button click.
+=================================================
+-->

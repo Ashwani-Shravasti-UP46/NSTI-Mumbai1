@@ -1,0 +1,30 @@
+<html>
+<body>
+	<h3>Simple Cookie CRUP in Javascript</h3>
+
+	<button onclick="creatCookie()">Create Cookie</button>
+	<button onclick="readCookie()">Read Cookie</button>
+	<button onclick="updateCookie()">Update Cookie</button>
+	<button onclick="deleteCookie()">Delete Cookie</button>
+		<p id="output"></p>
+<script>
+	function createCookie(){
+	document.cookie="username=Arun; path=/;";
+	document.getElementById("output").innerHTML="Cookie Created!";
+	}
+	function readCookie(){
+	let cookies=document.cookie;
+	if(cookies){
+	document.getElementById("output").innerHTML="cookie:"+cookies;
+	} 
+	else {
+	document.getElementById("output").innerHTML="NO cookies found!";
+	}
+	}
+	function updateCookie() {
+	document.cookie="username=; expires=thu, 01 jan 1970 00:00:00 UTC; path=/;";
+	document.getElementById("output").innerHTML="Cookie Deleted!";
+	}
+</body>
+</script>
+</html>

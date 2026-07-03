@@ -1,0 +1,25 @@
+<html>
+<body>
+<script>
+let n1=parseInt(prompt("Enter the limit of  n1:"));
+let n2=parseInt(prompt("Enter the limit of  n2:")); 
+for(let i = n1; i<=n2; i++)
+    {
+       var power=i.toString().length,sum=0;
+       var temp=i;
+       var dup=i;
+while(temp>0)
+{
+   let digit=temp%10;
+   sum=sum+(digit**power);
+  temp=parseInt(temp/10);
+}
+if(sum==dup){
+
+  document.write(dup+"<br>");
+ 
+}
+}
+</script>
+</body>
+</html>

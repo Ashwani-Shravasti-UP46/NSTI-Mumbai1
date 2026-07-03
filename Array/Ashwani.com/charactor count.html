@@ -1,0 +1,74 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Form with Real-time Character Count
+=====================================================
+
+AIM:
+- To create a form that shows real-time character 
+  count in a textarea using JavaScript.
+
+OBJECTIVE:
+- Add a textarea for user input.
+- Count characters as user types.
+- Display the character count dynamically below the textarea.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Create a form with a textarea.
+2) Add a <span> element to display character count.
+3) Add onkeyup event to textarea → call countChars().
+4) In countChars():
+   - Get length of textarea value.
+   - Update span text with character count.
+5) End.
+
+STEPS TO RUN:
+- Save file as char_count.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (char_count.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character Count</title>
+  <script>
+    function countChars() {
+      let text = document.getElementById("msg").value;
+      let count = text.length;
+      document.getElementById("count").innerText = count;
+    }
+  </script>
+</head>
+<body>
+  <h2>Feedback Form (with Character Count)</h2>
+
+  <form>
+    Message:<br>
+    <textarea id="msg" rows="4" cols="40" onkeyup="countChars()"></textarea><br>
+    <small>Character Count: <span id="count">0</span></small>
+  </form>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+User types: "Hello"
+Character Count = 5
+
+User types: "Hello Sunil!"
+Character Count = 12
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to show real-time character count in a textarea.
+=================================================
+-->

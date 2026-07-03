@@ -1,0 +1,77 @@
+<!-- 
+=====================================================
+PRACTICAL: JavaScript Program for Bubble Sort
+=====================================================
+
+AIM:
+- To write a JavaScript program that sorts an array 
+  using Bubble Sort algorithm.
+
+OBJECTIVE:
+- Accept an array of numbers.
+- Compare adjacent elements and swap if needed.
+- Repeat until array is sorted.
+- Display sorted array.
+
+TOOLS:
+- Web Browser (Chrome/Firefox/Edge)
+- Any Text Editor (VS Code/Notepad)
+
+ALGORITHM:
+1) Define an array with unsorted numbers.
+2) Repeat for i = 0 to n-1:
+      For j = 0 to n-i-1:
+         If arr[j] > arr[j+1] → swap.
+3) Print sorted array.
+4) End.
+
+STEPS TO RUN:
+- Save file as bubble_sort.html
+- Open in browser.
+
+=====================================================
+JAVASCRIPT CODE (bubble_sort.html)
+=====================================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bubble Sort</title>
+</head>
+<body>
+  <h2>JavaScript Bubble Sort</h2>
+
+  <script>
+    let arr = [25, 10, 15, 5, 30, 20];
+    document.write("Original Array: " + arr + "<br><br>");
+
+    // Bubble Sort logic
+    for (let i = 0; i < arr.length - 1; i++) {
+      for (let j = 0; j < arr.length - i - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+          let temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+        }
+      }
+    }
+
+    document.write("Sorted Array (Ascending): " + arr);
+  </script>
+</body>
+</html>
+
+<!--
+================= SAMPLE OUTPUT =================
+
+Original Array: 25,10,15,5,30,20
+
+Sorted Array (Ascending): 5,10,15,20,25,30
+
+=================================================
+RESULT:
+- Successfully implemented JavaScript program 
+  to sort array using Bubble Sort algorithm.
+=================================================
+-->

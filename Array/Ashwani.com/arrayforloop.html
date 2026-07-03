@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Array element of using for of loop</title>
+</head>
+<body>
+<script>
+
+let numbers=[12,23,34,45,56,78];
+let sum=0;
+let max=numbers[0];
+let min=numbers[0];
+document.write("Array the element");
+for(let num of numbers){
+document.write(num+"<br>");
+sum+=num;
+if(num>max)max=num;
+if(num<min) min=num;
+}
+let avg=sum/numbers.length;
+document.write("Result:");
+document.write("sum="+sum+"<br>");
+document.write("largest="+max+"<br>");
+document.write("smallest="+min+"<br>");
+</script>
+</body>
+</html>
+
